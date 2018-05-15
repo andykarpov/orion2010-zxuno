@@ -91,9 +91,9 @@ END COMPONENT;
 
 begin
 
-VGA_R <= "110" when i='1' and r='1' else "010" when r='1' else "000";
-VGA_G <= "110" when i='1' and g='1' else "010" when g='1' else "000";
-VGA_B <= "110" when i='1' and b='1' else "010" when b='1' else "000";
+VGA_R <= "110" when i/='0' and r='1' else "010" when r='1' else "000";
+VGA_G <= "110" when i/='0' and g='1' else "010" when g='1' else "000";
+VGA_B <= "110" when i/='0' and b='1' else "010" when b='1' else "000";
 SOUND_L <= dac_out;
 SOUND_R <= dac_out;
 SRAM_ADDR(20 downto 18) <= (others => '0');

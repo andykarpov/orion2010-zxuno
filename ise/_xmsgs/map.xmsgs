@@ -5,10 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">orion/t80inst/u0/Regs/Mram_RegsH121/SPO</arg> has no load.
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">orion/t80inst/u0/Regs/Mram_RegsH121/SPO</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">3</arg> more times for the following (max. 5 shown):
+<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">3</arg> more times for the following (max. 5 shown):
 <arg fmt="%s" index="3">orion/t80inst/u0/Regs/Mram_RegsL122/SPO,
 orion/t80inst/u0/Regs/Mram_RegsH122/SPO,
 orion/t80inst/u0/Regs/Mram_RegsL121/SPO</arg>
@@ -21,7 +21,7 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 <msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
 </msg>
 
-<msg type="warning" file="Pack" num="2574" delta="new" >The F7 multiplexer symbol &quot;<arg fmt="%s" index="1">orion/receiver/Mmux_state[3]_state[3]_wide_mux_37_OUT_6_f7_0</arg>&quot; and its I1 input driver &quot;<arg fmt="%s" index="2">orion/receiver/Mmux_state[3]_state[3]_wide_mux_37_OUT_711</arg>&quot; were implemented suboptimally in the same slice component. The function generator could not be placed directly driving the F7 multiplexer. The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="2574" delta="old" >The F7 multiplexer symbol &quot;<arg fmt="%s" index="1">orion/receiver/Mmux_state[3]_state[3]_wide_mux_37_OUT_6_f7_0</arg>&quot; and its I1 input driver &quot;<arg fmt="%s" index="2">orion/receiver/Mmux_state[3]_state[3]_wide_mux_37_OUT_711</arg>&quot; were implemented suboptimally in the same slice component. The function generator could not be placed directly driving the F7 multiplexer. The design will exhibit suboptimal timing.
 </msg>
 
 <msg type="info" file="Pack" num="1716" delta="old" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
@@ -33,7 +33,7 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 <msg type="info" file="Map" num="215" delta="old" >The Interim Design Summary has been generated in the MAP Report (.mrp).
 </msg>
 
-<msg type="warning" file="Place" num="1137" delta="new" >This design is not guaranteed to be routable! This design contains a global buffer instance, &lt;<arg fmt="%s" index="1">clocks/clkout1_buf</arg>&gt;, driving the net, &lt;<arg fmt="%s" index="2">clk20</arg>&gt;, that is driving the following (first <arg fmt="%d" index="3">30</arg>) non-clock load pins.
+<msg type="warning" file="Place" num="1137" delta="old" >This design is not guaranteed to be routable! This design contains a global buffer instance, &lt;<arg fmt="%s" index="1">clocks/clkout1_buf</arg>&gt;, driving the net, &lt;<arg fmt="%s" index="2">clk20</arg>&gt;, that is driving the following (first <arg fmt="%d" index="3">30</arg>) non-clock load pins.
 <arg fmt="%s" index="4">&lt; PIN: orion/ram_we0_SW0.A5; &gt;
 &lt; PIN: orion/Mmux_a102.A5; &gt;
 &lt; PIN: orion/Mmux_uart_clk11.A4; &gt;
@@ -43,16 +43,16 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 <msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">orion/csf767_dataO[3]_AND_422_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">orion/csf767_dataO[3]_AND_422_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">orion/csf767_dataO[4]_AND_420_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">orion/csf767_dataO[4]_AND_420_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">orion/t80inst/u0/Regs/Mram_RegsL11_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">orion/t80inst/u0/Regs/Mram_RegsL11_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">orion/t80inst/u0/Regs/Mram_RegsH11_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">orion/t80inst/u0/Regs/Mram_RegsH11_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
 <msg type="info" file="PhysDesignRules" num="1861" delta="old" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">clocks/dcm_sp_inst</arg>, consult the device Data Sheet.

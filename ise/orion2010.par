@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-andy-mi::  Tue May 15 21:24:17 2018
+andy-mi::  Tue May 15 21:59:47 2018
 
 par -w -intstyle ise -ol high -mt off orion2010_map.ncd orion2010.ncd
 orion2010.pcf 
@@ -117,22 +117,22 @@ Phase  2  : 10598 unrouted;      REAL time: 5 secs
 
 Phase  3  : 5319 unrouted;      REAL time: 8 secs 
 
-Phase  4  : 5319 unrouted; (Setup:0, Hold:16884, Component Switching Limit:0)     REAL time: 9 secs 
+Phase  4  : 5319 unrouted; (Setup:0, Hold:16884, Component Switching Limit:0)     REAL time: 8 secs 
 
 Updating file: orion2010.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:15517, Component Switching Limit:0)     REAL time: 13 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:15517, Component Switching Limit:0)     REAL time: 12 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:15517, Component Switching Limit:0)     REAL time: 13 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:15517, Component Switching Limit:0)     REAL time: 12 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:15517, Component Switching Limit:0)     REAL time: 13 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:15517, Component Switching Limit:0)     REAL time: 12 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:15517, Component Switching Limit:0)     REAL time: 13 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:15517, Component Switching Limit:0)     REAL time: 12 secs 
 WARNING:Route:522 - Unusually high hold time violation detected among 1 connections.The router will continue and try to fix it 
 	orion/uart_wr:AQ -> orion/transm/state<2>:A6 -3673
 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 13 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 12 secs 
 
 Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 13 secs 
 Total REAL time to Router completion: 13 secs 
@@ -236,8 +236,8 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 14 secs 
-Total CPU time to PAR completion: 14 secs 
+Total REAL time to PAR completion: 13 secs 
+Total CPU time to PAR completion: 13 secs 
 
 Peak Memory Usage:  637 MB
 

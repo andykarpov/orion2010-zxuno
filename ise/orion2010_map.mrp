@@ -10,7 +10,7 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Tue May 15 21:23:56 2018
+Mapped Date    : Tue May 15 21:59:26 2018
 
 Design Summary
 --------------
@@ -98,8 +98,8 @@ Specific Feature Utilization:
 Average Fanout of Non-Clock Nets:                4.43
 
 Peak Memory Usage:  710 MB
-Total REAL time to MAP completion:  19 secs 
-Total CPU time to MAP completion:   18 secs 
+Total REAL time to MAP completion:  17 secs 
+Total CPU time to MAP completion:   17 secs 
 
 Table of Contents
 -----------------
