@@ -61,15 +61,14 @@ component T80s is
 	);
 end component;
 
-component lpm_rom1 is
-	port
-	(
-		address		: IN STD_LOGIC_VECTOR (11 DOWNTO 0);
-		clken		: IN STD_LOGIC  := '1';
-		clock		: IN STD_LOGIC  := '1';
-		q		    : OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
-	);
-end component;
+COMPONENT rombios IS
+PORT (
+	--Port A
+ ADDRA          : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+ DOUTA          : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+ CLKA       : IN STD_LOGIC
+);
+END COMPONENT;
 
 component orionkeyboard is
  port(
@@ -601,6 +600,7 @@ begin
   when "10"=>uart_clk<=uart_del(0);
   when "01"=>uart_clk<=uart_del(1);
   when "00"=>uart_clk<=uart_del(2);
+  when others => 
  end case;
 end process;
  
@@ -656,7 +656,8 @@ selector:= top & fbfull & p4f(2);
                                                                        a18<=f9(2); 
 			                                end case;			                                
 			             end case;           
-			end case;                    		  
+			end case; 
+	when others => 
   end case;
 end process;
 
@@ -705,6 +706,7 @@ if (clock'event and clock='1') then
   when '1'=>if (hcnt(9 downto 0)=486) then hsync<='0';
              elsif (hcnt(9 downto 0)=566) then hsync<='1'; 
             end if;
+  when others => 
  end case;
 end if; 
 end process;
@@ -765,6 +767,7 @@ case hcnt(2 downto 0) is
             vidc<=vid3(1);
  when "111"=>vid<=vid2(0);
             vidc<=vid3(0);
+ when others => 
 end case;
 end process;
 
@@ -874,12 +877,11 @@ port map(
 	key_int				=>int_key
 );
 
-romd_altera:lpm_rom1 --------- alteraROM BIOS ---------------
+romd_altera:rombios --------- alteraROM BIOS ---------------
 port map(
-		address		=>romd_a(11 downto 0),
-		clock		=>not(clock),
-		clken		=>'1',		
-		q		    =>romd_d(7 downto 0)
+		ADDRA		=>romd_a(11 downto 0),
+		CLKA		=>not(clock),
+		DOUTA		    =>romd_d(7 downto 0)
 );
 
 t80inst:T80s	     --------- Z80 core (T80) -----------

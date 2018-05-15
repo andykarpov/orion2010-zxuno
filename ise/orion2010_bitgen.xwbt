@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/ise/orion2010.ncd
+OUTFILE=/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/ise/orion2010.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/ise
+LICENSE=WebPack
+USER_INFO=211218115_0_0_370

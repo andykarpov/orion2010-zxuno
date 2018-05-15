@@ -23,11 +23,27 @@ output				key_ss,
 input				ind_rus_lat,
 
 output		[7:0]	rk_kbo,
-output              key_int,
-input               ask_int
+output              key_int
 
 
 );
+
+wire [7:0] rk_kb_scan;
+wire ind_rus_lat;
+wire ask_int;
+wire key_rus_lat;
+wire key_us;
+wire key_ss;
+wire res_k;
+wire turb_10;
+wire turb_5;
+wire turb_2;
+wire rom_s;
+wire cpm_s;
+wire [7:0] rk_kbo;
+wire key_int;
+wire [1:0] pref;
+wire [7:0] rk_kb_out;
 
 assign			key_rus_lat	=	caps;
 assign			key_us		=	ctrl;
@@ -108,9 +124,9 @@ always @(posedge clk) begin
 					prefix<=ex_code? 1 : 0;
 					keyb_int<=1'b1;					
 					case(ps2q)
-						8'h12, 8'h59:	shift		<= 1'b0;		//шифт нажат
-						8'h14:			ctrl		<= 1'b0;		//контрол нажат
-						8'h58:			caps		<= 1'b0;		//капс -руслат
+						8'h12, 8'h59:	shift		<= 1'b0;		// 
+						8'h14:			ctrl		<= 1'b0;		// 
+						8'h58:			caps		<= 1'b0;		// -
 						8'h7e:          res_key     <= 1'b1;        //reset
 						8'h07:          turbo10     <= 1'b1;        //turbo10
 						8'h78:          turbo5      <= 1'b1;        //turbo5
@@ -319,25 +335,38 @@ reg				ps2rden;
 wire	[7:0]	ps2q;	
 wire			ps2dsr;	
 	
+wire clk;
+wire reset;
+wire ps2_clk;
+wire ps2_data;
 	
-ps2_keyboard ps2_keyboard(
-	.clk							(clk),
+ps2_keyboard ps2_keyboard_ins(
+	/*.clk							(clk),
 	.reset							(reset),
 	.ps2_clk_i						(ps2_clk),
 	.ps2_data_i						(ps2_data),
-//	.rx_extended					(),
-	.rx_released					(),
-	.rx_shift_key_on				(),
 	.rx_scan_code					(ps2q),
-	.rx_ascii						(),
 	.rx_data_ready					(ps2dsr),       // rx_read_o
 	.rx_read						(ps2rden),       // rx_read_ack_i
-//	.tx_data						(),
-//	.tx_write						(),
-//	.tx_write_ack_o					(),
-//	.tx_error_no_keyboard_ack		(),
-
-//	.translate						()
+	*/
+	.clk(clk),
+	.reset(reset),
+	.ps2_clk_en_o_(),
+	.ps2_data_en_o_(),
+	.ps2_clk_i(ps2_clk),
+	.ps2_data_i(ps2_data),
+	.rx_extended(),
+	.rx_released(),
+	.rx_shift_key_on(),
+	.rx_scan_code(ps2q),
+	.rx_ascii(),
+	.rx_data_ready(ps2dsr),
+	.rx_read(ps2rden),
+	.tx_data(),
+	.tx_write(),
+	.tx_write_ack_o(),
+	.tx_error_no_keyboard_ack(),
+	.translate()	
   );
 
 endmodule

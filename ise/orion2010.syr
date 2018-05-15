@@ -1,0 +1,2063 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Reading design: orion2010.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "orion2010.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "orion2010"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : orion2010
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"../src/cores/rombios" "../src/cores/clock"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/cores/clock/clock.v" into library work
+Parsing module <clock>.
+Analyzing Verilog file "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/ps2_keyboard.v" into library work
+Parsing module <ps2_keyboard>.
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/ps2_keyboard.v" Line 87: Redeclaration of ansi port rx_extended is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/ps2_keyboard.v" Line 88: Redeclaration of ansi port rx_released is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/ps2_keyboard.v" Line 89: Redeclaration of ansi port rx_scan_code is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/ps2_keyboard.v" Line 90: Redeclaration of ansi port rx_ascii is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/ps2_keyboard.v" Line 91: Redeclaration of ansi port rx_data_ready is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/ps2_keyboard.v" Line 92: Redeclaration of ansi port tx_error_no_keyboard_ack is not allowed
+Analyzing Verilog file "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" into library work
+Parsing module <orionkeyboard>.
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 31: Redeclaration of ansi port rk_kb_scan is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 32: Redeclaration of ansi port ind_rus_lat is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 34: Redeclaration of ansi port key_rus_lat is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 35: Redeclaration of ansi port key_us is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 36: Redeclaration of ansi port key_ss is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 37: Redeclaration of ansi port res_k is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 38: Redeclaration of ansi port turb_10 is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 39: Redeclaration of ansi port turb_5 is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 40: Redeclaration of ansi port turb_2 is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 41: Redeclaration of ansi port rom_s is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 42: Redeclaration of ansi port cpm_s is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 43: Redeclaration of ansi port rk_kbo is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 44: Redeclaration of ansi port key_int is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 45: Redeclaration of ansi port pref is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 46: Redeclaration of ansi port rk_kb_out is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 338: Redeclaration of ansi port clk is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 339: Redeclaration of ansi port reset is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 340: Redeclaration of ansi port ps2_clk is not allowed
+WARNING:HDLCompiler:751 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 341: Redeclaration of ansi port ps2_data is not allowed
+Analyzing Verilog file "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/cores/rombios/rombios.v" into library work
+Parsing module <rombios>.
+Analyzing Verilog file "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/async_transmitter.v" into library work
+Parsing module <async_transmitter>.
+Analyzing Verilog file "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/async_receiver.v" into library work
+Parsing module <async_receiver>.
+Parsing VHDL file "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/T80/T80_Reg.vhd" into library work
+Parsing entity <T80_Reg>.
+Parsing architecture <rtl> of entity <t80_reg>.
+Parsing VHDL file "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/T80/T80_Pack.vhd" into library work
+Parsing package <T80_Pack>.
+Parsing VHDL file "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/T80/T80_MCode.vhd" into library work
+Parsing entity <T80_MCode>.
+Parsing architecture <rtl> of entity <t80_mcode>.
+Parsing VHDL file "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/T80/T80_ALU.vhd" into library work
+Parsing entity <T80_ALU>.
+Parsing architecture <rtl> of entity <t80_alu>.
+Parsing VHDL file "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/T80/T80.vhd" into library work
+Parsing entity <T80>.
+Parsing architecture <rtl> of entity <t80>.
+Parsing VHDL file "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/T80/T80s.vhd" into library work
+Parsing entity <T80s>.
+Parsing architecture <rtl> of entity <t80s>.
+Parsing VHDL file "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" into library work
+Parsing entity <vga_test>.
+Parsing architecture <vga_arch> of entity <vga_test>.
+WARNING:HDLCompiler:946 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 859: Actual for formal port clk is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 883: Actual for formal port clka is neither a static name nor a globally static expression
+Parsing VHDL file "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/orion2010.vhd" into library work
+Parsing entity <orion2010>.
+Parsing architecture <orion2010_arch> of entity <orion2010>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <orion2010> (architecture <orion2010_arch>) from library <work>.
+
+Elaborating entity <vga_test> (architecture <vga_arch>) from library <work>.
+INFO:HDLCompiler:679 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 603. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 660. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 709. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 770. Case statement is complete. others clause is never selected
+Going to verilog side to elaborate module async_transmitter
+
+Elaborating module <async_transmitter(ClkFrequency=20000000,Baud=38400,RegisterInputData=1,BaudGeneratorAccWidth=16)>.
+Back to vhdl to continue elaboration
+Going to verilog side to elaborate module async_receiver
+
+Elaborating module <async_receiver(ClkFrequency=20000000,Baud=38400,Baud8GeneratorAccWidth=16)>.
+Back to vhdl to continue elaboration
+Going to verilog side to elaborate module orionkeyboard
+
+Elaborating module <orionkeyboard>.
+WARNING:HDLCompiler:413 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 124: Result of 32-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <ps2_keyboard>.
+WARNING:HDLCompiler:413 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/ps2_keyboard.v" Line 342: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/ps2_keyboard.v" Line 371: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/ps2_keyboard.v" Line 379: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:552 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 343: Input port tx_data[7] is not connected on this instance
+Back to vhdl to continue elaboration
+Going to verilog side to elaborate module rombios
+
+Elaborating module <rombios>.
+WARNING:HDLCompiler:1499 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/cores/rombios/rombios.v" Line 39: Empty module <rombios> remains a black box.
+Back to vhdl to continue elaboration
+
+Elaborating entity <T80s> (architecture <rtl>) with generics from library <work>.
+
+Elaborating entity <T80> (architecture <rtl>) with generics from library <work>.
+
+Elaborating entity <T80_MCode> (architecture <rtl>) with generics from library <work>.
+
+Elaborating entity <T80_ALU> (architecture <rtl>) with generics from library <work>.
+
+Elaborating entity <T80_Reg> (architecture <rtl>) from library <work>.
+Going to verilog side to elaborate module clock
+
+Elaborating module <clock>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.5,CLKFX_DIVIDE=5,CLKFX_MULTIPLY=2,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=20.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/cores/clock/clock.v" Line 126: Assignment to locked_int ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/cores/clock/clock.v" Line 127: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+Back to vhdl to continue elaboration
+WARNING:HDLCompiler:634 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/orion2010.vhd" Line 45: Net <wait_n> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/orion2010.vhd" Line 49: Net <rxd> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <orion2010>.
+    Related source file is "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/orion2010.vhd".
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/orion2010.vhd" line 104: Output port <sound> of the instance <orion> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/orion2010.vhd" line 104: Output port <wr> of the instance <orion> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/orion2010.vhd" line 104: Output port <rd> of the instance <orion> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/orion2010.vhd" line 104: Output port <mreq> of the instance <orion> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/orion2010.vhd" line 104: Output port <m1> of the instance <orion> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/orion2010.vhd" line 104: Output port <iorq> of the instance <orion> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/orion2010.vhd" line 104: Output port <csf7_n> of the instance <orion> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/orion2010.vhd" line 104: Output port <ram_oe0> of the instance <orion> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/orion2010.vhd" line 104: Output port <rom_oe> of the instance <orion> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/orion2010.vhd" line 104: Output port <txd> of the instance <orion> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/orion2010.vhd" line 104: Output port <rom_we> of the instance <orion> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <wait_n> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <rxd> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	inferred   3 Multiplexer(s).
+Unit <orion2010> synthesized.
+
+Synthesizing Unit <vga_test>.
+    Related source file is "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd".
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" line 849: Output port <RxD_endofpacket> of the instance <receiver> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" line 849: Output port <RxD_idle> of the instance <receiver> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" line 887: Output port <RFSH_n> of the instance <t80inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" line 887: Output port <HALT_n> of the instance <t80inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" line 887: Output port <BUSAK_n> of the instance <t80inst> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <rx_status>.
+    Found 1-bit register for signal <sck_buf>.
+    Found 10-bit register for signal <vcnt>.
+    Found 19-bit register for signal <int_cnt>.
+    Found 1-bit register for signal <interr>.
+    Found 1-bit register for signal <int_buf>.
+    Found 1-bit register for signal <int_keyb>.
+    Found 8-bit register for signal <vector>.
+    Found 3-bit register for signal <del>.
+    Found 2-bit register for signal <turbo_reg>.
+    Found 1-bit register for signal <clk_cpu>.
+    Found 8-bit register for signal <dac_reg>.
+    Found 8-bit register for signal <dac_cnt>.
+    Found 8-bit register for signal <dac_buf>.
+    Found 1-bit register for signal <dac_out>.
+    Found 1-bit register for signal <cpm_rom>.
+    Found 8-bit register for signal <pf400>.
+    Found 8-bit register for signal <pf501>.
+    Found 8-bit register for signal <pf502>.
+    Found 1-bit register for signal <pf766>.
+    Found 8-bit register for signal <p4f>.
+    Found 4-bit register for signal <f8>.
+    Found 3-bit register for signal <f9>.
+    Found 2-bit register for signal <fa>.
+    Found 1-bit register for signal <mode_vga>.
+    Found 3-bit register for signal <fb>.
+    Found 1-bit register for signal <fbfull>.
+    Found 1-bit register for signal <fbint>.
+    Found 8-bit register for signal <fc>.
+    Found 1-bit register for signal <fe>.
+    Found 1-bit register for signal <ff>.
+    Found 1-bit register for signal <cs>.
+    Found 1-bit register for signal <mosi_buf>.
+    Found 7-bit register for signal <miso_buf<6:0>>.
+    Found 8-bit register for signal <rx_reg>.
+    Found 1-bit register for signal <uart_wr>.
+    Found 3-bit register for signal <uart_del>.
+    Found 1-bit register for signal <rx_int>.
+    Found 2-bit register for signal <uart_speed>.
+    Found 1-bit register for signal <hsync>.
+    Found 1-bit register for signal <vsync>.
+    Found 1-bit register for signal <blank>.
+    Found 8-bit register for signal <vid0>.
+    Found 8-bit register for signal <vid1>.
+    Found 8-bit register for signal <vid2>.
+    Found 8-bit register for signal <vid3>.
+    Found 1-bit register for signal <blank1>.
+    Found 1-bit register for signal <red>.
+    Found 1-bit register for signal <green>.
+    Found 1-bit register for signal <blue>.
+    Found 1-bit register for signal <i_clock_DFF_74>.
+    Found 10-bit register for signal <hcnt>.
+    Found 1-bit register for signal <fbdis>.
+    Found 1-bit register for signal <rom_reg<1>>.
+    Found 1-bit register for signal <rom_reg<0>>.
+    Found 10-bit adder for signal <hcnt[9]_GND_6_o_add_1_OUT> created at line 231.
+    Found 10-bit adder for signal <vcnt[9]_GND_6_o_add_5_OUT> created at line 242.
+    Found 19-bit adder for signal <int_cnt[18]_GND_6_o_add_9_OUT> created at line 253.
+    Found 3-bit adder for signal <del[2]_GND_6_o_add_18_OUT> created at line 309.
+    Found 2-bit adder for signal <rom_reg[1]_GND_6_o_add_46_OUT> created at line 401.
+    Found 3-bit adder for signal <uart_del[2]_GND_6_o_add_106_OUT> created at line 607.
+    Found 8-bit subtractor for signal <GND_6_o_GND_6_o_sub_32_OUT<7:0>> created at line 349.
+    Found 8-bit subtractor for signal <GND_6_o_GND_6_o_sub_34_OUT<7:0>> created at line 351.
+    Found 16x4-bit Read Only RAM for signal <_n0761>
+    Found 1-bit 4-to-1 multiplexer for signal <uart_clk> created at line 598.
+    Found 1-bit 8-to-1 multiplexer for signal <vid> created at line 753.
+    Found 1-bit 8-to-1 multiplexer for signal <vidc> created at line 753.
+    Found 1-bit 7-to-1 multiplexer for signal <f8[3]_vid_Mux_159_o> created at line 788.
+WARNING:Xst:737 - Found 1-bit latch for signal <inport>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit tristate buffer for signal <d<7>> created at line 17
+    Found 1-bit tristate buffer for signal <d<6>> created at line 17
+    Found 1-bit tristate buffer for signal <d<5>> created at line 17
+    Found 1-bit tristate buffer for signal <d<4>> created at line 17
+    Found 1-bit tristate buffer for signal <d<3>> created at line 17
+    Found 1-bit tristate buffer for signal <d<2>> created at line 17
+    Found 1-bit tristate buffer for signal <d<1>> created at line 17
+    Found 1-bit tristate buffer for signal <d<0>> created at line 17
+    Found 1-bit tristate buffer for signal <bright> created at line 825
+    Found 8-bit comparator greater for signal <GND_6_o_dac_buf[7]_LessThan_33_o> created at line 350
+    Found 5-bit comparator equal for signal <hcnt[9]_GND_6_o_equal_147_o> created at line 727
+    WARNING:Xst:2404 -  FFs/Latches <bright<0:0>> (without init value) have a constant value of 0 in block <vga_test>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred 209 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred   2 Comparator(s).
+	inferred  60 Multiplexer(s).
+	inferred   9 Tristate(s).
+Unit <vga_test> synthesized.
+
+Synthesizing Unit <async_transmitter>.
+    Related source file is "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/async_transmitter.v".
+        ClkFrequency = 20000000
+        Baud = 38400
+        RegisterInputData = 1
+        BaudGeneratorAccWidth = 16
+    Found 8-bit register for signal <TxD_dataReg>.
+    Found 4-bit register for signal <state>.
+    Found 1-bit register for signal <TxD>.
+    Found 17-bit register for signal <BaudGeneratorAcc>.
+    Found 17-bit adder for signal <GND_18_o_BaudGeneratorInc[16]_add_2_OUT> created at line 26.
+    Found 4-bit 15-to-1 multiplexer for signal <state[3]_state[3]_wide_mux_25_OUT> created at line 38.
+    Found 1-bit 8-to-1 multiplexer for signal <muxbit> created at line 58.
+    Found 4-bit comparator greater for signal <state[3]_GND_18_o_LessThan_30_o> created at line 71
+    HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <state> would allow inference of a finite state machine and as consequence better performance and smaller area.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  30 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  15 Multiplexer(s).
+Unit <async_transmitter> synthesized.
+
+Synthesizing Unit <async_receiver>.
+    Related source file is "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/async_receiver.v".
+        ClkFrequency = 20000000
+        Baud = 38400
+        Baud8 = 307200
+        Baud8GeneratorAccWidth = 16
+    Found 2-bit register for signal <RxD_sync_inv>.
+    Found 2-bit register for signal <RxD_cnt_inv>.
+    Found 1-bit register for signal <RxD_bit_inv>.
+    Found 4-bit register for signal <bit_spacing>.
+    Found 4-bit register for signal <state>.
+    Found 8-bit register for signal <RxD_data>.
+    Found 1-bit register for signal <RxD_data_ready>.
+    Found 5-bit register for signal <gap_count>.
+    Found 1-bit register for signal <RxD_endofpacket>.
+    Found 17-bit register for signal <Baud8GeneratorAcc>.
+INFO:Xst:1799 - State 01 is never reached in FSM <RxD_sync_inv>.
+    Found finite state machine <FSM_2> for signal <RxD_sync_inv>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 1                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 1                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | Baud8Tick (positive)                           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 11                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 2-bit subtractor for signal <RxD_cnt_inv[1]_GND_19_o_sub_12_OUT> created at line 39.
+    Found 17-bit adder for signal <GND_19_o_Baud8GeneratorInc[16]_add_2_OUT> created at line 23.
+    Found 2-bit adder for signal <RxD_cnt_inv[1]_GND_19_o_add_9_OUT> created at line 37.
+    Found 4-bit adder for signal <n0105> created at line 59.
+    Found 5-bit adder for signal <gap_count[4]_GND_19_o_add_47_OUT> created at line 88.
+    Found 4-bit 12-to-1 multiplexer for signal <state[3]_state[3]_wide_mux_37_OUT> created at line 63.
+    HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <state> would allow inference of a finite state machine and as consequence better performance and smaller area.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  43 D-type flip-flop(s).
+	inferred  11 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <async_receiver> synthesized.
+
+Synthesizing Unit <orionkeyboard>.
+    Related source file is "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v".
+WARNING:Xst:2898 - Port 'tx_data', unconnected in block instance 'ps2_keyboard_ins', is tied to GND.
+WARNING:Xst:2898 - Port 'tx_write', unconnected in block instance 'ps2_keyboard_ins', is tied to GND.
+WARNING:Xst:2898 - Port 'translate', unconnected in block instance 'ps2_keyboard_ins', is tied to GND.
+WARNING:Xst:647 - Input <ind_rus_lat> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" line 343: Output port <rx_ascii> of the instance <ps2_keyboard_ins> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" line 343: Output port <ps2_clk_en_o_> of the instance <ps2_keyboard_ins> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" line 343: Output port <ps2_data_en_o_> of the instance <ps2_keyboard_ins> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" line 343: Output port <rx_extended> of the instance <ps2_keyboard_ins> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" line 343: Output port <rx_released> of the instance <ps2_keyboard_ins> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" line 343: Output port <rx_shift_key_on> of the instance <ps2_keyboard_ins> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" line 343: Output port <tx_write_ack_o> of the instance <ps2_keyboard_ins> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" line 343: Output port <tx_error_no_keyboard_ack> of the instance <ps2_keyboard_ins> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <ctrl>.
+    Found 1-bit register for signal <caps>.
+    Found 4-bit register for signal <state>.
+    Found 1-bit register for signal <res_key>.
+    Found 1-bit register for signal <cpm>.
+    Found 1-bit register for signal <ex_code>.
+    Found 1-bit register for signal <strobe>.
+    Found 1-bit register for signal <keyb_int>.
+    Found 8-bit register for signal <rk_kb>.
+    Found 2-bit register for signal <prefix>.
+    Found 1-bit register for signal <turbo10>.
+    Found 1-bit register for signal <turbo5>.
+    Found 1-bit register for signal <turbo2>.
+    Found 1-bit register for signal <rom>.
+    Found 1-bit register for signal <press_release>.
+    Found 1-bit register for signal <ps2rden>.
+    Found 64-bit register for signal <n0230[63:0]>.
+    Found 1-bit register for signal <shift>.
+    Found finite state machine <FSM_5> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 15                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 18                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred  88 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <orionkeyboard> synthesized.
+
+Synthesizing Unit <ps2_keyboard>.
+    Related source file is "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/ps2_keyboard.v".
+        TIMER_60USEC_VALUE_PP = 2950
+        TIMER_60USEC_BITS_PP = 12
+        TIMER_5USEC_VALUE_PP = 185
+        TIMER_5USEC_BITS_PP = 8
+        TRAP_SHIFT_KEYS_PP = 0
+        m1_rx_clk_h = 1
+        m1_rx_clk_l = 0
+        m1_rx_falling_edge_marker = 13
+        m1_rx_rising_edge_marker = 14
+        m1_tx_force_clk_l = 3
+        m1_tx_first_wait_clk_h = 10
+        m1_tx_first_wait_clk_l = 11
+        m1_tx_reset_timer = 12
+        m1_tx_wait_clk_h = 2
+        m1_tx_clk_h = 4
+        m1_tx_clk_l = 5
+        m1_tx_wait_keyboard_ack = 6
+        m1_tx_done_recovery = 7
+        m1_tx_error_no_keyboard_ack = 8
+        m1_tx_rising_edge_marker = 9
+        m2_rx_data_ready = 1
+        m2_rx_data_ready_ack = 0
+    Found 1-bit register for signal <ps2_data_s>.
+    Found 4-bit register for signal <m1_state>.
+    Found 1-bit register for signal <m2_state>.
+    Found 4-bit register for signal <bit_count>.
+    Found 11-bit register for signal <q>.
+    Found 12-bit register for signal <timer_60usec_count>.
+    Found 8-bit register for signal <timer_5usec_count>.
+    Found 1-bit register for signal <hold_extended>.
+    Found 1-bit register for signal <hold_released>.
+    Found 1-bit register for signal <left_shift_key>.
+    Found 1-bit register for signal <right_shift_key>.
+    Found 1-bit register for signal <rx_extended>.
+    Found 1-bit register for signal <rx_released>.
+    Found 8-bit register for signal <rx_scan_code>.
+    Found 8-bit register for signal <rx_ascii>.
+    Found 1-bit register for signal <ps2_clk_s>.
+    Found 4-bit adder for signal <bit_count[3]_GND_21_o_add_31_OUT> created at line 342.
+    Found 12-bit adder for signal <timer_60usec_count[11]_GND_21_o_add_49_OUT> created at line 371.
+    Found 8-bit adder for signal <timer_5usec_count[7]_GND_21_o_add_55_OUT> created at line 379.
+    Found 8x1-bit Read Only RAM for signal <enable_timer_5usec>
+    Found 16x3-bit Read Only RAM for signal <_n1696>
+    Found 4-bit 15-to-1 multiplexer for signal <m1_next_state> created at line 177.
+    HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <m1_state> would allow inference of a finite state machine and as consequence better performance and smaller area.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  64 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
+Unit <ps2_keyboard> synthesized.
+
+Synthesizing Unit <T80s>.
+    Related source file is "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/T80/T80s.vhd".
+        Mode = 1
+        T2Write = 1
+        IOWait = 1
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/T80/T80s.vhd" line 115: Output port <IntE> of the instance <u0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/T80/T80s.vhd" line 115: Output port <Stop> of the instance <u0> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <WR_n>.
+    Found 1-bit register for signal <IORQ_n>.
+    Found 1-bit register for signal <MREQ_n>.
+    Found 1-bit register for signal <RD_n>.
+    Found 8-bit register for signal <DI_Reg>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+	inferred  11 Multiplexer(s).
+Unit <T80s> synthesized.
+
+Synthesizing Unit <T80>.
+    Related source file is "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/T80/T80.vhd".
+        Mode = 1
+        IOWait = 1
+        Flag_C = 0
+        Flag_N = 1
+        Flag_P = 2
+        Flag_X = 3
+        Flag_H = 4
+        Flag_Y = 5
+        Flag_Z = 6
+        Flag_S = 7
+    Found 1-bit register for signal <RFSH_n>.
+    Found 1-bit register for signal <M1_n>.
+    Found 1-bit register for signal <Alternate>.
+    Found 1-bit register for signal <Arith16_r>.
+    Found 1-bit register for signal <Z16_r>.
+    Found 1-bit register for signal <Save_ALU_r>.
+    Found 1-bit register for signal <PreserveC_r>.
+    Found 1-bit register for signal <XY_Ind>.
+    Found 1-bit register for signal <INT_s>.
+    Found 1-bit register for signal <NMI_s>.
+    Found 1-bit register for signal <Halt_FF>.
+    Found 1-bit register for signal <NMICycle>.
+    Found 1-bit register for signal <IntCycle>.
+    Found 1-bit register for signal <IntE_FF1>.
+    Found 1-bit register for signal <IntE_FF2>.
+    Found 1-bit register for signal <No_BTR>.
+    Found 1-bit register for signal <Auto_Wait_t1>.
+    Found 1-bit register for signal <Auto_Wait_t2>.
+    Found 16-bit register for signal <SP>.
+    Found 8-bit register for signal <ACC>.
+    Found 8-bit register for signal <F>.
+    Found 8-bit register for signal <Ap>.
+    Found 8-bit register for signal <Fp>.
+    Found 16-bit register for signal <A>.
+    Found 16-bit register for signal <PC>.
+    Found 16-bit register for signal <TmpAddr>.
+    Found 8-bit register for signal <IR>.
+    Found 8-bit register for signal <DO>.
+    Found 8-bit register for signal <I>.
+    Found 8-bit register for signal <R>.
+    Found 2-bit register for signal <ISet>.
+    Found 2-bit register for signal <XY_State>.
+    Found 2-bit register for signal <IStatus>.
+    Found 3-bit register for signal <MCycles>.
+    Found 3-bit register for signal <TState>.
+    Found 3-bit register for signal <Pre_XY_F_M>.
+    Found 5-bit register for signal <Read_To_Reg_r>.
+    Found 4-bit register for signal <ALU_Op_r>.
+    Found 3-bit register for signal <MCycle>.
+    Found 3-bit register for signal <RegAddrA_r>.
+    Found 3-bit register for signal <RegAddrB_r>.
+    Found 3-bit register for signal <RegAddrC>.
+    Found 1-bit register for signal <IncDecZ>.
+    Found 16-bit register for signal <RegBusA_r>.
+    Found 8-bit register for signal <BusB>.
+    Found 8-bit register for signal <BusA>.
+    Found 16-bit adder for signal <TmpAddr[15]_GND_28_o_add_46_OUT> created at line 1241.
+    Found 16-bit adder for signal <RegBusC[15]_DI_Reg[7]_add_81_OUT> created at line 567.
+    Found 16-bit adder for signal <SP[15]_GND_28_o_add_88_OUT> created at line 1241.
+    Found 16-bit adder for signal <RegBusA[15]_GND_28_o_add_214_OUT> created at line 1253.
+    Found 3-bit adder for signal <Pre_XY_F_M[2]_GND_28_o_add_265_OUT> created at line 1241.
+    Found 3-bit adder for signal <MCycle[2]_GND_28_o_add_270_OUT> created at line 1241.
+    Found 3-bit adder for signal <TState[2]_GND_28_o_add_278_OUT> created at line 1241.
+    Found 16-bit subtractor for signal <GND_28_o_GND_28_o_sub_88_OUT<15:0>> created at line 1308.
+    Found 16-bit subtractor for signal <RegBusA[15]_GND_28_o_sub_216_OUT<15:0>> created at line 1320.
+    Found 16-bit 7-to-1 multiplexer for signal <Set_Addr_To[2]_PC[15]_wide_mux_48_OUT> created at line 474.
+    Found 8-bit 3-to-1 multiplexer for signal <Special_LD[1]_ACC[7]_wide_mux_110_OUT> created at line 603.
+    Found 8-bit 11-to-1 multiplexer for signal <Set_BusB_To[3]_X_26_o_wide_mux_242_OUT> created at line 846.
+    Found 8-bit 3-to-1 multiplexer for signal <_n1463> created at line 603.
+    Found 3-bit comparator equal for signal <T_Res> created at line 334
+    Found 3-bit comparator equal for signal <MCycles[2]_MCycle[2]_equal_267_o> created at line 1030
+    WARNING:Xst:2404 -  FFs/Latches <BusReq_s<0:0>> (without init value) have a constant value of 0 in block <T80>.
+    WARNING:Xst:2404 -  FFs/Latches <BusAck<0:0>> (without init value) have a constant value of 0 in block <T80>.
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred 213 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred 189 Multiplexer(s).
+Unit <T80> synthesized.
+
+Synthesizing Unit <T80_MCode>.
+    Related source file is "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/T80/T80_MCode.vhd".
+        Mode = 1
+        Flag_C = 0
+        Flag_N = 1
+        Flag_P = 2
+        Flag_X = 3
+        Flag_H = 4
+        Flag_Y = 5
+        Flag_Z = 6
+        Flag_S = 7
+WARNING:Xst:647 - Input <F<1:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <F<5:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 256x25-bit Read Only RAM for signal <_n2100>
+    Found 1-bit 8-to-1 multiplexer for signal <IR[5]_F[7]_Mux_192_o> created at line 171.
+    Found 4-bit 3-to-1 multiplexer for signal <ISet[1]_IR[7]_wide_mux_462_OUT> created at line 248.
+    Found 4-bit 3-to-1 multiplexer for signal <Set_BusA_To> created at line 248.
+    Found 1-bit 3-to-1 multiplexer for signal <Read_To_Reg> created at line 248.
+    Found 3-bit 3-to-1 multiplexer for signal <MCycles> created at line 248.
+    Found 1-bit 3-to-1 multiplexer for signal <ISet[1]_IR[7]_Mux_467_o> created at line 248.
+    Found 3-bit 3-to-1 multiplexer for signal <ISet[1]_IR[7]_wide_mux_468_OUT> created at line 248.
+    Found 1-bit 3-to-1 multiplexer for signal <Write> created at line 248.
+    Found 1-bit 3-to-1 multiplexer for signal <Read_To_Acc> created at line 248.
+    Found 1-bit 3-to-1 multiplexer for signal <LDZ> created at line 248.
+    Found 1-bit 3-to-1 multiplexer for signal <LDW> created at line 248.
+    Found 1-bit 3-to-1 multiplexer for signal <Inc_WZ> created at line 248.
+    Found 3-bit 3-to-1 multiplexer for signal <ISet[1]_IR[7]_wide_mux_474_OUT> created at line 248.
+    Found 4-bit 3-to-1 multiplexer for signal <IncDec_16> created at line 248.
+    Found 1-bit 3-to-1 multiplexer for signal <Save_ALU> created at line 248.
+    Found 1-bit 3-to-1 multiplexer for signal <PreserveC> created at line 248.
+    Found 4-bit 3-to-1 multiplexer for signal <ALU_Op> created at line 248.
+    Found 1-bit 3-to-1 multiplexer for signal <Jump> created at line 248.
+    Found 1-bit 3-to-1 multiplexer for signal <ISet[1]_IR[7]_Mux_490_o> created at line 248.
+    Found 1-bit 3-to-1 multiplexer for signal <IORQ> created at line 248.
+    Summary:
+	inferred   1 RAM(s).
+	inferred 384 Multiplexer(s).
+Unit <T80_MCode> synthesized.
+
+Synthesizing Unit <T80_ALU>.
+    Related source file is "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/T80/T80_ALU.vhd".
+        Mode = 1
+        Flag_C = 0
+        Flag_N = 1
+        Flag_P = 2
+        Flag_X = 3
+        Flag_H = 4
+        Flag_Y = 5
+        Flag_Z = 6
+        Flag_S = 7
+    Found 6-bit adder for signal <n0124> created at line 104.
+    Found 5-bit adder for signal <n0123> created at line 104.
+    Found 3-bit adder for signal <n0122> created at line 104.
+    Found 9-bit adder for signal <GND_30_o_GND_30_o_add_21_OUT> created at line 1241.
+    Found 9-bit adder for signal <GND_30_o_GND_30_o_add_24_OUT> created at line 1241.
+    Found 8-bit subtractor for signal <GND_30_o_GND_30_o_sub_29_OUT<7:0>> created at line 1308.
+    Found 9-bit subtractor for signal <GND_30_o_GND_30_o_sub_32_OUT<8:0>> created at line 1308.
+    Found 8-bit 8-to-1 multiplexer for signal <IR[5]_GND_30_o_wide_mux_42_OUT> created at line 288.
+    Found 5-bit comparator greater for signal <GND_30_o_GND_30_o_LessThan_24_o> created at line 214
+    Found 4-bit comparator greater for signal <PWR_21_o_BusA[3]_LessThan_27_o> created at line 219
+    Found 4-bit comparator greater for signal <GND_30_o_BusA[3]_LessThan_28_o> created at line 220
+    Found 8-bit comparator greater for signal <PWR_21_o_BusA[7]_LessThan_31_o> created at line 225
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred  57 Multiplexer(s).
+Unit <T80_ALU> synthesized.
+
+Synthesizing Unit <T80_Reg>.
+    Related source file is "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/T80/T80_Reg.vhd".
+    Found 8x8-bit dual-port RAM <Mram_RegsH> for signal <RegsH>.
+    Found 8x8-bit dual-port RAM <Mram_RegsL> for signal <RegsL>.
+    Summary:
+	inferred   4 RAM(s).
+Unit <T80_Reg> synthesized.
+
+Synthesizing Unit <clock>.
+    Related source file is "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/cores/clock/clock.v".
+    Summary:
+	no macro.
+Unit <clock> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 8
+ 16x3-bit single-port Read Only RAM                    : 1
+ 16x4-bit single-port Read Only RAM                    : 1
+ 256x25-bit single-port Read Only RAM                  : 1
+ 8x1-bit single-port Read Only RAM                     : 1
+ 8x8-bit dual-port RAM                                 : 4
+# Adders/Subtractors                                   : 29
+ 10-bit adder                                          : 2
+ 12-bit adder                                          : 1
+ 16-bit adder                                          : 2
+ 16-bit addsub                                         : 2
+ 17-bit adder                                          : 2
+ 19-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 2-bit addsub                                          : 1
+ 3-bit adder                                           : 5
+ 4-bit adder                                           : 2
+ 5-bit adder                                           : 2
+ 6-bit adder                                           : 1
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 3
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 1
+# Registers                                            : 150
+ 1-bit register                                        : 77
+ 10-bit register                                       : 2
+ 11-bit register                                       : 1
+ 12-bit register                                       : 1
+ 16-bit register                                       : 5
+ 17-bit register                                       : 2
+ 19-bit register                                       : 1
+ 2-bit register                                        : 8
+ 3-bit register                                        : 11
+ 4-bit register                                        : 7
+ 5-bit register                                        : 2
+ 64-bit register                                       : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 31
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 9
+ 3-bit comparator equal                                : 2
+ 4-bit comparator greater                              : 3
+ 5-bit comparator equal                                : 1
+ 5-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 746
+ 1-bit 2-to-1 multiplexer                              : 311
+ 1-bit 3-to-1 multiplexer                              : 12
+ 1-bit 4-to-1 multiplexer                              : 1
+ 1-bit 7-to-1 multiplexer                              : 1
+ 1-bit 8-to-1 multiplexer                              : 4
+ 16-bit 2-to-1 multiplexer                             : 20
+ 16-bit 7-to-1 multiplexer                             : 1
+ 17-bit 2-to-1 multiplexer                             : 3
+ 2-bit 2-to-1 multiplexer                              : 4
+ 3-bit 2-to-1 multiplexer                              : 113
+ 3-bit 3-to-1 multiplexer                              : 3
+ 4-bit 12-to-1 multiplexer                             : 1
+ 4-bit 15-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 178
+ 4-bit 3-to-1 multiplexer                              : 4
+ 5-bit 2-to-1 multiplexer                              : 2
+ 8-bit 11-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 77
+ 8-bit 3-to-1 multiplexer                              : 2
+ 8-bit 8-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 5
+# Tristates                                            : 9
+ 1-bit tristate buffer                                 : 9
+# FSMs                                                 : 2
+# Xors                                                 : 9
+ 1-bit xor2                                            : 3
+ 1-bit xor8                                            : 5
+ 8-bit xor2                                            : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <../src/cores/rombios/rombios.ngc>.
+Loading core <rombios> for timing and area information for instance <romd_altera>.
+WARNING:Xst:1290 - Hierarchical block <transm> is unconnected in block <orion>.
+   It will be removed from the design.
+WARNING:Xst:1710 - FF/Latch <DI_Reg_7> (without init value) has a constant value of 0 in block <t80inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DI_Reg_6> (without init value) has a constant value of 0 in block <t80inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DI_Reg_5> (without init value) has a constant value of 0 in block <t80inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DI_Reg_4> (without init value) has a constant value of 0 in block <t80inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DI_Reg_3> (without init value) has a constant value of 0 in block <t80inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DI_Reg_2> (without init value) has a constant value of 0 in block <t80inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DI_Reg_1> (without init value) has a constant value of 0 in block <t80inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DI_Reg_0> (without init value) has a constant value of 0 in block <t80inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ISet_1> (without init value) has a constant value of 0 in block <u0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XY_State_1> (without init value) has a constant value of 0 in block <u0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XY_State_0> (without init value) has a constant value of 0 in block <u0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IR_7> (without init value) has a constant value of 0 in block <u0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IR_6> (without init value) has a constant value of 0 in block <u0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IR_5> (without init value) has a constant value of 0 in block <u0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IR_4> (without init value) has a constant value of 0 in block <u0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IR_3> (without init value) has a constant value of 0 in block <u0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IR_2> (without init value) has a constant value of 0 in block <u0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IR_1> (without init value) has a constant value of 0 in block <u0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IR_0> (without init value) has a constant value of 0 in block <u0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Z16_r> (without init value) has a constant value of 0 in block <u0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <q_0> of sequential type is unconnected in block <ps2_keyboard_ins>.
+WARNING:Xst:2677 - Node <p4f[7]_dff_79_1> of sequential type is unconnected in block <orion>.
+WARNING:Xst:2677 - Node <p4f[7]_dff_79_3> of sequential type is unconnected in block <orion>.
+WARNING:Xst:2677 - Node <p4f[7]_dff_79_4> of sequential type is unconnected in block <orion>.
+WARNING:Xst:2677 - Node <p4f[7]_dff_79_5> of sequential type is unconnected in block <orion>.
+WARNING:Xst:2677 - Node <p4f[7]_dff_79_6> of sequential type is unconnected in block <orion>.
+WARNING:Xst:2677 - Node <p4f[7]_dff_79_7> of sequential type is unconnected in block <orion>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <XY_Ind> is unconnected in block <u0>.
+WARNING:Xst:1710 - FF/Latch <Pre_XY_F_M_0> (without init value) has a constant value of 0 in block <u0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Pre_XY_F_M_1> (without init value) has a constant value of 0 in block <u0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Pre_XY_F_M_2> (without init value) has a constant value of 0 in block <u0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <rx_ascii<7:7>> (without init value) have a constant value of 0 in block <ps2_keyboard>.
+WARNING:Xst:2404 -  FFs/Latches <ISet<1:1>> (without init value) have a constant value of 0 in block <T80>.
+
+Synthesizing (advanced) Unit <T80>.
+The following registers are absorbed into counter <TState>: 1 register on signal <TState>.
+Unit <T80> synthesized (advanced).
+
+Synthesizing (advanced) Unit <T80_MCode>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2100> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 25-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <IR>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <T80_MCode> synthesized (advanced).
+
+Synthesizing (advanced) Unit <T80_Reg>.
+INFO:Xst:3231 - The small RAM <Mram_RegsH1> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     clkA           | connected to signal <Clk>           | rise     |
+    |     weA            | connected to signal <WEH_1>         | high     |
+    |     addrA          | connected to signal <AddrA>         |          |
+    |     diA            | connected to signal <DIH>           |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     addrB          | connected to signal <AddrC>         |          |
+    |     doB            | connected to signal <DOCH>          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_RegsL1> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     clkA           | connected to signal <Clk>           | rise     |
+    |     weA            | connected to signal <WEL_1>         | high     |
+    |     addrA          | connected to signal <AddrA>         |          |
+    |     diA            | connected to signal <DIL>           |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     addrB          | connected to signal <AddrC>         |          |
+    |     doB            | connected to signal <DOCL>          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RegsH> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     clkA           | connected to signal <Clk>           | rise     |
+    |     weA            | connected to signal <WEH_0>         | high     |
+    |     addrA          | connected to signal <AddrA>         |          |
+    |     diA            | connected to signal <DIH>           |          |
+    |     doA            | connected to signal <DOAH>          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     addrB          | connected to signal <AddrB>         |          |
+    |     doB            | connected to signal <DOBH>          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RegsL> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     clkA           | connected to signal <Clk>           | rise     |
+    |     weA            | connected to signal <WEL_0>         | high     |
+    |     addrA          | connected to signal <AddrA>         |          |
+    |     diA            | connected to signal <DIL>           |          |
+    |     doA            | connected to signal <DOAL>          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     addrB          | connected to signal <AddrB>         |          |
+    |     doB            | connected to signal <DOBL>          |          |
+    -----------------------------------------------------------------------
+Unit <T80_Reg> synthesized (advanced).
+
+Synthesizing (advanced) Unit <async_receiver>.
+The following registers are absorbed into counter <RxD_cnt_inv>: 1 register on signal <RxD_cnt_inv>.
+The following registers are absorbed into counter <gap_count>: 1 register on signal <gap_count>.
+Unit <async_receiver> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ps2_keyboard>.
+The following registers are absorbed into counter <bit_count>: 1 register on signal <bit_count>.
+The following registers are absorbed into counter <timer_60usec_count>: 1 register on signal <timer_60usec_count>.
+The following registers are absorbed into counter <timer_5usec_count>: 1 register on signal <timer_5usec_count>.
+INFO:Xst:3231 - The small RAM <Mram_enable_timer_5usec> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m1_state<2:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <enable_timer_5usec> |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram__n1696> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 3-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m1_state>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <ps2_keyboard> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vga_test>.
+The following registers are absorbed into counter <uart_del[2]_dff_107>: 1 register on signal <uart_del[2]_dff_107>.
+The following registers are absorbed into counter <del>: 1 register on signal <del>.
+The following registers are absorbed into counter <int_cnt>: 1 register on signal <int_cnt>.
+The following registers are absorbed into counter <hcnt>: 1 register on signal <hcnt>.
+The following registers are absorbed into counter <dac_cnt>: 1 register on signal <dac_cnt>.
+The following registers are absorbed into counter <dac_buf>: 1 register on signal <dac_buf>.
+The following registers are absorbed into counter <vcnt>: 1 register on signal <vcnt>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0761> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <a_buff<7:4>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <vga_test> synthesized (advanced).
+WARNING:Xst:2677 - Node <p4f[7]_dff_79_3> of sequential type is unconnected in block <vga_test>.
+WARNING:Xst:2677 - Node <p4f[7]_dff_79_4> of sequential type is unconnected in block <vga_test>.
+WARNING:Xst:2677 - Node <p4f[7]_dff_79_5> of sequential type is unconnected in block <vga_test>.
+WARNING:Xst:2677 - Node <p4f[7]_dff_79_6> of sequential type is unconnected in block <vga_test>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 8
+ 16x3-bit single-port distributed Read Only RAM        : 1
+ 16x4-bit single-port distributed Read Only RAM        : 1
+ 256x25-bit single-port distributed Read Only RAM      : 1
+ 8x1-bit single-port distributed Read Only RAM         : 1
+ 8x8-bit dual-port distributed RAM                     : 4
+# Adders/Subtractors                                   : 16
+ 16-bit adder                                          : 2
+ 16-bit addsub                                         : 2
+ 17-bit adder                                          : 2
+ 2-bit adder                                           : 1
+ 3-bit adder                                           : 2
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 1
+ 6-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 1
+# Counters                                             : 13
+ 10-bit up counter                                     : 2
+ 12-bit up counter                                     : 1
+ 19-bit up counter                                     : 1
+ 2-bit updown counter                                  : 1
+ 3-bit up counter                                      : 3
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+ 8-bit down counter                                    : 2
+ 8-bit up counter                                      : 1
+# Registers                                            : 558
+ Flip-Flops                                            : 558
+# Comparators                                          : 9
+ 3-bit comparator equal                                : 2
+ 4-bit comparator greater                              : 3
+ 5-bit comparator equal                                : 1
+ 5-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 754
+ 1-bit 2-to-1 multiplexer                              : 310
+ 1-bit 3-to-1 multiplexer                              : 28
+ 1-bit 4-to-1 multiplexer                              : 1
+ 1-bit 7-to-1 multiplexer                              : 1
+ 1-bit 8-to-1 multiplexer                              : 4
+ 16-bit 2-to-1 multiplexer                             : 20
+ 16-bit 7-to-1 multiplexer                             : 1
+ 17-bit 2-to-1 multiplexer                             : 3
+ 2-bit 2-to-1 multiplexer                              : 4
+ 3-bit 2-to-1 multiplexer                              : 112
+ 3-bit 3-to-1 multiplexer                              : 3
+ 4-bit 12-to-1 multiplexer                             : 1
+ 4-bit 15-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 177
+ 4-bit 3-to-1 multiplexer                              : 4
+ 5-bit 2-to-1 multiplexer                              : 2
+ 8-bit 11-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 74
+ 8-bit 8-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 5
+# FSMs                                                 : 2
+# Xors                                                 : 9
+ 1-bit xor2                                            : 3
+ 1-bit xor8                                            : 5
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <vector_0> (without init value) has a constant value of 1 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vector_3> (without init value) has a constant value of 1 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vector_4> (without init value) has a constant value of 1 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vector_5> (without init value) has a constant value of 1 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vector_6> (without init value) has a constant value of 1 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vector_7> (without init value) has a constant value of 1 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <hold_released> (without init value) has a constant value of 0 in block <ps2_keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hold_extended> (without init value) has a constant value of 0 in block <ps2_keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <left_shift_key> (without init value) has a constant value of 1 in block <ps2_keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <right_shift_key> (without init value) has a constant value of 1 in block <ps2_keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rx_extended> (without init value) has a constant value of 0 in block <ps2_keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rx_released> (without init value) has a constant value of 0 in block <ps2_keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DI_Reg_0> (without init value) has a constant value of 0 in block <T80s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DI_Reg_1> (without init value) has a constant value of 0 in block <T80s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DI_Reg_2> (without init value) has a constant value of 0 in block <T80s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DI_Reg_3> (without init value) has a constant value of 0 in block <T80s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DI_Reg_4> (without init value) has a constant value of 0 in block <T80s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DI_Reg_5> (without init value) has a constant value of 0 in block <T80s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DI_Reg_6> (without init value) has a constant value of 0 in block <T80s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DI_Reg_7> (without init value) has a constant value of 0 in block <T80s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Z16_r> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <IR_0> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <IR_1> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <IR_2> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <IR_3> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <IR_4> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <IR_5> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <IR_6> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <IR_7> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XY_State_0> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XY_State_1> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <XY_Ind> is unconnected in block <T80>.
+WARNING:Xst:1710 - FF/Latch <Pre_XY_F_M_0> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Pre_XY_F_M_1> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Pre_XY_F_M_2> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2146 - In block <vga_test>, Counter <uart_del[2]_dff_107> <del> are equivalent, XST will keep only <uart_del[2]_dff_107>.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <orion/orionkey/FSM_5> on signal <state[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0100  | 0100
+ 0110  | 0110
+ 0101  | 0101
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+ 1010  | 1010
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <orion/receiver/FSM_2> on signal <RxD_sync_inv[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 01    | unreached
+ 11    | 11
+-------------------
+WARNING:Xst:2677 - Node <BaudGeneratorAcc_0> of sequential type is unconnected in block <async_transmitter>.
+INFO:Xst:2261 - The FF/Latch <RegAddrA_r_2> in Unit <T80> is equivalent to the following FF/Latch, which will be removed : <RegAddrB_r_2> 
+WARNING:Xst:2677 - Node <orion/ff> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/fe> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/inport> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:1710 - FF/Latch <Halt_FF> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ALU_Op_r_2> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ALU_Op_r_1> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ALU_Op_r_0> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <IStatus_1> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <IStatus_0> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MCycles_1> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Arith16_r> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Read_To_Reg_r_3> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Read_To_Reg_r_2> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Read_To_Reg_r_1> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Read_To_Reg_r_0> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RegAddrB_r_0> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RegAddrA_r_1> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RegAddrA_r_0> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <No_BTR> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PreserveC_r> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <IntE_FF2> is unconnected in block <T80>.
+INFO:Xst:2261 - The FF/Latch <Save_ALU_r> in Unit <T80> is equivalent to the following FF/Latch, which will be removed : <ALU_Op_r_3> 
+WARNING:Xst:1710 - FF/Latch <Alternate> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <I_0> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <I_1> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <I_2> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <I_3> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <I_4> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <I_5> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <I_6> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <I_7> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RegAddrC_2> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PC_8> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PC_9> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PC_10> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RegAddrA_r_2> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <Ap_0> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <Ap_1> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <Ap_2> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <Ap_3> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <Ap_4> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <Ap_5> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <Ap_6> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <Ap_7> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <Fp_0> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <Fp_1> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <Fp_2> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <Fp_3> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <Fp_4> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <Fp_5> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <Fp_6> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <Fp_7> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <R_0> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <R_1> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <R_2> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <R_3> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <R_4> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <R_5> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <R_6> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <R_7> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <RegBusA_r_0> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <RegBusA_r_1> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <RegBusA_r_2> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <RegBusA_r_3> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <RegBusA_r_4> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <RegBusA_r_5> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <RegBusA_r_6> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <RegBusA_r_7> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <RegBusA_r_8> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <RegBusA_r_9> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <RegBusA_r_10> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <RegBusA_r_11> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <RegBusA_r_12> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <RegBusA_r_13> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <RegBusA_r_14> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <RegBusA_r_15> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <IncDecZ> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <TmpAddr_8> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <TmpAddr_9> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <TmpAddr_10> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <TmpAddr_11> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <TmpAddr_12> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <TmpAddr_13> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <TmpAddr_14> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <TmpAddr_15> of sequential type is unconnected in block <T80>.
+INFO:Xst:2261 - The FF/Latch <PC_11> in Unit <T80> is equivalent to the following 4 FFs/Latches, which will be removed : <PC_12> <PC_13> <PC_14> <PC_15> 
+WARNING:Xst:1710 - FF/Latch <ISet> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Read_To_Reg_r_4> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Save_ALU_r> (without init value) has a constant value of 0 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <BusA_7> is unconnected in block <T80>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <BusA_6> is unconnected in block <T80>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <BusA_5> is unconnected in block <T80>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <BusA_4> is unconnected in block <T80>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <BusA_3> is unconnected in block <T80>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <BusA_2> is unconnected in block <T80>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <BusA_1> is unconnected in block <T80>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <BusA_0> is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <F_0> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <F_1> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <F_2> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <F_3> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <F_4> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <F_5> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <F_6> of sequential type is unconnected in block <T80>.
+WARNING:Xst:2677 - Node <F_7> of sequential type is unconnected in block <T80>.
+WARNING:Xst:1710 - FF/Latch <ACC_0> (without init value) has a constant value of 1 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ACC_1> (without init value) has a constant value of 1 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ACC_2> (without init value) has a constant value of 1 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ACC_3> (without init value) has a constant value of 1 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ACC_4> (without init value) has a constant value of 1 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ACC_5> (without init value) has a constant value of 1 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ACC_6> (without init value) has a constant value of 1 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ACC_7> (without init value) has a constant value of 1 in block <T80>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    orion/rom_reg_1 in unit <orion2010>
+    orion/rom_reg_0 in unit <orion2010>
+
+WARNING:Xst:2041 - Unit orion2010: 1 internal tristate is replaced by logic (pull-up yes): i.
+
+Optimizing unit <orion2010> ...
+
+Optimizing unit <orionkeyboard> ...
+
+Optimizing unit <ps2_keyboard> ...
+
+Optimizing unit <async_transmitter> ...
+
+Optimizing unit <T80s> ...
+
+Optimizing unit <T80> ...
+
+Optimizing unit <T80_ALU> ...
+
+Optimizing unit <async_receiver> ...
+WARNING:Xst:1710 - FF/Latch <RxD_data_ready> (without init value) has a constant value of 0 in block <async_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RxD_data_7> (without init value) has a constant value of 0 in block <async_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RxD_cnt_inv_1> (without init value) has a constant value of 1 in block <async_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RxD_data_6> (without init value) has a constant value of 0 in block <async_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RxD_bit_inv> (without init value) has a constant value of 1 in block <async_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RxD_data_5> (without init value) has a constant value of 0 in block <async_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RxD_data_4> (without init value) has a constant value of 0 in block <async_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RxD_data_3> (without init value) has a constant value of 0 in block <async_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RxD_data_2> (without init value) has a constant value of 0 in block <async_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RxD_data_1> (without init value) has a constant value of 0 in block <async_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RxD_data_0> (without init value) has a constant value of 0 in block <async_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <RxD_cnt_inv_0> of sequential type is unconnected in block <async_receiver>.
+WARNING:Xst:2677 - Node <orion/op_uart[7]_dff_104_7> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/op_uart[7]_dff_104_6> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/op_uart[7]_dff_104_5> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/op_uart[7]_dff_104_4> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/op_uart[7]_dff_104_3> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/op_uart[7]_dff_104_2> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/op_uart[7]_dff_104_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/op_uart[7]_dff_104_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/rx_status> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/vector_2> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/vector_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/miso_buf[6]_dff_102_6> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/miso_buf[6]_dff_102_5> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/miso_buf[6]_dff_102_4> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/miso_buf[6]_dff_102_3> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/miso_buf[6]_dff_102_2> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/miso_buf[6]_dff_102_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/miso_buf[6]_dff_102_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/p4f[7]_dff_79_7> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/p4f[7]_dff_79_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/pf400[7]_dff_50_7> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/pf400[7]_dff_50_6> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/pf400[7]_dff_50_5> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/pf400[7]_dff_50_4> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/pf400[7]_dff_50_3> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/pf400[7]_dff_50_2> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/pf400[7]_dff_50_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/pf400[7]_dff_50_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/uart_wr> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/prefix_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/prefix_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/rk_kb_7> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/rk_kb_6> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/rk_kb_5> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/rk_kb_4> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/rk_kb_3> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/rk_kb_2> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/rk_kb_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/rk_kb_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_63> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_62> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_61> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_60> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_59> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_58> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_57> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_56> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_55> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_54> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_53> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_52> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_51> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_50> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_49> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_48> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_47> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_46> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_45> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_44> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_43> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_42> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_41> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_40> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_39> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_38> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_37> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_36> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_35> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_34> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_33> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_32> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_31> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_30> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_29> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_28> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_27> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_26> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_25> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_24> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_23> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_22> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_21> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_20> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_19> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_18> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_17> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_16> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_15> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_14> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_13> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_12> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_11> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_10> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_9> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_8> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_7> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_6> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_5> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_4> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_3> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_2> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/keymatrix_7_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/shift> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/press_release> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/strobe> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/ex_code> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/caps> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/ctrl> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/ps2_keyboard_ins/q_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/ps2_keyboard_ins/rx_ascii_6> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/ps2_keyboard_ins/rx_ascii_5> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/ps2_keyboard_ins/rx_ascii_4> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/ps2_keyboard_ins/rx_ascii_3> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/ps2_keyboard_ins/rx_ascii_2> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/ps2_keyboard_ins/rx_ascii_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/ps2_keyboard_ins/rx_ascii_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/state_3> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/state_2> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/state_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/state_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/BaudGeneratorAcc_16> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/BaudGeneratorAcc_15> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/BaudGeneratorAcc_14> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/BaudGeneratorAcc_13> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/BaudGeneratorAcc_12> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/BaudGeneratorAcc_11> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/BaudGeneratorAcc_10> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/BaudGeneratorAcc_9> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/BaudGeneratorAcc_8> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/BaudGeneratorAcc_7> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/BaudGeneratorAcc_6> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/BaudGeneratorAcc_5> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/BaudGeneratorAcc_4> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/BaudGeneratorAcc_3> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/BaudGeneratorAcc_2> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/BaudGeneratorAcc_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/TxD_dataReg_7> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/TxD_dataReg_6> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/TxD_dataReg_5> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/TxD_dataReg_4> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/TxD_dataReg_3> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/TxD_dataReg_2> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/TxD_dataReg_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/TxD_dataReg_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/transm/TxD> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/t80inst/u0/RFSH_n> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/gap_count_4> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/gap_count_3> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/gap_count_2> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/gap_count_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/gap_count_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/RxD_endofpacket> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/RxD_data_7> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/RxD_data_6> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/RxD_data_5> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/RxD_data_4> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/RxD_data_3> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/RxD_data_2> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/RxD_data_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/RxD_data_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/SP_15> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/TmpAddr_0> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/TmpAddr_1> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/TmpAddr_2> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/TmpAddr_3> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/TmpAddr_4> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/TmpAddr_5> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/TmpAddr_6> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/TmpAddr_7> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/PC_11> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/A_0> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/A_1> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/A_2> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/A_3> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/A_4> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/A_5> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/A_6> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/A_7> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/A_8> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/A_9> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/A_10> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/IntCycle> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/RegAddrB_r_1> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/Auto_Wait_t1> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/MCycle_0> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/MCycle_1> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/MCycle_2> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/SP_0> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/SP_1> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/SP_2> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/SP_3> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/SP_4> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/SP_5> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/SP_6> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/SP_7> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/SP_8> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/SP_9> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/SP_10> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/SP_11> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/SP_12> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/SP_13> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/SP_14> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/sck_buf> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/dac_reg[7]_dff_29_0> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/dac_reg[7]_dff_29_1> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/dac_reg[7]_dff_29_2> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/dac_reg[7]_dff_29_3> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/dac_reg[7]_dff_29_4> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/dac_reg[7]_dff_29_5> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/dac_reg[7]_dff_29_6> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/dac_reg[7]_dff_29_7> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/fc_0> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/fc_1> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/fc_2> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/fc_3> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/fc_4> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/fc_5> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/fc_6> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/fc_7> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/f9_0> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/f9_1> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/f9_2> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/fa_0> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/fa_1> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/mode_vga> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/fbfull> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/cs> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/mosi_buf> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/A_11> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/A_12> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/A_13> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/A_14> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/A_15> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/IntE_FF1> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/u0/TState_2> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/orionkey/ps2_keyboard_ins/timer_5usec_count_0> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/orionkey/ps2_keyboard_ins/timer_5usec_count_1> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/orionkey/ps2_keyboard_ins/timer_5usec_count_2> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/orionkey/ps2_keyboard_ins/timer_5usec_count_3> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/orionkey/ps2_keyboard_ins/timer_5usec_count_4> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/orionkey/ps2_keyboard_ins/timer_5usec_count_5> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/orionkey/ps2_keyboard_ins/timer_5usec_count_6> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/orionkey/ps2_keyboard_ins/timer_5usec_count_7> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/p4f[7]_dff_79_0> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/p4f[7]_dff_79_2> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/t80inst/u0/MCycles_2> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/t80inst/u0/PC_7> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/t80inst/u0/PC_6> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/t80inst/u0/PC_5> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/t80inst/u0/PC_4> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/t80inst/u0/PC_3> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/t80inst/u0/PC_2> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/t80inst/u0/PC_1> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/t80inst/u0/PC_0> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/t80inst/u0/Auto_Wait_t2> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/RD_n> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/Regs/Mram_RegsH122> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/Regs/Mram_RegsH121> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/Regs/Mram_RegsH11> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/Regs/Mram_RegsL122> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/Regs/Mram_RegsL121> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/RegAddrC_1> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/RegAddrC_0> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/Regs/Mram_RegsL11> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/receiver/RxD_data_ready> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/rx_int> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/int_buf> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/orionkey/keyb_int> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/pf766> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/MCycles_0> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/M1_n> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/int_keyb> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/INT_s> is unconnected in block <orion2010>.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/WR_n> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/t80inst/IORQ_n> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/pf501[7]_dff_53_0> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/pf501[7]_dff_53_1> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/pf501[7]_dff_53_2> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/pf501[7]_dff_53_3> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/pf501[7]_dff_53_4> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/pf501[7]_dff_53_5> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/pf501[7]_dff_53_6> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/pf501[7]_dff_53_7> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/pf502[7]_dff_56_0> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/pf502[7]_dff_56_1> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/pf502[7]_dff_56_2> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/pf502[7]_dff_56_3> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/pf502[7]_dff_56_4> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/pf502[7]_dff_56_5> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/pf502[7]_dff_56_6> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/pf502[7]_dff_56_7> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/f8_0> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/f8_1> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/f8_3> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/fb_0> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/fb_1> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/fb_2> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <orion/fbdis> (without init value) has a constant value of 1 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <orion/int_cnt_18> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_17> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_16> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_15> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_14> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_13> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_12> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_11> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_10> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_9> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_8> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_7> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_6> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_5> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_4> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_3> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_2> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/int_cnt_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/fbint> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/uart_speed_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/uart_speed_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/interr> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/RxD_cnt_inv_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/RxD_cnt_inv_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/state_3> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/state_2> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/state_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/state_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/bit_spacing_3> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/bit_spacing_2> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/bit_spacing_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/bit_spacing_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/RxD_bit_inv> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/Baud8GeneratorAcc_16> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/Baud8GeneratorAcc_15> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/Baud8GeneratorAcc_14> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/Baud8GeneratorAcc_13> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/Baud8GeneratorAcc_12> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/Baud8GeneratorAcc_11> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/Baud8GeneratorAcc_10> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/Baud8GeneratorAcc_9> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/Baud8GeneratorAcc_8> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/Baud8GeneratorAcc_7> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/Baud8GeneratorAcc_6> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/Baud8GeneratorAcc_5> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/Baud8GeneratorAcc_4> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/Baud8GeneratorAcc_3> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/Baud8GeneratorAcc_2> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/Baud8GeneratorAcc_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/receiver/Baud8GeneratorAcc_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/Regs/Mram_RegsL1> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/Regs/Mram_RegsL2> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/Regs/Mram_RegsL3> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/Regs/Mram_RegsL4> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/Regs/Mram_RegsL5> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/Regs/Mram_RegsL6> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/Regs/Mram_RegsL7> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/u0/Regs/Mram_RegsL8> is unconnected in block <orion2010>.
+WARNING:Xst:1710 - FF/Latch <orion/red> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/blue> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <orion/f8_2> (without init value) has a constant value of 0 in block <orion2010>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <orion/rom_reg_0> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/rom_reg_1> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:2677 - Node <orion/orionkey/rom> of sequential type is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/vid1_5> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/vid3_5> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/vid1_4> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/vid3_4> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/vid1_6> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/vid3_6> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/vid1_7> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/vid3_7> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/vid1_1> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/vid3_1> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/vid1_0> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/vid3_0> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/vid1_2> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/vid3_2> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/vid1_3> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/vid3_3> is unconnected in block <orion2010>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <orion/t80inst/MREQ_n> is unconnected in block <orion2010>.
+INFO:Xst:2261 - The FF/Latch <orion/orionkey/ps2_keyboard_ins/m1_state_3> in Unit <orion2010> is equivalent to the following FF/Latch, which will be removed : <orion/orionkey/ps2_keyboard_ins/m1_state_2> 
+INFO:Xst:2261 - The FF/Latch <orion/hcnt_0> in Unit <orion2010> is equivalent to the following FF/Latch, which will be removed : <orion/uart_del[2]_dff_107_0> 
+INFO:Xst:2261 - The FF/Latch <orion/hcnt_1> in Unit <orion2010> is equivalent to the following FF/Latch, which will be removed : <orion/uart_del[2]_dff_107_1> 
+INFO:Xst:2261 - The FF/Latch <orion/hcnt_2> in Unit <orion2010> is equivalent to the following FF/Latch, which will be removed : <orion/uart_del[2]_dff_107_2> 
+INFO:Xst:3203 - The FF/Latch <orion/hcnt_0> in Unit <orion2010> is the opposite to the following FF/Latch, which will be removed : <orion/dac_cnt_0> 
+INFO:Xst:3203 - The FF/Latch <orion/hcnt_1> in Unit <orion2010> is the opposite to the following FF/Latch, which will be removed : <orion/dac_cnt_1> 
+INFO:Xst:3203 - The FF/Latch <orion/hcnt_2> in Unit <orion2010> is the opposite to the following FF/Latch, which will be removed : <orion/dac_cnt_2> 
+INFO:Xst:3203 - The FF/Latch <orion/hcnt_3> in Unit <orion2010> is the opposite to the following FF/Latch, which will be removed : <orion/dac_cnt_3> 
+INFO:Xst:3203 - The FF/Latch <orion/hcnt_4> in Unit <orion2010> is the opposite to the following FF/Latch, which will be removed : <orion/dac_cnt_4> 
+INFO:Xst:3203 - The FF/Latch <orion/hcnt_5> in Unit <orion2010> is the opposite to the following FF/Latch, which will be removed : <orion/dac_cnt_5> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2399 - RAMs <orion/t80inst/u0/Regs/Mram_RegsH2>, <orion/t80inst/u0/Regs/Mram_RegsH9> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <orion/t80inst/u0/Regs/Mram_RegsH2>, <orion/t80inst/u0/Regs/Mram_RegsH8> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <orion/t80inst/u0/Regs/Mram_RegsH2>, <orion/t80inst/u0/Regs/Mram_RegsH7> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <orion/t80inst/u0/Regs/Mram_RegsH2>, <orion/t80inst/u0/Regs/Mram_RegsH6> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <orion/t80inst/u0/Regs/Mram_RegsH2>, <orion/t80inst/u0/Regs/Mram_RegsH5> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <orion/t80inst/u0/Regs/Mram_RegsH2>, <orion/t80inst/u0/Regs/Mram_RegsH3> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <orion/t80inst/u0/Regs/Mram_RegsH2>, <orion/t80inst/u0/Regs/Mram_RegsH4> are equivalent, second RAM is removed
+Found area constraint ratio of 100 (+ 5) on block orion2010, actual ratio is 3.
+INFO:Xst:2260 - The FF/Latch <orion/t80inst/u0/BusB_7> in Unit <orion2010> is equivalent to the following 7 FFs/Latches : <orion/t80inst/u0/BusB_6> <orion/t80inst/u0/BusB_5> <orion/t80inst/u0/BusB_4> <orion/t80inst/u0/BusB_3> <orion/t80inst/u0/BusB_2> <orion/t80inst/u0/BusB_1> <orion/t80inst/u0/BusB_0> 
+
+Final Macro Processing ...
+
+Processing Unit <orion2010> :
+	Found 3-bit shift register for signal <orion/orionkey/ps2_keyboard_ins/q_8>.
+Unit <orion2010> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 122
+ Flip-Flops                                            : 122
+# Shift Registers                                      : 1
+ 3-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : orion2010.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 239
+#      GND                         : 2
+#      INV                         : 11
+#      LUT1                        : 34
+#      LUT2                        : 11
+#      LUT3                        : 24
+#      LUT4                        : 22
+#      LUT5                        : 9
+#      LUT6                        : 38
+#      MUXCY                       : 43
+#      MUXF7                       : 1
+#      VCC                         : 2
+#      XORCY                       : 42
+# FlipFlops/Latches                : 123
+#      FD                          : 41
+#      FD_1                        : 2
+#      FDCE                        : 10
+#      FDE                         : 41
+#      FDR                         : 11
+#      FDRE                        : 16
+#      FDS                         : 2
+# RAMS                             : 3
+#      RAM16X1D                    : 1
+#      RAMB16BWER                  : 2
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 52
+#      IBUF                        : 2
+#      IBUFG                       : 1
+#      IOBUF                       : 8
+#      OBUF                        : 41
+# DCMs                             : 1
+#      DCM_SP                      : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             123  out of  11440     1%  
+ Number of Slice LUTs:                  152  out of   5720     2%  
+    Number used as Logic:               149  out of   5720     2%  
+    Number used as Memory:                3  out of   1440     0%  
+       Number used as RAM:                2
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    190
+   Number with an unused Flip Flop:      67  out of    190    35%  
+   Number with an unused LUT:            38  out of    190    20%  
+   Number of fully used LUT-FF pairs:    85  out of    190    44%  
+   Number of unique control sets:        16
+
+IO Utilization: 
+ Number of IOs:                          53
+ Number of bonded IOBs:                  52  out of    102    50%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of     32     6%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                                                      | Load  |
+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+-------+
+CLK50                              | DCM_SP:CLKFX                                                                                                                               | 97    |
+orion/orionkey/cpm                 | NONE(orion/cpm_rom)                                                                                                                        | 1     |
+orion/clk_cpu                      | NONE(orion/t80inst/u0/TState_1)                                                                                                            | 19    |
+orion/romd_altera/N1               | NONE(orion/romd_altera/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram)| 2     |
+orion/hcnt_9                       | NONE(orion/vcnt_9)                                                                                                                         | 10    |
+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 3.471ns (Maximum Frequency: 288.122MHz)
+   Minimum input arrival time before clock: 2.083ns
+   Maximum output required time after clock: 6.051ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK50'
+  Clock period: 2.777ns (frequency: 360.127MHz)
+  Total number of paths / destination ports: 1501 / 171
+-------------------------------------------------------------------------
+Delay:               3.471ns (Levels of Logic = 3)
+  Source:            orion/hcnt_0 (FF)
+  Destination:       orion/green (FF)
+  Source Clock:      CLK50 rising 0.4X
+  Destination Clock: CLK50 falling 0.4X
+
+  Data Path: orion/hcnt_0 to orion/green
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             25   0.525   1.511  orion/hcnt_0 (orion/hcnt_0)
+     LUT6:I4->O            1   0.250   0.000  orion/Mmux_vid_3 (orion/Mmux_vid_3)
+     MUXF7:I1->O           1   0.175   0.682  orion/Mmux_vid_2_f7 (orion/vid)
+     LUT2:I1->O            1   0.254   0.000  orion/green_rstpot (orion/green_rstpot)
+     FD_1:D                    0.074          orion/green
+    ----------------------------------------
+    Total                      3.471ns (1.278ns logic, 2.193ns route)
+                                       (36.8% logic, 63.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'orion/orionkey/cpm'
+  Clock period: 1.749ns (frequency: 571.755MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.749ns (Levels of Logic = 0)
+  Source:            orion/cpm_rom (FF)
+  Destination:       orion/cpm_rom (FF)
+  Source Clock:      orion/orionkey/cpm rising
+  Destination Clock: orion/orionkey/cpm rising
+
+  Data Path: orion/cpm_rom to orion/cpm_rom
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.525   0.765  orion/cpm_rom (orion/cpm_rom)
+     FDR:R                     0.459          orion/cpm_rom
+    ----------------------------------------
+    Total                      1.749ns (0.984ns logic, 0.765ns route)
+                                       (56.3% logic, 43.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'orion/clk_cpu'
+  Clock period: 2.894ns (frequency: 345.542MHz)
+  Total number of paths / destination ports: 39 / 28
+-------------------------------------------------------------------------
+Delay:               2.894ns (Levels of Logic = 1)
+  Source:            orion/t80inst/u0/TState_1 (FF)
+  Destination:       orion/t80inst/u0/DO_7 (FF)
+  Source Clock:      orion/clk_cpu rising
+  Destination Clock: orion/clk_cpu rising
+
+  Data Path: orion/t80inst/u0/TState_1 to orion/t80inst/u0/DO_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.525   0.874  orion/t80inst/u0/TState_1 (orion/t80inst/u0/TState_1)
+     LUT2:I0->O            8   0.250   0.943  orion/t80inst/u0/_n1548_inv1 (orion/t80inst/u0/_n1548_inv)
+     FDCE:CE                   0.302          orion/t80inst/u0/DO_7
+    ----------------------------------------
+    Total                      2.894ns (1.077ns logic, 1.817ns route)
+                                       (37.2% logic, 62.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'orion/hcnt_9'
+  Clock period: 3.471ns (frequency: 288.122MHz)
+  Total number of paths / destination ports: 145 / 10
+-------------------------------------------------------------------------
+Delay:               3.471ns (Levels of Logic = 11)
+  Source:            orion/vcnt_1 (FF)
+  Destination:       orion/vcnt_9 (FF)
+  Source Clock:      orion/hcnt_9 falling
+  Destination Clock: orion/hcnt_9 falling
+
+  Data Path: orion/vcnt_1 to orion/vcnt_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              13   0.525   1.098  orion/vcnt_1 (orion/vcnt_1)
+     LUT1:I0->O            1   0.254   0.000  orion/Mcount_vcnt_cy<1>_rt (orion/Mcount_vcnt_cy<1>_rt)
+     MUXCY:S->O            1   0.215   0.000  orion/Mcount_vcnt_cy<1> (orion/Mcount_vcnt_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  orion/Mcount_vcnt_cy<2> (orion/Mcount_vcnt_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  orion/Mcount_vcnt_cy<3> (orion/Mcount_vcnt_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  orion/Mcount_vcnt_cy<4> (orion/Mcount_vcnt_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  orion/Mcount_vcnt_cy<5> (orion/Mcount_vcnt_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  orion/Mcount_vcnt_cy<6> (orion/Mcount_vcnt_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  orion/Mcount_vcnt_cy<7> (orion/Mcount_vcnt_cy<7>)
+     MUXCY:CI->O           0   0.023   0.000  orion/Mcount_vcnt_cy<8> (orion/Mcount_vcnt_cy<8>)
+     XORCY:CI->O           1   0.206   0.682  orion/Mcount_vcnt_xor<9> (orion/Result<9>2)
+     LUT6:I5->O            1   0.254   0.000  orion/vcnt_9_rstpot (orion/vcnt_9_rstpot)
+     FD:D                      0.074          orion/vcnt_9
+    ----------------------------------------
+    Total                      3.471ns (1.691ns logic, 1.780ns route)
+                                       (48.7% logic, 51.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK50'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              2.083ns (Levels of Logic = 1)
+  Source:            SRAM_DQ<7> (PAD)
+  Destination:       orion/vid0_7 (FF)
+  Destination Clock: CLK50 rising 0.4X
+
+  Data Path: SRAM_DQ<7> to orion/vid0_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           1   1.328   0.681  SRAM_DQ_7_IOBUF (N32)
+     FDE:D                     0.074          orion/vid0_7
+    ----------------------------------------
+    Total                      2.083ns (1.402ns logic, 0.681ns route)
+                                       (67.3% logic, 32.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK50'
+  Total number of paths / destination ports: 58 / 21
+-------------------------------------------------------------------------
+Offset:              6.051ns (Levels of Logic = 2)
+  Source:            orion/hcnt_0 (FF)
+  Destination:       SRAM_ADDR<13> (PAD)
+  Source Clock:      CLK50 rising 0.4X
+
+  Data Path: orion/hcnt_0 to SRAM_ADDR<13>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             25   0.525   1.679  orion/hcnt_0 (orion/hcnt_0)
+     LUT4:I0->O            1   0.254   0.681  orion/Mmux_a51 (SRAM_ADDR_11_OBUF)
+     OBUF:I->O                 2.912          SRAM_ADDR_11_OBUF (SRAM_ADDR<11>)
+    ----------------------------------------
+    Total                      6.051ns (3.691ns logic, 2.360ns route)
+                                       (61.0% logic, 39.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'orion/hcnt_9'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              5.746ns (Levels of Logic = 2)
+  Source:            orion/vcnt_6 (FF)
+  Destination:       SRAM_ADDR<5> (PAD)
+  Source Clock:      orion/hcnt_9 falling
+
+  Data Path: orion/vcnt_6 to SRAM_ADDR<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              13   0.525   1.374  orion/vcnt_6 (orion/vcnt_6)
+     LUT4:I0->O            1   0.254   0.681  orion/Mmux_a151 (SRAM_ADDR_5_OBUF)
+     OBUF:I->O                 2.912          SRAM_ADDR_5_OBUF (SRAM_ADDR<5>)
+    ----------------------------------------
+    Total                      5.746ns (3.691ns logic, 2.055ns route)
+                                       (64.2% logic, 35.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'orion/clk_cpu'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            orion/t80inst/u0/DO_7 (FF)
+  Destination:       SRAM_DQ<7> (PAD)
+  Source Clock:      orion/clk_cpu rising
+
+  Data Path: orion/t80inst/u0/DO_7 to SRAM_DQ<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.525   0.681  orion/t80inst/u0/DO_7 (orion/t80inst/u0/DO_7)
+     IOBUF:I->IO               2.912          SRAM_DQ_7_IOBUF (SRAM_DQ<7>)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK50
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK50             |    6.811|    1.895|    5.787|         |
+orion/hcnt_9      |         |    4.549|         |         |
+orion/orionkey/cpm|         |         |    1.690|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock orion/clk_cpu
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK50          |         |    3.115|         |         |
+orion/clk_cpu  |    2.894|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock orion/hcnt_9
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+orion/hcnt_9   |         |         |    3.471|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock orion/orionkey/cpm
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+orion/orionkey/cpm|    1.749|         |         |         |
+------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.20 secs
+ 
+--> 
+
+
+Total memory usage is 444456 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  629 (   0 filtered)
+Number of infos    :   59 (   0 filtered)
+

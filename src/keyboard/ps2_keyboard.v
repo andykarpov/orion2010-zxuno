@@ -20,24 +20,25 @@
 
 
 module ps2_keyboard (
-  clk,
-  reset,
-  ps2_clk_en_o_,
-  ps2_data_en_o_,
-  ps2_clk_i,
-  ps2_data_i,
-  rx_extended,
-  rx_released,
-  rx_shift_key_on,
-  rx_scan_code,
-  rx_ascii,
-  rx_data_ready,       // rx_read_o
-  rx_read,             // rx_read_ack_i
-  tx_data,
-  tx_write,
-  tx_write_ack_o,
-  tx_error_no_keyboard_ack,
-  translate
+input clk,
+input reset,
+output ps2_clk_en_o_,
+output ps2_data_en_o_,
+input  ps2_clk_i,
+input  ps2_data_i,
+output rx_extended,
+output rx_released,
+output rx_shift_key_on,
+output [7:0] rx_scan_code,
+output [7:0] rx_ascii,
+output rx_data_ready,
+input rx_read,
+input [7:0] tx_data,
+input tx_write,
+output tx_write_ack_o,
+output tx_error_no_keyboard_ack,
+input  translate
+  
   );
 
 // Parameters
@@ -81,25 +82,7 @@ parameter m2_rx_data_ready = 1;
 parameter m2_rx_data_ready_ack = 0;
 
   
-// I/O declarations
-input clk;
-input reset;
-output ps2_clk_en_o_ ;
-output ps2_data_en_o_ ;
-input  ps2_clk_i ;
-input  ps2_data_i ;
-output rx_extended;
-output rx_released;
-output rx_shift_key_on;
-output [7:0] rx_scan_code;
-output [7:0] rx_ascii;
-output rx_data_ready;
-input rx_read;
-input [7:0] tx_data;
-input tx_write;
-output tx_write_ack_o;
-output tx_error_no_keyboard_ack;
-input  translate ;
+
 
 reg rx_extended;
 reg rx_released;

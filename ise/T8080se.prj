@@ -1,0 +1,6 @@
+vhdl work "../src/T80/T80_Reg.vhd"
+vhdl work "../src/T80/T80_Pack.vhd"
+vhdl work "../src/T80/T80_MCode.vhd"
+vhdl work "../src/T80/T80_ALU.vhd"
+vhdl work "../src/T80/T80.vhd"
+vhdl work "../src/T80/T8080se.vhd"

@@ -1,0 +1,814 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'orion2010'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o orion2010_map.ncd orion2010.ngd orion2010.pcf 
+Target Device  : xc6slx9
+Target Package : tqg144
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Tue May 15 08:15:31 2018
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    3
+Slice Logic Utilization:
+  Number of Slice Registers:                    53 out of  11,440    1%
+    Number used as Flip Flops:                  53
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                         75 out of   5,720    1%
+    Number used as logic:                       73 out of   5,720    1%
+      Number using O6 output only:              30
+      Number using O5 output only:              21
+      Number using O5 and O6:                   22
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   1,440    0%
+    Number used exclusively as route-thrus:      2
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         2
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                    34 out of   1,430    2%
+  Number of MUXCYs used:                        40 out of   2,860    1%
+  Number of LUT Flip Flop pairs used:           90
+    Number with an unused Flip Flop:            37 out of      90   41%
+    Number with an unused LUT:                  15 out of      90   16%
+    Number of fully used LUT-FF pairs:          38 out of      90   42%
+    Number of unique control sets:               8
+    Number of slice register sites lost
+      to control set restrictions:              35 out of  11,440    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        51 out of     102   50%
+    Number of LOCed IOBs:                       51 out of      51  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     1 out of       4   25%
+    Number used as DCMs:                         1
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     200    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      16    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                2.83
+
+Peak Memory Usage:  678 MB
+Total REAL time to MAP completion:  7 secs 
+Total CPU time to MAP completion:   7 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:MapLib:701 - Signal PS2_CLK connected to top level port PS2_CLK has been
+   removed.
+WARNING:MapLib:701 - Signal PS2_DAT connected to top level port PS2_DAT has been
+   removed.
+WARNING:Place:1137 - This design is not guaranteed to be routable! This design
+   contains a global buffer instance, <clocks/clkout1_buf>, driving the net,
+   <clk20>, that is driving the following (first 30) non-clock load pins.
+   < PIN: orion/Mmux_a101.A2; >
+   This is not a recommended design practice in Spartan-6 due to limitations in
+   the global routing that may cause excessive delay, skew or unroutable
+   situations.  It is recommended to only use a BUFG resource to drive clock
+   loads. Please pay extra attention to the timing and routing of this path to
+   ensure the design goals are met. This is normally an ERROR but the
+   CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
+   <clocks/clkout1_buf.O> allowing your design to continue. This constraint
+   disables all clock placer rules related to the specified COMP.PIN.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network SD_DAT_IBUF has no load.
+INFO:LIT:395 - The above info message is repeated 9 more times for the following
+   (max. 5 shown):
+   orion/t80inst/u0/Regs/Mram_RegsH2/SPO,
+   orion/romd_altera/douta<7>,
+   orion/romd_altera/douta<6>,
+   orion/romd_altera/douta<5>,
+   orion/romd_altera/douta<4>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+INFO:PhysDesignRules:1861 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp clocks/dcm_sp_inst,
+   consult the device Data Sheet.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 173 block(s) removed
+   2 block(s) optimized away
+ 171 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "orion/romd_altera/douta<7>" is sourceless and has been removed.
+The signal "orion/romd_altera/douta<6>" is sourceless and has been removed.
+The signal "orion/romd_altera/douta<5>" is sourceless and has been removed.
+The signal "orion/romd_altera/douta<4>" is sourceless and has been removed.
+The signal "orion/romd_altera/douta<3>" is sourceless and has been removed.
+The signal "orion/romd_altera/douta<2>" is sourceless and has been removed.
+The signal "orion/romd_altera/douta<1>" is sourceless and has been removed.
+The signal "orion/romd_altera/douta<0>" is sourceless and has been removed.
+The signal "orion/romd_altera/N0" is sourceless and has been removed.
+The signal "orion/romd_altera/N1" is sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "PS2_CLK_IBUF" is unused and has been removed.
+ Unused block "PS2_CLK_IBUF" (BUF) removed.
+  The signal "PS2_CLK" is unused and has been removed.
+   Unused block "PS2_CLK" (PAD) removed.
+The signal "PS2_DAT_IBUF" is unused and has been removed.
+ Unused block "PS2_DAT_IBUF" (BUF) removed.
+  The signal "PS2_DAT" is unused and has been removed.
+   Unused block "PS2_DAT" (PAD) removed.
+The signal "orion/cpm_rom" is unused and has been removed.
+ Unused block "orion/cpm_rom" (SFF) removed.
+  The signal "orion/orionkey/cpm" is unused and has been removed.
+   Unused block "orion/orionkey/cpm" (FF) removed.
+    The signal "orion/clock_INV_189_o" is unused and has been removed.
+     Unused block "orion/clock_INV_189_o1_INV_0" (BUF) removed.
+    The signal "orion/orionkey/cpm_rstpot" is unused and has been removed.
+     Unused block "orion/orionkey/cpm_rstpot" (ROM) removed.
+      The signal "orion/orionkey/_n0646_inv" is unused and has been removed.
+       Unused block "orion/orionkey/_n0646_inv" (ROM) removed.
+        The signal "orion/orionkey/_n0760_inv1" is unused and has been removed.
+         Unused block "orion/orionkey/_n0760_inv11" (ROM) removed.
+          The signal "orion/orionkey/state_FSM_FFd4" is unused and has been removed.
+           Unused block "orion/orionkey/state_FSM_FFd4" (FF) removed.
+            The signal "orion/orionkey/state_FSM_FFd4-In" is unused and has been removed.
+             Unused block "orion/orionkey/state_FSM_FFd4-In2" (ROM) removed.
+              The signal "orion/orionkey/state_FSM_FFd4-In1" is unused and has been removed.
+               Unused block "orion/orionkey/state_FSM_FFd4-In1" (ROM) removed.
+                The signal "orion/orionkey/state_FSM_FFd3" is unused and has been removed.
+                 Unused block "orion/orionkey/state_FSM_FFd3" (FF) removed.
+                  The signal "orion/orionkey/state_FSM_FFd3-In" is unused and has been removed.
+                   Unused block "orion/orionkey/state_FSM_FFd3-In1" (ROM) removed.
+                    The signal "orion/orionkey/ps2q[7]_PWR_13_o_equal_36_o<7>1" is unused and has
+been removed.
+                     Unused block "orion/orionkey/ps2q[7]_PWR_13_o_equal_36_o<7>1" (ROM) removed.
+                      The signal "orion/orionkey/ps2_keyboard_ins/rx_scan_code<7>" is unused and has
+been removed.
+                       Unused block "orion/orionkey/ps2_keyboard_ins/rx_scan_code_7" (FF) removed.
+                        The signal "orion/orionkey/ps2_keyboard_ins/rx_output_strobe" is unused and has
+been removed.
+                         Unused block "orion/orionkey/ps2_keyboard_ins/rx_output_strobe<3>2" (ROM)
+removed.
+                          The signal "orion/orionkey/ps2_keyboard_ins/bit_count<0>" is unused and has been
+removed.
+                           Unused block "orion/orionkey/ps2_keyboard_ins/bit_count_0" (SFF) removed.
+                            The signal "orion/orionkey/ps2_keyboard_ins/_n1679_inv" is unused and has been
+removed.
+                             Unused block "orion/orionkey/ps2_keyboard_ins/_n1679_inv1" (ROM) removed.
+                              The signal "orion/orionkey/ps2_keyboard_ins/m1_state<1>" is unused and has been
+removed.
+                               Unused block "orion/orionkey/ps2_keyboard_ins/m1_state_1" (FF) removed.
+                                The signal "orion/orionkey/ps2_keyboard_ins/m1_next_state<1>" is unused and has
+been removed.
+                                 Unused block "orion/orionkey/ps2_keyboard_ins/Mmux_m1_next_state4" (ROM)
+removed.
+                                  The signal "orion/orionkey/ps2_keyboard_ins/m1_state<3>" is unused and has been
+removed.
+                                   Unused block "orion/orionkey/ps2_keyboard_ins/m1_state_3" (FF) removed.
+                                    The signal "orion/orionkey/ps2_keyboard_ins/m1_next_state<3>" is unused and has
+been removed.
+                                     Unused block "orion/orionkey/ps2_keyboard_ins/Mmux_m1_next_state71" (ROM)
+removed.
+                                      The signal "orion/orionkey/ps2_keyboard_ins/ps2_clk_s" is unused and has been
+removed.
+                                       Unused block "orion/orionkey/ps2_keyboard_ins/ps2_clk_s" (FF) removed.
+                                      The signal "orion/orionkey/ps2_keyboard_ins/m1_state<0>" is unused and has been
+removed.
+                                       Unused block "orion/orionkey/ps2_keyboard_ins/m1_state_0" (FF) removed.
+                                        The signal "orion/orionkey/ps2_keyboard_ins/m1_next_state<0>" is unused and has
+been removed.
+                                         Unused block "orion/orionkey/ps2_keyboard_ins/Mmux_m1_next_state2" (ROM)
+removed.
+                                          The signal "orion/orionkey/ps2_keyboard_ins/timer_60usec_done<11>" is unused and
+has been removed.
+                                           Unused block "orion/orionkey/ps2_keyboard_ins/timer_60usec_done<11>1" (ROM)
+removed.
+                                            The signal "orion/orionkey/ps2_keyboard_ins/timer_60usec_count<2>" is unused and
+has been removed.
+                                             Unused block "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_2" (SFF)
+removed.
+                                              The signal "orion/orionkey/ps2_keyboard_ins/timer_60usec_done_inv" is unused and
+has been removed.
+                                               Unused block "orion/orionkey/ps2_keyboard_ins/timer_60usec_done_inv1" (ROM)
+removed.
+                                                The signal "orion/orionkey/ps2_keyboard_ins/timer_60usec_done<11>1" is unused
+and has been removed.
+                                                 Unused block "orion/orionkey/ps2_keyboard_ins/timer_60usec_done<11>2" (ROM)
+removed.
+*The signal "orion/orionkey/ps2_keyboard_ins/timer_60usec_count<3>" is unused and
+has been removed.
+* Unused block "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_3" (SFF)
+removed.
+*  The signal "orion/orionkey/ps2_keyboard_ins/Result<3>1" is unused and has been
+removed.
+*   Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_xor<3>"
+(XOR) removed.
+*    The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<2>" is
+unused and has been removed.
+*     Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<2>"
+(MUX) removed.
+*      The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<1>" is
+unused and has been removed.
+*       Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<1>"
+(MUX) removed.
+*        The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<0>" is
+unused and has been removed.
+*         Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<0>"
+(MUX) removed.
+*          The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_lut<0>" is
+unused and has been removed.
+*           Unused block
+"orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_lut<0>_INV_0" (BUF)
+removed.
+*            The signal "orion/orionkey/ps2_keyboard_ins/timer_60usec_count<0>" is unused and
+has been removed.
+*             Unused block "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_0" (SFF)
+removed.
+*              The signal "orion/orionkey/ps2_keyboard_ins/Result<0>1" is unused and has been
+removed.
+*               Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_xor<0>"
+(XOR) removed.
+*              The signal "orion/orionkey/ps2_keyboard_ins/Mram__n16962_inv" is unused and has
+been removed.
+*               Unused block "orion/orionkey/ps2_keyboard_ins/Mram__n16962_inv1" (ROM) removed.
+*        The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<1>_rt"
+is unused and has been removed.
+*         Unused block
+"orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<1>_rt" (ROM)
+removed.
+*          The signal "orion/orionkey/ps2_keyboard_ins/timer_60usec_count<1>" is unused and
+has been removed.
+*           Unused block "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_1" (SFF)
+removed.
+*            The signal "orion/orionkey/ps2_keyboard_ins/Result<1>1" is unused and has been
+removed.
+*             Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_xor<1>"
+(XOR) removed.
+*      The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<2>_rt"
+is unused and has been removed.
+*       Unused block
+"orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<2>_rt" (ROM)
+removed.
+*    The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<3>_rt"
+is unused and has been removed.
+*     Unused block
+"orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<3>_rt" (ROM)
+removed.
+*The signal "orion/orionkey/ps2_keyboard_ins/timer_60usec_count<4>" is unused and
+has been removed.
+* Unused block "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_4" (SFF)
+removed.
+*  The signal "orion/orionkey/ps2_keyboard_ins/Result<4>" is unused and has been
+removed.
+*   Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_xor<4>"
+(XOR) removed.
+*    The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<3>" is
+unused and has been removed.
+*     Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<3>"
+(MUX) removed.
+*    The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<4>_rt"
+is unused and has been removed.
+*     Unused block
+"orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<4>_rt" (ROM)
+removed.
+*The signal "orion/orionkey/ps2_keyboard_ins/timer_60usec_count<5>" is unused and
+has been removed.
+* Unused block "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_5" (SFF)
+removed.
+*  The signal "orion/orionkey/ps2_keyboard_ins/Result<5>" is unused and has been
+removed.
+*   Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_xor<5>"
+(XOR) removed.
+*    The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<4>" is
+unused and has been removed.
+*     Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<4>"
+(MUX) removed.
+*    The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<5>_rt"
+is unused and has been removed.
+*     Unused block
+"orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<5>_rt" (ROM)
+removed.
+*The signal "orion/orionkey/ps2_keyboard_ins/timer_60usec_count<6>" is unused and
+has been removed.
+* Unused block "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_6" (SFF)
+removed.
+*  The signal "orion/orionkey/ps2_keyboard_ins/Result<6>" is unused and has been
+removed.
+*   Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_xor<6>"
+(XOR) removed.
+*    The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<5>" is
+unused and has been removed.
+*     Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<5>"
+(MUX) removed.
+*    The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<6>_rt"
+is unused and has been removed.
+*     Unused block
+"orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<6>_rt" (ROM)
+removed.
+*The signal "orion/orionkey/ps2_keyboard_ins/timer_60usec_count<10>" is unused
+and has been removed.
+* Unused block "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_10" (SFF)
+removed.
+*  The signal "orion/orionkey/ps2_keyboard_ins/Result<10>" is unused and has been
+removed.
+*   Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_xor<10>"
+(XOR) removed.
+*    The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<9>" is
+unused and has been removed.
+*     Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<9>"
+(MUX) removed.
+*      The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<8>" is
+unused and has been removed.
+*       Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<8>"
+(MUX) removed.
+*        The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<7>" is
+unused and has been removed.
+*         Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<7>"
+(MUX) removed.
+*          The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<6>" is
+unused and has been removed.
+*           Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<6>"
+(MUX) removed.
+*          The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<7>_rt"
+is unused and has been removed.
+*           Unused block
+"orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<7>_rt" (ROM)
+removed.
+*            The signal "orion/orionkey/ps2_keyboard_ins/timer_60usec_count<7>" is unused and
+has been removed.
+*             Unused block "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_7" (SFF)
+removed.
+*              The signal "orion/orionkey/ps2_keyboard_ins/Result<7>" is unused and has been
+removed.
+*               Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_xor<7>"
+(XOR) removed.
+*        The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<8>_rt"
+is unused and has been removed.
+*         Unused block
+"orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<8>_rt" (ROM)
+removed.
+*          The signal "orion/orionkey/ps2_keyboard_ins/timer_60usec_count<8>" is unused and
+has been removed.
+*           Unused block "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_8" (SFF)
+removed.
+*            The signal "orion/orionkey/ps2_keyboard_ins/Result<8>" is unused and has been
+removed.
+*             Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_xor<8>"
+(XOR) removed.
+*      The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<9>_rt"
+is unused and has been removed.
+*       Unused block
+"orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<9>_rt" (ROM)
+removed.
+*        The signal "orion/orionkey/ps2_keyboard_ins/timer_60usec_count<9>" is unused and
+has been removed.
+*         Unused block "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_9" (SFF)
+removed.
+*          The signal "orion/orionkey/ps2_keyboard_ins/Result<9>" is unused and has been
+removed.
+*           Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_xor<9>"
+(XOR) removed.
+*    The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<10>_rt"
+is unused and has been removed.
+*     Unused block
+"orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<10>_rt" (ROM)
+removed.
+                                              The signal "orion/orionkey/ps2_keyboard_ins/Result<2>1" is unused and has been
+removed.
+                                               Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_xor<2>"
+(XOR) removed.
+                                            The signal "orion/orionkey/ps2_keyboard_ins/timer_60usec_count<11>" is unused
+and has been removed.
+                                             Unused block "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_11" (SFF)
+removed.
+                                              The signal "orion/orionkey/ps2_keyboard_ins/Result<11>" is unused and has been
+removed.
+                                               Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_xor<11>"
+(XOR) removed.
+                                                The signal "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<10>" is
+unused and has been removed.
+                                                 Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_cy<10>"
+(MUX) removed.
+                                                The signal
+"orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_xor<11>_rt" is unused
+and has been removed.
+                                                 Unused block
+"orion/orionkey/ps2_keyboard_ins/Mcount_timer_60usec_count_xor<11>_rt" (ROM)
+removed.
+                            The signal "orion/orionkey/ps2_keyboard_ins/Result<0>" is unused and has been
+removed.
+                             Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_bit_count_xor<0>11_INV_0"
+(BUF) removed.
+                            The signal "orion/orionkey/ps2_keyboard_ins/Reset_OR_DriverANDClockEnable" is
+unused and has been removed.
+                             Unused block "orion/orionkey/ps2_keyboard_ins/Reset_OR_DriverANDClockEnable1"
+(ROM) removed.
+                              The signal "orion/orionkey/ps2_keyboard_ins/timer_60usec_done" is unused and has
+been removed.
+                               Unused block "orion/orionkey/ps2_keyboard_ins/timer_60usec_done<11>3" (ROM)
+removed.
+                          The signal "orion/orionkey/ps2_keyboard_ins/bit_count<1>" is unused and has been
+removed.
+                           Unused block "orion/orionkey/ps2_keyboard_ins/bit_count_1" (SFF) removed.
+                            The signal "orion/orionkey/ps2_keyboard_ins/Result<1>" is unused and has been
+removed.
+                             Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_bit_count_xor<1>11" (ROM)
+removed.
+                          The signal "orion/orionkey/ps2_keyboard_ins/bit_count<2>" is unused and has been
+removed.
+                           Unused block "orion/orionkey/ps2_keyboard_ins/bit_count_2" (SFF) removed.
+                            The signal "orion/orionkey/ps2_keyboard_ins/Result<2>" is unused and has been
+removed.
+                             Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_bit_count_xor<2>11" (ROM)
+removed.
+                          The signal "orion/orionkey/ps2_keyboard_ins/bit_count<3>" is unused and has been
+removed.
+                           Unused block "orion/orionkey/ps2_keyboard_ins/bit_count_3" (SFF) removed.
+                            The signal "orion/orionkey/ps2_keyboard_ins/Result<3>" is unused and has been
+removed.
+                             Unused block "orion/orionkey/ps2_keyboard_ins/Mcount_bit_count_xor<3>11" (ROM)
+removed.
+                        The signal "orion/orionkey/ps2_keyboard_ins/q<8>" is unused and has been
+removed.
+                         Unused block "orion/orionkey/ps2_keyboard_ins/q_8" (FF) removed.
+                          The signal "orion/orionkey/ps2_keyboard_ins/GND_21_o_GND_21_o_OR_358_o" is
+unused and has been removed.
+                           Unused block "orion/orionkey/ps2_keyboard_ins/GND_21_o_GND_21_o_OR_358_o1" (ROM)
+removed.
+                          The signal "orion/orionkey/ps2_keyboard_ins/Mshreg_q_8" is unused and has been
+removed.
+                      The signal "orion/orionkey/ps2_keyboard_ins/rx_scan_code<0>" is unused and has
+been removed.
+                       Unused block "orion/orionkey/ps2_keyboard_ins/rx_scan_code_0" (FF) removed.
+                        The signal "orion/orionkey/ps2_keyboard_ins/q<1>" is unused and has been
+removed.
+                         Unused block "orion/orionkey/ps2_keyboard_ins/q_1" (FF) removed.
+                          The signal "orion/orionkey/ps2_keyboard_ins/q<2>" is unused and has been
+removed.
+                           Unused block "orion/orionkey/ps2_keyboard_ins/q_2" (FF) removed.
+                            The signal "orion/orionkey/ps2_keyboard_ins/q<3>" is unused and has been
+removed.
+                             Unused block "orion/orionkey/ps2_keyboard_ins/q_3" (FF) removed.
+                              The signal "orion/orionkey/ps2_keyboard_ins/q<4>" is unused and has been
+removed.
+                               Unused block "orion/orionkey/ps2_keyboard_ins/q_4" (FF) removed.
+                                The signal "orion/orionkey/ps2_keyboard_ins/q<5>" is unused and has been
+removed.
+                                 Unused block "orion/orionkey/ps2_keyboard_ins/q_5" (FF) removed.
+                                  The signal "orion/orionkey/ps2_keyboard_ins/q<6>" is unused and has been
+removed.
+                                   Unused block "orion/orionkey/ps2_keyboard_ins/q_6" (FF) removed.
+                                    The signal "orion/orionkey/ps2_keyboard_ins/q<7>" is unused and has been
+removed.
+                                     Unused block "orion/orionkey/ps2_keyboard_ins/q_7" (FF) removed.
+                      The signal "orion/orionkey/ps2_keyboard_ins/rx_scan_code<2>" is unused and has
+been removed.
+                       Unused block "orion/orionkey/ps2_keyboard_ins/rx_scan_code_2" (FF) removed.
+                      The signal "orion/orionkey/ps2_keyboard_ins/rx_scan_code<6>" is unused and has
+been removed.
+                       Unused block "orion/orionkey/ps2_keyboard_ins/rx_scan_code_6" (FF) removed.
+                      The signal "orion/orionkey/ps2_keyboard_ins/rx_scan_code<5>" is unused and has
+been removed.
+                       Unused block "orion/orionkey/ps2_keyboard_ins/rx_scan_code_5" (FF) removed.
+                      The signal "N26" is unused and has been removed.
+                       Unused block "orion/orionkey/ps2q[7]_PWR_13_o_equal_36_o<7>1_SW0" (ROM) removed.
+                        The signal "orion/orionkey/ps2_keyboard_ins/rx_scan_code<1>" is unused and has
+been removed.
+                         Unused block "orion/orionkey/ps2_keyboard_ins/rx_scan_code_1" (FF) removed.
+                        The signal "orion/orionkey/ps2_keyboard_ins/rx_scan_code<3>" is unused and has
+been removed.
+                         Unused block "orion/orionkey/ps2_keyboard_ins/rx_scan_code_3" (FF) removed.
+                    The signal "orion/orionkey/ps2_keyboard_ins/rx_scan_code<4>" is unused and has
+been removed.
+                     Unused block "orion/orionkey/ps2_keyboard_ins/rx_scan_code_4" (FF) removed.
+                    The signal "orion/orionkey/state_FSM_FFd1" is unused and has been removed.
+                     Unused block "orion/orionkey/state_FSM_FFd1" (FF) removed.
+                      The signal "orion/orionkey/state_FSM_FFd1-In" is unused and has been removed.
+                       Unused block "orion/orionkey/state_FSM_FFd1-In1" (ROM) removed.
+                    The signal "orion/orionkey/state_FSM_FFd2" is unused and has been removed.
+                     Unused block "orion/orionkey/state_FSM_FFd2" (FF) removed.
+                      The signal "orion/orionkey/state_FSM_FFd2-In" is unused and has been removed.
+                       Unused block "orion/orionkey/state_FSM_FFd2-In1" (ROM) removed.
+                The signal "orion/orionkey/ps2_keyboard_ins/m2_state" is unused and has been
+removed.
+                 Unused block "orion/orionkey/ps2_keyboard_ins/m2_state" (FF) removed.
+                  The signal "orion/orionkey/ps2_keyboard_ins/m2_next_state" is unused and has
+been removed.
+                   Unused block "orion/orionkey/ps2_keyboard_ins/Mmux_m2_next_state11" (ROM)
+removed.
+                    The signal "orion/orionkey/ps2rden" is unused and has been removed.
+                     Unused block "orion/orionkey/ps2rden" (FF) removed.
+                      The signal "orion/orionkey/ps2rden_rstpot" is unused and has been removed.
+                       Unused block "orion/orionkey/ps2rden_rstpot" (ROM) removed.
+        The signal "N16" is unused and has been removed.
+         Unused block "orion/orionkey/_n0646_inv_SW0" (ROM) removed.
+The signal "orion/orionkey/turbo2" is unused and has been removed.
+ Unused block "orion/orionkey/turbo2" (FF) removed.
+  The signal "orion/orionkey/turbo2_rstpot" is unused and has been removed.
+   Unused block "orion/orionkey/turbo2_rstpot" (ROM) removed.
+    The signal "orion/orionkey/_n0878_inv" is unused and has been removed.
+     Unused block "orion/orionkey/_n0878_inv" (ROM) removed.
+      The signal "N20" is unused and has been removed.
+       Unused block "orion/orionkey/_n0878_inv_SW0" (ROM) removed.
+The signal "orion/orionkey/turbo5" is unused and has been removed.
+ Unused block "orion/orionkey/turbo5" (FF) removed.
+  The signal "orion/orionkey/turbo5_rstpot" is unused and has been removed.
+   Unused block "orion/orionkey/turbo5_rstpot" (ROM) removed.
+    The signal "orion/orionkey/_n0847_inv" is unused and has been removed.
+     Unused block "orion/orionkey/_n0847_inv" (ROM) removed.
+      The signal "N22" is unused and has been removed.
+       Unused block "orion/orionkey/_n0847_inv_SW0" (ROM) removed.
+The signal "orion/orionkey/turbo10" is unused and has been removed.
+ Unused block "orion/orionkey/turbo10" (FF) removed.
+  The signal "orion/orionkey/turbo10_rstpot" is unused and has been removed.
+   Unused block "orion/orionkey/turbo10_rstpot" (ROM) removed.
+    The signal "orion/orionkey/_n0816_inv" is unused and has been removed.
+     Unused block "orion/orionkey/_n0816_inv" (ROM) removed.
+      The signal "N18" is unused and has been removed.
+       Unused block "orion/orionkey/_n0816_inv_SW0" (ROM) removed.
+The signal "orion/orionkey/res_key" is unused and has been removed.
+ Unused block "orion/orionkey/res_key" (FF) removed.
+  The signal "orion/orionkey/res_key_rstpot" is unused and has been removed.
+   Unused block "orion/orionkey/res_key_rstpot" (ROM) removed.
+    The signal "orion/orionkey/_n0615_inv" is unused and has been removed.
+     Unused block "orion/orionkey/_n0615_inv" (ROM) removed.
+      The signal "N24" is unused and has been removed.
+       Unused block "orion/orionkey/_n0615_inv_SW0" (ROM) removed.
+The signal "orion/turbo_reg<0>" is unused and has been removed.
+ Unused block "orion/turbo_reg_0" (FF) removed.
+  The signal "orion/turbo_reg_0_rstpot1" is unused and has been removed.
+   Unused block "orion/turbo_reg_0_rstpot1" (ROM) removed.
+The signal "orion/turbo_reg<1>" is unused and has been removed.
+ Unused block "orion/turbo_reg_1" (FF) removed.
+  The signal "orion/turbo_reg_1_rstpot1" is unused and has been removed.
+   Unused block "orion/turbo_reg_1_rstpot1" (ROM) removed.
+The signal "orion/clk_cpu" is unused and has been removed.
+ Unused block "orion/clk_cpu" (FF) removed.
+  The signal "orion/clk_cpu_rstpot" is unused and has been removed.
+   Unused block "orion/clk_cpu_rstpot" (ROM) removed.
+The signal "orion/orionkey/ps2_keyboard_ins/ps2_data_s" is unused and has been
+removed.
+ Unused block "orion/orionkey/ps2_keyboard_ins/ps2_data_s" (FF) removed.
+The signal "orion/t80inst/RESET_n_inv" is unused and has been removed.
+ Unused block "orion/res_n_INV_113_o1" (ROM) removed.
+The signal "orion/t80inst/u0/TState<0>" is unused and has been removed.
+ Unused block "orion/t80inst/u0/TState_0" (FF) removed.
+  The signal "orion/t80inst/u0/_n1574_inv" is unused and has been removed.
+   Unused block "orion/t80inst/u0/_n1574_inv1" (ROM) removed.
+    The signal "orion/t80inst/u0/TState<1>" is unused and has been removed.
+     Unused block "orion/t80inst/u0/TState_1" (FF) removed.
+      The signal "orion/t80inst/u0/Mcount_TState1" is unused and has been removed.
+       Unused block "orion/t80inst/u0/Mcount_TState_xor<1>11" (ROM) removed.
+  The signal "orion/t80inst/u0/Mcount_TState" is unused and has been removed.
+   Unused block "orion/t80inst/u0/Mcount_TState_xor<0>11_INV_0" (BUF) removed.
+The signal "orion/t80inst/u0/_n1548_inv" is unused and has been removed.
+ Unused block "orion/t80inst/u0/_n1548_inv1" (ROM) removed.
+The signal "orion/t80inst/u0/BusB<0>" is unused and has been removed.
+ Unused block "orion/t80inst/u0/BusB_0" (FF) removed.
+  The signal "orion/t80inst/u0/RegBusB<8>" is unused and has been removed.
+The signal "orion/t80inst/u0/BusB<1>" is unused and has been removed.
+ Unused block "orion/t80inst/u0/BusB_1" (FF) removed.
+The signal "orion/t80inst/u0/BusB<2>" is unused and has been removed.
+ Unused block "orion/t80inst/u0/BusB_2" (FF) removed.
+The signal "orion/t80inst/u0/BusB<3>" is unused and has been removed.
+ Unused block "orion/t80inst/u0/BusB_3" (FF) removed.
+The signal "orion/t80inst/u0/BusB<4>" is unused and has been removed.
+ Unused block "orion/t80inst/u0/BusB_4" (FF) removed.
+The signal "orion/t80inst/u0/BusB<5>" is unused and has been removed.
+ Unused block "orion/t80inst/u0/BusB_5" (FF) removed.
+The signal "orion/t80inst/u0/BusB<6>" is unused and has been removed.
+ Unused block "orion/t80inst/u0/BusB_6" (FF) removed.
+The signal "orion/t80inst/u0/BusB<7>" is unused and has been removed.
+ Unused block "orion/t80inst/u0/BusB_7" (FF) removed.
+The signal "orion/t80inst/u0/DO<7>" is unused and has been removed.
+ Unused block "orion/t80inst/u0/DO_7" (FF) removed.
+The signal "orion/t80inst/u0/DO<6>" is unused and has been removed.
+ Unused block "orion/t80inst/u0/DO_6" (FF) removed.
+The signal "orion/t80inst/u0/DO<5>" is unused and has been removed.
+ Unused block "orion/t80inst/u0/DO_5" (FF) removed.
+The signal "orion/t80inst/u0/DO<4>" is unused and has been removed.
+ Unused block "orion/t80inst/u0/DO_4" (FF) removed.
+The signal "orion/t80inst/u0/DO<3>" is unused and has been removed.
+ Unused block "orion/t80inst/u0/DO_3" (FF) removed.
+The signal "orion/t80inst/u0/DO<2>" is unused and has been removed.
+ Unused block "orion/t80inst/u0/DO_2" (FF) removed.
+The signal "orion/t80inst/u0/DO<1>" is unused and has been removed.
+ Unused block "orion/t80inst/u0/DO_1" (FF) removed.
+The signal "orion/t80inst/u0/DO<0>" is unused and has been removed.
+ Unused block "orion/t80inst/u0/DO_0" (FF) removed.
+Unused block "SRAM_DQ_0_IOBUF/OBUFT" (TRI) removed.
+Unused block "SRAM_DQ_1_IOBUF/OBUFT" (TRI) removed.
+Unused block "SRAM_DQ_2_IOBUF/OBUFT" (TRI) removed.
+Unused block "SRAM_DQ_3_IOBUF/OBUFT" (TRI) removed.
+Unused block "SRAM_DQ_4_IOBUF/OBUFT" (TRI) removed.
+Unused block "SRAM_DQ_5_IOBUF/OBUFT" (TRI) removed.
+Unused block "SRAM_DQ_6_IOBUF/OBUFT" (TRI) removed.
+Unused block "SRAM_DQ_7_IOBUF/OBUFT" (TRI) removed.
+Unused block "orion/orionkey/ps2_keyboard_ins/Mshreg_q_8" (SRLC16E) removed.
+Unused block
+"orion/romd_altera/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.
+cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram" (RAMB16BWER) removed.
+Unused block
+"orion/romd_altera/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.
+cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram" (RAMB16BWER) removed.
+Unused block "orion/romd_altera/XST_GND" (ZERO) removed.
+Unused block "orion/romd_altera/XST_VCC" (ONE) removed.
+Unused block "orion/t80inst/u0/Regs/Mram_RegsH2" (RAM16X1D) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| CLK50                              | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
+| SD_CLK                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SD_CMD                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SD_DAT                             | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
+| SD_DAT3                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SOUND_L                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SOUND_R                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<0>                       | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<1>                       | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<2>                       | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<3>                       | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<4>                       | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<5>                       | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<6>                       | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<7>                       | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<8>                       | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<9>                       | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<10>                      | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<11>                      | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<12>                      | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<13>                      | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<14>                      | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<15>                      | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<16>                      | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<17>                      | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<18>                      | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<19>                      | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_ADDR<20>                      | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_CE_N                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SRAM_DQ<0>                         | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
+| SRAM_DQ<1>                         | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
+| SRAM_DQ<2>                         | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
+| SRAM_DQ<3>                         | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
+| SRAM_DQ<4>                         | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
+| SRAM_DQ<5>                         | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
+| SRAM_DQ<6>                         | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
+| SRAM_DQ<7>                         | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
+| SRAM_WE_N                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| STD_B_N                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| STD_N                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| VGA_B<0>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| VGA_B<1>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| VGA_B<2>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| VGA_G<0>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| VGA_G<1>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| VGA_G<2>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| VGA_HS                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| VGA_R<0>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| VGA_R<1>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| VGA_R<2>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| VGA_VS                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.
