@@ -50,6 +50,7 @@ signal rxd : std_logic;
 signal txd : std_logic;
 signal rom_we : std_logic;
 signal dac_out : std_logic;
+signal d : std_logic_vector(7 downto 0);
 
 COMPONENT vga_test IS
 PORT (
@@ -95,11 +96,14 @@ VGA_G <= "110" when i='1' and g='1' else "010" when g='1' else "000";
 VGA_B <= "110" when i='1' and b='1' else "010" when b='1' else "000";
 SOUND_L <= dac_out;
 SOUND_R <= dac_out;
-SRAM_ADDR(20 downto 19) <= (others => '0');
+SRAM_ADDR(20 downto 18) <= (others => '0');
 SRAM_WE_N <= ram_we0;
 SRAM_CE_N <= '0';
 STD_N <= '0';
 STD_B_N <= '1';
+SRAM_DQ <= d(7 downto 0) when ram_we0 = '0' else "ZZZZZZZZ";
+d <= SRAM_DQ when ram_oe0 = '0' else "ZZZZZZZZ";
+wait_n <= '1';
 
 orion:vga_test
 port map (
@@ -113,8 +117,8 @@ port map (
 	sound => sound,
 	a => SRAM_ADDR(16 downto 0),
 	a17 => SRAM_ADDR(17),
-	a18 => SRAM_ADDR(18),
-	d => SRAM_DQ,
+	a18 => open,
+	d => d(7 downto 0),
 	wr => wr,
 	rd => rd,
 	mreq => mreq,

@@ -1,18 +1,29 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue May 15 08:15:38 2018
+// Written by: Map P.20131013 on Tue May 15 21:24:14 2018
 //! **************************************************************************
 
 SCHEMATIC START;
-PIN clocks/clkout1_buf_pin<1> = BEL "clocks/clkout1_buf" PINNAME O;
-PIN "clocks/clkout1_buf_pin<1>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "SD_DAT3" LOCATE = SITE "P59" LEVEL 1;
+COMP "VGA_B<0>" LOCATE = SITE "P88" LEVEL 1;
+COMP "VGA_B<1>" LOCATE = SITE "P92" LEVEL 1;
+COMP "VGA_B<2>" LOCATE = SITE "P93" LEVEL 1;
+COMP "VGA_G<0>" LOCATE = SITE "P82" LEVEL 1;
+COMP "VGA_G<1>" LOCATE = SITE "P83" LEVEL 1;
+COMP "VGA_G<2>" LOCATE = SITE "P84" LEVEL 1;
+COMP "VGA_R<0>" LOCATE = SITE "P79" LEVEL 1;
+COMP "VGA_R<1>" LOCATE = SITE "P80" LEVEL 1;
+COMP "VGA_R<2>" LOCATE = SITE "P81" LEVEL 1;
+COMP "SOUND_L" LOCATE = SITE "P10" LEVEL 1;
+COMP "SOUND_R" LOCATE = SITE "P9" LEVEL 1;
+COMP "STD_B_N" LOCATE = SITE "P67" LEVEL 1;
+COMP "SRAM_CE_N" LOCATE = SITE "P144" LEVEL 1;
+COMP "SRAM_WE_N" LOCATE = SITE "P121" LEVEL 1;
+COMP "SRAM_DQ<0>" LOCATE = SITE "P132" LEVEL 1;
 COMP "SRAM_DQ<1>" LOCATE = SITE "P127" LEVEL 1;
 COMP "SRAM_DQ<2>" LOCATE = SITE "P124" LEVEL 1;
 COMP "SRAM_DQ<3>" LOCATE = SITE "P123" LEVEL 1;
-COMP "VGA_R<0>" LOCATE = SITE "P79" LEVEL 1;
 COMP "SRAM_DQ<4>" LOCATE = SITE "P115" LEVEL 1;
-COMP "VGA_R<1>" LOCATE = SITE "P80" LEVEL 1;
 COMP "SRAM_DQ<5>" LOCATE = SITE "P117" LEVEL 1;
-COMP "VGA_R<2>" LOCATE = SITE "P81" LEVEL 1;
 COMP "SRAM_DQ<6>" LOCATE = SITE "P119" LEVEL 1;
 COMP "SRAM_DQ<7>" LOCATE = SITE "P126" LEVEL 1;
 COMP "CLK50" LOCATE = SITE "P55" LEVEL 1;
@@ -21,41 +32,42 @@ COMP "SRAM_ADDR<10>" LOCATE = SITE "P104" LEVEL 1;
 COMP "SRAM_ADDR<11>" LOCATE = SITE "P102" LEVEL 1;
 COMP "SRAM_ADDR<12>" LOCATE = SITE "P101" LEVEL 1;
 COMP "SRAM_ADDR<20>" LOCATE = SITE "P143" LEVEL 1;
-COMP "VGA_G<0>" LOCATE = SITE "P82" LEVEL 1;
-COMP "SRAM_WE_N" LOCATE = SITE "P121" LEVEL 1;
 COMP "SRAM_ADDR<13>" LOCATE = SITE "P100" LEVEL 1;
-COMP "VGA_G<1>" LOCATE = SITE "P83" LEVEL 1;
 COMP "SRAM_ADDR<14>" LOCATE = SITE "P111" LEVEL 1;
-COMP "VGA_G<2>" LOCATE = SITE "P84" LEVEL 1;
 COMP "SRAM_ADDR<15>" LOCATE = SITE "P131" LEVEL 1;
 COMP "SRAM_ADDR<16>" LOCATE = SITE "P138" LEVEL 1;
 COMP "SRAM_ADDR<17>" LOCATE = SITE "P140" LEVEL 1;
 COMP "SRAM_ADDR<18>" LOCATE = SITE "P142" LEVEL 1;
-COMP "SD_DAT3" LOCATE = SITE "P59" LEVEL 1;
 COMP "SRAM_ADDR<19>" LOCATE = SITE "P105" LEVEL 1;
-COMP "SRAM_ADDR<0>" LOCATE = SITE "P141" LEVEL 1;
 COMP "SD_DAT" LOCATE = SITE "P78" LEVEL 1;
+COMP "SD_CMD" LOCATE = SITE "P74" LEVEL 1;
+COMP "SD_CLK" LOCATE = SITE "P75" LEVEL 1;
+COMP "VGA_HS" LOCATE = SITE "P87" LEVEL 1;
+COMP "VGA_VS" LOCATE = SITE "P85" LEVEL 1;
+COMP "SRAM_ADDR<0>" LOCATE = SITE "P141" LEVEL 1;
 COMP "SRAM_ADDR<1>" LOCATE = SITE "P139" LEVEL 1;
 COMP "SRAM_ADDR<2>" LOCATE = SITE "P137" LEVEL 1;
-COMP "SD_CMD" LOCATE = SITE "P74" LEVEL 1;
 COMP "SRAM_ADDR<3>" LOCATE = SITE "P134" LEVEL 1;
 COMP "SRAM_ADDR<4>" LOCATE = SITE "P133" LEVEL 1;
 COMP "SRAM_ADDR<5>" LOCATE = SITE "P120" LEVEL 1;
-COMP "SD_CLK" LOCATE = SITE "P75" LEVEL 1;
 COMP "SRAM_ADDR<6>" LOCATE = SITE "P118" LEVEL 1;
 COMP "SRAM_ADDR<7>" LOCATE = SITE "P116" LEVEL 1;
 COMP "SRAM_ADDR<8>" LOCATE = SITE "P114" LEVEL 1;
 COMP "SRAM_ADDR<9>" LOCATE = SITE "P112" LEVEL 1;
-COMP "SOUND_L" LOCATE = SITE "P10" LEVEL 1;
-COMP "SRAM_CE_N" LOCATE = SITE "P144" LEVEL 1;
-COMP "SOUND_R" LOCATE = SITE "P9" LEVEL 1;
-COMP "VGA_HS" LOCATE = SITE "P87" LEVEL 1;
-COMP "STD_B_N" LOCATE = SITE "P67" LEVEL 1;
-COMP "VGA_B<0>" LOCATE = SITE "P88" LEVEL 1;
-COMP "VGA_B<1>" LOCATE = SITE "P92" LEVEL 1;
-COMP "VGA_B<2>" LOCATE = SITE "P93" LEVEL 1;
-COMP "VGA_VS" LOCATE = SITE "P85" LEVEL 1;
-COMP "SRAM_DQ<0>" LOCATE = SITE "P132" LEVEL 1;
+COMP "PS2_DAT" LOCATE = SITE "P98" LEVEL 1;
+COMP "PS2_CLK" LOCATE = SITE "P99" LEVEL 1;
+PIN clocks/clkout1_buf_pin<1> = BEL "clocks/clkout1_buf" PINNAME O;
+PIN "clocks/clkout1_buf_pin<1>" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN
+        orion/romd_altera/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram_pins<28>
+        = BEL
+        "orion/romd_altera/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        orion/romd_altera/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram_pins<28>
+        = BEL
+        "orion/romd_altera/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram"
+        PINNAME CLKA;
 TIMEGRP clocks_clkfx = BEL "clocks/clkout1_buf" BEL "orion/hcnt_9" BEL
         "orion/hcnt_8" BEL "orion/hcnt_7" BEL "orion/hcnt_6" BEL
         "orion/hcnt_5" BEL "orion/hcnt_4" BEL "orion/hcnt_3" BEL
@@ -63,14 +75,201 @@ TIMEGRP clocks_clkfx = BEL "clocks/clkout1_buf" BEL "orion/hcnt_9" BEL
         "orion/dac_buf_7" BEL "orion/dac_buf_6" BEL "orion/dac_buf_5" BEL
         "orion/dac_buf_4" BEL "orion/dac_buf_3" BEL "orion/dac_buf_2" BEL
         "orion/dac_buf_1" BEL "orion/dac_buf_0" BEL "orion/dac_cnt_7" BEL
-        "orion/dac_cnt_6" BEL "orion/vid2_7" BEL "orion/vid2_6" BEL
+        "orion/dac_cnt_6" BEL "orion/int_cnt_18" BEL "orion/int_cnt_17" BEL
+        "orion/int_cnt_16" BEL "orion/int_cnt_15" BEL "orion/int_cnt_14" BEL
+        "orion/int_cnt_13" BEL "orion/int_cnt_12" BEL "orion/int_cnt_11" BEL
+        "orion/int_cnt_10" BEL "orion/int_cnt_9" BEL "orion/int_cnt_8" BEL
+        "orion/int_cnt_7" BEL "orion/i_clock_DFF_74" BEL "orion/red" BEL
+        "orion/green" BEL "orion/blue" BEL "orion/dac_out" BEL "orion/vid3_7"
+        BEL "orion/vid3_6" BEL "orion/vid3_5" BEL "orion/vid3_4" BEL
+        "orion/vid3_3" BEL "orion/vid3_2" BEL "orion/vid3_1" BEL
+        "orion/vid3_0" BEL "orion/vid2_7" BEL "orion/vid2_6" BEL
         "orion/vid2_5" BEL "orion/vid2_4" BEL "orion/vid2_3" BEL
         "orion/vid2_2" BEL "orion/vid2_1" BEL "orion/vid2_0" BEL
-        "orion/vid0_7" BEL "orion/vid0_6" BEL "orion/vid0_5" BEL
-        "orion/vid0_4" BEL "orion/vid0_3" BEL "orion/vid0_2" BEL
-        "orion/vid0_1" BEL "orion/vid0_0" BEL "orion/blank1" BEL
-        "orion/i_clock_DFF_74" BEL "orion/green" BEL "orion/dac_out" BEL
-        "orion/blank" BEL "orion/vsync" BEL "orion/hsync" BEL "SRAM_ADDR<16>";
+        "orion/vid1_7" BEL "orion/vid1_6" BEL "orion/vid1_5" BEL
+        "orion/vid1_4" BEL "orion/vid1_3" BEL "orion/vid1_2" BEL
+        "orion/vid1_1" BEL "orion/vid1_0" BEL "orion/vid0_7" BEL
+        "orion/vid0_6" BEL "orion/vid0_5" BEL "orion/vid0_4" BEL
+        "orion/vid0_3" BEL "orion/vid0_2" BEL "orion/vid0_1" BEL
+        "orion/vid0_0" BEL "orion/vector_2" BEL "orion/vector_1" BEL
+        "orion/clk_cpu" BEL "orion/turbo_reg_1" BEL "orion/turbo_reg_0" BEL
+        "orion/blank1" BEL "orion/orionkey/state_FSM_FFd2" BEL
+        "orion/orionkey/state_FSM_FFd3" BEL "orion/orionkey/state_FSM_FFd1"
+        BEL "orion/orionkey/state_FSM_FFd4" BEL "orion/orionkey/prefix_1" BEL
+        "orion/orionkey/prefix_0" BEL "orion/orionkey/rk_kb_7" BEL
+        "orion/orionkey/rk_kb_6" BEL "orion/orionkey/rk_kb_5" BEL
+        "orion/orionkey/rk_kb_4" BEL "orion/orionkey/rk_kb_3" BEL
+        "orion/orionkey/rk_kb_2" BEL "orion/orionkey/rk_kb_1" BEL
+        "orion/orionkey/rk_kb_0" BEL "orion/orionkey/keymatrix_7_63" BEL
+        "orion/orionkey/keymatrix_7_62" BEL "orion/orionkey/keymatrix_7_61"
+        BEL "orion/orionkey/keymatrix_7_60" BEL
+        "orion/orionkey/keymatrix_7_59" BEL "orion/orionkey/keymatrix_7_58"
+        BEL "orion/orionkey/keymatrix_7_57" BEL
+        "orion/orionkey/keymatrix_7_56" BEL "orion/orionkey/keymatrix_7_55"
+        BEL "orion/orionkey/keymatrix_7_54" BEL
+        "orion/orionkey/keymatrix_7_53" BEL "orion/orionkey/keymatrix_7_52"
+        BEL "orion/orionkey/keymatrix_7_51" BEL
+        "orion/orionkey/keymatrix_7_50" BEL "orion/orionkey/keymatrix_7_49"
+        BEL "orion/orionkey/keymatrix_7_48" BEL
+        "orion/orionkey/keymatrix_7_47" BEL "orion/orionkey/keymatrix_7_46"
+        BEL "orion/orionkey/keymatrix_7_45" BEL
+        "orion/orionkey/keymatrix_7_44" BEL "orion/orionkey/keymatrix_7_43"
+        BEL "orion/orionkey/keymatrix_7_42" BEL
+        "orion/orionkey/keymatrix_7_41" BEL "orion/orionkey/keymatrix_7_40"
+        BEL "orion/orionkey/keymatrix_7_39" BEL
+        "orion/orionkey/keymatrix_7_38" BEL "orion/orionkey/keymatrix_7_37"
+        BEL "orion/orionkey/keymatrix_7_36" BEL
+        "orion/orionkey/keymatrix_7_35" BEL "orion/orionkey/keymatrix_7_34"
+        BEL "orion/orionkey/keymatrix_7_33" BEL
+        "orion/orionkey/keymatrix_7_32" BEL "orion/orionkey/keymatrix_7_31"
+        BEL "orion/orionkey/keymatrix_7_30" BEL
+        "orion/orionkey/keymatrix_7_29" BEL "orion/orionkey/keymatrix_7_28"
+        BEL "orion/orionkey/keymatrix_7_27" BEL
+        "orion/orionkey/keymatrix_7_26" BEL "orion/orionkey/keymatrix_7_25"
+        BEL "orion/orionkey/keymatrix_7_24" BEL
+        "orion/orionkey/keymatrix_7_23" BEL "orion/orionkey/keymatrix_7_22"
+        BEL "orion/orionkey/keymatrix_7_21" BEL
+        "orion/orionkey/keymatrix_7_20" BEL "orion/orionkey/keymatrix_7_19"
+        BEL "orion/orionkey/keymatrix_7_18" BEL
+        "orion/orionkey/keymatrix_7_17" BEL "orion/orionkey/keymatrix_7_16"
+        BEL "orion/orionkey/keymatrix_7_15" BEL
+        "orion/orionkey/keymatrix_7_14" BEL "orion/orionkey/keymatrix_7_13"
+        BEL "orion/orionkey/keymatrix_7_12" BEL
+        "orion/orionkey/keymatrix_7_11" BEL "orion/orionkey/keymatrix_7_10"
+        BEL "orion/orionkey/keymatrix_7_9" BEL "orion/orionkey/keymatrix_7_8"
+        BEL "orion/orionkey/keymatrix_7_7" BEL "orion/orionkey/keymatrix_7_6"
+        BEL "orion/orionkey/keymatrix_7_5" BEL "orion/orionkey/keymatrix_7_4"
+        BEL "orion/orionkey/keymatrix_7_3" BEL "orion/orionkey/keymatrix_7_2"
+        BEL "orion/orionkey/keymatrix_7_1" BEL "orion/orionkey/keymatrix_7_0"
+        BEL "orion/orionkey/shift" BEL "orion/orionkey/ps2rden" BEL
+        "orion/orionkey/press_release" BEL "orion/orionkey/rom" BEL
+        "orion/orionkey/turbo5" BEL "orion/orionkey/turbo10" BEL
+        "orion/orionkey/turbo2" BEL "orion/orionkey/keyb_int" BEL
+        "orion/orionkey/strobe" BEL "orion/orionkey/cpm" BEL
+        "orion/orionkey/res_key" BEL "orion/orionkey/ex_code" BEL
+        "orion/orionkey/caps" BEL "orion/orionkey/ctrl" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_5usec_count_7" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_5usec_count_6" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_5usec_count_5" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_5usec_count_4" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_5usec_count_3" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_5usec_count_2" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_5usec_count_1" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_5usec_count_0" BEL
+        "orion/orionkey/ps2_keyboard_ins/bit_count_3" BEL
+        "orion/orionkey/ps2_keyboard_ins/bit_count_2" BEL
+        "orion/orionkey/ps2_keyboard_ins/bit_count_1" BEL
+        "orion/orionkey/ps2_keyboard_ins/bit_count_0" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_11" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_10" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_9" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_8" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_7" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_6" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_5" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_4" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_3" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_2" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_1" BEL
+        "orion/orionkey/ps2_keyboard_ins/timer_60usec_count_0" BEL
+        "orion/orionkey/ps2_keyboard_ins/rx_scan_code_7" BEL
+        "orion/orionkey/ps2_keyboard_ins/rx_scan_code_6" BEL
+        "orion/orionkey/ps2_keyboard_ins/rx_scan_code_5" BEL
+        "orion/orionkey/ps2_keyboard_ins/rx_scan_code_4" BEL
+        "orion/orionkey/ps2_keyboard_ins/rx_scan_code_3" BEL
+        "orion/orionkey/ps2_keyboard_ins/rx_scan_code_2" BEL
+        "orion/orionkey/ps2_keyboard_ins/rx_scan_code_1" BEL
+        "orion/orionkey/ps2_keyboard_ins/rx_scan_code_0" BEL
+        "orion/orionkey/ps2_keyboard_ins/m1_state_3" BEL
+        "orion/orionkey/ps2_keyboard_ins/m1_state_2" BEL
+        "orion/orionkey/ps2_keyboard_ins/m1_state_1" BEL
+        "orion/orionkey/ps2_keyboard_ins/m1_state_0" BEL
+        "orion/orionkey/ps2_keyboard_ins/q_7" BEL
+        "orion/orionkey/ps2_keyboard_ins/q_6" BEL
+        "orion/orionkey/ps2_keyboard_ins/q_5" BEL
+        "orion/orionkey/ps2_keyboard_ins/q_4" BEL
+        "orion/orionkey/ps2_keyboard_ins/q_3" BEL
+        "orion/orionkey/ps2_keyboard_ins/q_2" BEL
+        "orion/orionkey/ps2_keyboard_ins/q_1" BEL
+        "orion/orionkey/ps2_keyboard_ins/ps2_clk_s" BEL
+        "orion/orionkey/ps2_keyboard_ins/ps2_data_s" BEL
+        "orion/orionkey/ps2_keyboard_ins/m2_state" BEL "orion/transm/state_3"
+        BEL "orion/transm/state_2" BEL "orion/transm/state_1" BEL
+        "orion/transm/state_0" BEL "orion/transm/BaudGeneratorAcc_16" BEL
+        "orion/transm/BaudGeneratorAcc_15" BEL
+        "orion/transm/BaudGeneratorAcc_14" BEL
+        "orion/transm/BaudGeneratorAcc_13" BEL
+        "orion/transm/BaudGeneratorAcc_12" BEL
+        "orion/transm/BaudGeneratorAcc_11" BEL
+        "orion/transm/BaudGeneratorAcc_10" BEL
+        "orion/transm/BaudGeneratorAcc_9" BEL
+        "orion/transm/BaudGeneratorAcc_8" BEL
+        "orion/transm/BaudGeneratorAcc_7" BEL
+        "orion/transm/BaudGeneratorAcc_6" BEL
+        "orion/transm/BaudGeneratorAcc_5" BEL
+        "orion/transm/BaudGeneratorAcc_4" BEL
+        "orion/transm/BaudGeneratorAcc_3" BEL
+        "orion/transm/BaudGeneratorAcc_2" BEL
+        "orion/transm/BaudGeneratorAcc_1" BEL "orion/t80inst/DI_Reg_7" BEL
+        "orion/t80inst/DI_Reg_6" BEL "orion/t80inst/DI_Reg_5" BEL
+        "orion/t80inst/DI_Reg_4" BEL "orion/t80inst/DI_Reg_3" BEL
+        "orion/t80inst/DI_Reg_2" BEL "orion/t80inst/DI_Reg_1" BEL
+        "orion/t80inst/DI_Reg_0" BEL "orion/t80inst/u0/IR_7" BEL
+        "orion/t80inst/u0/IR_6" BEL "orion/t80inst/u0/IR_5" BEL
+        "orion/t80inst/u0/IR_4" BEL "orion/t80inst/u0/IR_3" BEL
+        "orion/t80inst/u0/IR_2" BEL "orion/t80inst/u0/IR_1" BEL
+        "orion/t80inst/u0/IR_0" BEL "orion/receiver/RxD_cnt_inv_1" BEL
+        "orion/receiver/RxD_cnt_inv_0" BEL "orion/receiver/state_3" BEL
+        "orion/receiver/state_2" BEL "orion/receiver/state_1" BEL
+        "orion/receiver/state_0" BEL "orion/receiver/bit_spacing_3" BEL
+        "orion/receiver/bit_spacing_2" BEL "orion/receiver/bit_spacing_1" BEL
+        "orion/receiver/bit_spacing_0" BEL "orion/receiver/RxD_bit_inv" BEL
+        "orion/receiver/Baud8GeneratorAcc_16" BEL
+        "orion/receiver/Baud8GeneratorAcc_15" BEL
+        "orion/receiver/Baud8GeneratorAcc_14" BEL
+        "orion/receiver/Baud8GeneratorAcc_13" BEL
+        "orion/receiver/Baud8GeneratorAcc_12" BEL
+        "orion/receiver/Baud8GeneratorAcc_11" BEL
+        "orion/receiver/Baud8GeneratorAcc_10" BEL
+        "orion/receiver/Baud8GeneratorAcc_9" BEL
+        "orion/receiver/Baud8GeneratorAcc_8" BEL
+        "orion/receiver/Baud8GeneratorAcc_7" BEL
+        "orion/receiver/Baud8GeneratorAcc_6" BEL
+        "orion/receiver/Baud8GeneratorAcc_5" BEL
+        "orion/receiver/Baud8GeneratorAcc_4" BEL
+        "orion/receiver/Baud8GeneratorAcc_3" BEL
+        "orion/receiver/Baud8GeneratorAcc_2" BEL
+        "orion/receiver/Baud8GeneratorAcc_1" BEL
+        "orion/receiver/Baud8GeneratorAcc_0" BEL "orion/receiver/RxD_data_7"
+        BEL "orion/receiver/RxD_data_6" BEL "orion/receiver/RxD_data_5" BEL
+        "orion/receiver/RxD_data_4" BEL "orion/receiver/RxD_data_3" BEL
+        "orion/receiver/RxD_data_2" BEL "orion/receiver/RxD_data_1" BEL
+        "orion/receiver/RxD_data_0" BEL "orion/receiver/RxD_data_ready" BEL
+        "orion/blank" BEL "orion/vsync" BEL "orion/hsync" BEL "orion/uart_wr"
+        BEL "orion/interr" BEL "orion/t80inst/u0/IR_0_1" BEL
+        "orion/t80inst/u0/IR_1_1" BEL "orion/t80inst/u0/IR_2_1" BEL
+        "orion/t80inst/u0/IR_7_1" BEL "orion/t80inst/u0/IR_6_1" BEL
+        "orion/t80inst/u0/IR_0_2" BEL "orion/t80inst/u0/IR_2_2" BEL
+        "orion/t80inst/u0/IR_4_1" BEL "orion/t80inst/u0/IR_5_1" BEL
+        "orion/t80inst/u0/IR_3_1" BEL "orion/t80inst/u0/IR_4_2" BEL
+        "orion/t80inst/u0/IR_1_2" BEL "orion/t80inst/u0/IR_2_3" BEL
+        "orion/t80inst/u0/IR_0_3" BEL "orion/t80inst/u0/IR_6_2" BEL
+        "orion/t80inst/u0/IR_4_3" BEL "orion/t80inst/u0/IR_7_2" BEL
+        "orion/t80inst/u0/IR_0_4" BEL "orion/t80inst/u0/IR_2_4" BEL
+        "orion/t80inst/u0/IR_6_3" BEL "orion/t80inst/u0/IR_5_2" BEL
+        "orion/t80inst/u0/IR_3_2" BEL "orion/t80inst/u0/IR_7_3" BEL
+        "orion/t80inst/u0/IR_1_3" BEL "orion/t80inst/u0/IR_3_3" BEL
+        "orion/t80inst/u0/IR_4_4" BEL "orion/t80inst/u0/IR_5_3" BEL
+        "orion/t80inst/u0/IR_0_5" BEL "orion/t80inst/u0/IR_0_6" BEL
+        "orion/t80inst/u0/IR_1_4" BEL "orion/t80inst/u0/IR_2_5" BEL
+        "orion/uart_clk_BUFG" BEL "orion/orionkey/ps2_keyboard_ins/Mshreg_q_8"
+        BEL "orion/orionkey/ps2_keyboard_ins/q_8" PIN
+        "orion/romd_altera/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram_pins<28>"
+        PIN
+        "orion/romd_altera/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram_pins<28>"
+        BEL "SRAM_DQ<7>" BEL "SRAM_DQ<6>" BEL "SRAM_DQ<5>" BEL "SRAM_DQ<4>"
+        BEL "SRAM_DQ<3>" BEL "SRAM_DQ<2>" BEL "SRAM_DQ<1>" BEL "SRAM_DQ<0>"
+        BEL "SRAM_ADDR<16>" BEL "SRAM_WE_N";
 PIN SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0> = BEL "SP6_BUFIO_INSERT_ML_BUFIO2_0"
         PINNAME DIVCLK;
 PIN clocks/dcm_sp_inst_pins<3> = BEL "clocks/dcm_sp_inst" PINNAME CLKIN;

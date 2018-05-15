@@ -124,7 +124,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1526361146" xil_pn:in_ck="-1511096901289441338" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="6619749677747537373" xil_pn:start_ts="1526361125">
+    <transform xil_pn:end_ts="1526408627" xil_pn:in_ck="-1511096901289441338" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="6619749677747537373" xil_pn:start_ts="1526408591">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -146,7 +146,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1526361328" xil_pn:in_ck="8719997854697509266" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="4445431511318585007" xil_pn:start_ts="1526361322">
+    <transform xil_pn:end_ts="1526408633" xil_pn:in_ck="8719997854697509266" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="4445431511318585007" xil_pn:start_ts="1526408627">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -155,7 +155,7 @@
       <outfile xil_pn:name="orion2010.ngd"/>
       <outfile xil_pn:name="orion2010_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1526361340" xil_pn:in_ck="-6298822426573179271" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1448924893915930207" xil_pn:start_ts="1526361328">
+    <transform xil_pn:end_ts="1526408655" xil_pn:in_ck="-6298822426573179271" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1448924893915930207" xil_pn:start_ts="1526408633">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -169,7 +169,7 @@
       <outfile xil_pn:name="orion2010_summary.xml"/>
       <outfile xil_pn:name="orion2010_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1526361351" xil_pn:in_ck="-7458757763871221230" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1526361340">
+    <transform xil_pn:end_ts="1526408678" xil_pn:in_ck="-7458757763871221230" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1526408655">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -184,8 +184,9 @@
       <outfile xil_pn:name="orion2010_pad.txt"/>
       <outfile xil_pn:name="orion2010_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1526364267" xil_pn:in_ck="6596219933309008173" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="-5300744434847113436" xil_pn:start_ts="1526364255">
+    <transform xil_pn:end_ts="1526408707" xil_pn:in_ck="6596219933309008173" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="-5300744434847113436" xil_pn:start_ts="1526408688">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="orion2010.bgn"/>
@@ -197,7 +198,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1526361351" xil_pn:in_ck="-6298822426573179403" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1526361346">
+    <transform xil_pn:end_ts="1526408678" xil_pn:in_ck="-6298822426573179403" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1526408673">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

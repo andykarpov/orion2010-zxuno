@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-andy-mi::  Tue May 15 08:15:42 2018
+andy-mi::  Tue May 15 21:24:17 2018
 
 par -w -intstyle ise -ol high -mt off orion2010_map.ncd orion2010.ncd
 orion2010.pcf 
@@ -22,30 +22,39 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                    53 out of  11,440    1%
-    Number used as Flip Flops:                  53
-    Number used as Latches:                      0
+  Number of Slice Registers:                   648 out of  11,440    5%
+    Number used as Flip Flops:                 646
+    Number used as Latches:                      2
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                         75 out of   5,720    1%
-    Number used as logic:                       73 out of   5,720    1%
-      Number using O6 output only:              30
-      Number using O5 output only:              21
-      Number using O5 and O6:                   22
+  Number of Slice LUTs:                      1,974 out of   5,720   34%
+    Number used as logic:                    1,927 out of   5,720   33%
+      Number using O6 output only:           1,568
+      Number using O5 output only:              98
+      Number using O5 and O6:                  261
       Number used as ROM:                        0
-    Number used as Memory:                       0 out of   1,440    0%
-    Number used exclusively as route-thrus:      2
-      Number with same-slice register load:      0
-      Number with same-slice carry load:         2
-      Number with other load:                    0
+    Number used as Memory:                      35 out of   1,440    2%
+      Number used as Dual Port RAM:             34
+        Number using O6 output only:            10
+        Number using O5 output only:             2
+        Number using O5 and O6:                 22
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:             1
+        Number using O6 output only:             1
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:     12
+      Number with same-slice register load:      4
+      Number with same-slice carry load:         7
+      Number with other load:                    1
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    34 out of   1,430    2%
-  Number of MUXCYs used:                        40 out of   2,860    1%
-  Number of LUT Flip Flop pairs used:           90
-    Number with an unused Flip Flop:            37 out of      90   41%
-    Number with an unused LUT:                  15 out of      90   16%
-    Number of fully used LUT-FF pairs:          38 out of      90   42%
+  Number of occupied Slices:                   734 out of   1,430   51%
+  Number of MUXCYs used:                       228 out of   2,860    7%
+  Number of LUT Flip Flop pairs used:        2,096
+    Number with an unused Flip Flop:         1,457 out of   2,096   69%
+    Number with an unused LUT:                 122 out of   2,096    5%
+    Number of fully used LUT-FF pairs:         517 out of   2,096   24%
     Number of slice register sites lost
       to control set restrictions:               0 out of  11,440    0%
 
@@ -56,11 +65,11 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        51 out of     102   50%
-    Number of LOCed IOBs:                       51 out of      51  100%
+  Number of bonded IOBs:                        53 out of     102   51%
+    Number of LOCed IOBs:                       53 out of      53  100%
 
 Specific Feature Utilization:
-  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB16BWERs:                         2 out of      32    6%
   Number of RAMB8BWERs:                          0 out of      64    0%
   Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
     Number used as BUFIO2s:                      1
@@ -68,8 +77,8 @@ Specific Feature Utilization:
   Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
     Number used as BUFIO2FBs:                    1
     Number used as BUFIO2FB_2CLKs:               0
-  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
-    Number used as BUFGs:                        2
+  Number of BUFG/BUFGMUXs:                       5 out of      16   31%
+    Number used as BUFGs:                        5
     Number used as BUFGMUX:                      0
   Number of DCM/DCM_CLKGENs:                     1 out of       4   25%
     Number used as DCMs:                         1
@@ -94,36 +103,40 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 3 secs 
-Finished initial Timing Analysis.  REAL time: 3 secs 
+Starting initial Timing Analysis.  REAL time: 4 secs 
+Finished initial Timing Analysis.  REAL time: 4 secs 
 
-WARNING:Par:288 - The signal SD_DAT_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal orion/t80inst/u0/Regs/Mram_RegsL11_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal orion/t80inst/u0/Regs/Mram_RegsH11_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 395 unrouted;      REAL time: 3 secs 
+Phase  1  : 11556 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 330 unrouted;      REAL time: 3 secs 
+Phase  2  : 10598 unrouted;      REAL time: 5 secs 
 
-Phase  3  : 89 unrouted;      REAL time: 4 secs 
+Phase  3  : 5319 unrouted;      REAL time: 8 secs 
 
-Phase  4  : 89 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+Phase  4  : 5319 unrouted; (Setup:0, Hold:16884, Component Switching Limit:0)     REAL time: 9 secs 
 
 Updating file: orion2010.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:15517, Component Switching Limit:0)     REAL time: 13 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:15517, Component Switching Limit:0)     REAL time: 13 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:15517, Component Switching Limit:0)     REAL time: 13 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:15517, Component Switching Limit:0)     REAL time: 13 secs 
+WARNING:Route:522 - Unusually high hold time violation detected among 1 connections.The router will continue and try to fix it 
+	orion/uart_wr:AQ -> orion/transm/state<2>:A6 -3673
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
-Total REAL time to Router completion: 4 secs 
-Total CPU time to Router completion: 4 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 13 secs 
+
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 13 secs 
+Total REAL time to Router completion: 13 secs 
+Total CPU time to Router completion: 13 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -141,9 +154,36 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|               clk20 |  BUFGMUX_X2Y2| No   |   18 |  0.061     |  1.463      |
+|  orion/clk_cpu_BUFG |  BUFGMUX_X2Y1| No   |  130 |  0.116     |  1.507      |
 +---------------------+--------------+------+------+------------+-------------+
-|       orion/hcnt<9> |         Local|      |    8 |  0.403     |  0.786      |
+|               clk20 |  BUFGMUX_X2Y2| No   |  101 |  0.095     |  1.486      |
++---------------------+--------------+------+------+------------+-------------+
+| orion/uart_clk_BUFG |  BUFGMUX_X2Y4| No   |   20 |  0.106     |  1.497      |
++---------------------+--------------+------+------+------------+-------------+
+|orion/t80inst/WR_n_B |              |      |      |            |             |
+|                 UFG | BUFGMUX_X3Y13| No   |   25 |  0.109     |  1.500      |
++---------------------+--------------+------+------+------------+-------------+
+|orion/csf767_dataO[3 |              |      |      |            |             |
+|         ]_AND_422_o |         Local|      |    2 |  0.000     |  0.379      |
++---------------------+--------------+------+------+------------+-------------+
+|orion/receiver/RxD_d |              |      |      |            |             |
+|           ata_ready |         Local|      |    8 |  0.858     |  1.427      |
++---------------------+--------------+------+------+------------+-------------+
+|orion/csf767_dataO[4 |              |      |      |            |             |
+|         ]_AND_420_o |         Local|      |    2 |  0.000     |  0.586      |
++---------------------+--------------+------+------+------------+-------------+
+|  orion/orionkey/cpm |         Local|      |    2 |  0.000     |  2.042      |
++---------------------+--------------+------+------+------------+-------------+
+|       orion/hcnt<9> |         Local|      |    9 |  0.196     |  1.599      |
++---------------------+--------------+------+------+------------+-------------+
+|       orion/sck_buf |         Local|      |    3 |  0.682     |  1.214      |
++---------------------+--------------+------+------+------------+-------------+
+|  orion/t80inst/RD_n |         Local|      |    3 |  0.000     |  0.836      |
++---------------------+--------------+------+------+------------+-------------+
+|  orion/orionkey/rom |         Local|      |    4 |  0.366     |  1.713      |
++---------------------+--------------+------+------+------------+-------------+
+|orion/orionkey/keyb_ |              |      |      |            |             |
+|                 int |         Local|      |    1 |  0.000     |  1.023      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -168,8 +208,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   TS_CLK50 = PERIOD TIMEGRP "CLK50" 50 MHz  | MINLOWPULSE |    12.000ns|     8.000ns|       0|           0
   HIGH 50%                                  |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_clocks_clkfx = PERIOD TIMEGRP "clocks_ | SETUP       |    21.220ns|     7.560ns|       0|           0
-  clkfx" TS_CLK50 * 0.4 HIGH 50%            | HOLD        |     0.414ns|            |       0|           0
+  TS_clocks_clkfx = PERIOD TIMEGRP "clocks_ | SETUP       |    13.164ns|    23.672ns|       0|           0
+  clkfx" TS_CLK50 * 0.4 HIGH 50%            | HOLD        |     0.039ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -183,8 +223,8 @@ Derived Constraints for TS_CLK50
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_CLK50                       |     20.000ns|      8.000ns|      3.024ns|            0|            0|            0|          834|
-| TS_clocks_clkfx               |     50.000ns|      7.560ns|          N/A|            0|            0|          834|            0|
+|TS_CLK50                       |     20.000ns|      8.000ns|      9.469ns|            0|            0|            0|        61370|
+| TS_clocks_clkfx               |     50.000ns|     23.672ns|          N/A|            0|            0|        61370|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 All constraints were met.
@@ -194,19 +234,19 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+WARNING:Par:283 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 4 secs 
-Total CPU time to PAR completion: 4 secs 
+Total REAL time to PAR completion: 14 secs 
+Total CPU time to PAR completion: 14 secs 
 
-Peak Memory Usage:  610 MB
+Peak Memory Usage:  637 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
 Timing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 3
+Number of warning messages: 5
 Number of info messages: 0
 
 Writing design to file orion2010.ncd
