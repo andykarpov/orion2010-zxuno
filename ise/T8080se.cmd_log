@@ -1,2 +1,0 @@
-xst -intstyle ise -ifn "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/ise/T8080se.xst" -ofn "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/ise/T8080se.syr" 
-ngdbuild -intstyle ise -dd _ngo -sd ../src/cores/font -nt timestamp -uc /home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/pins.ucf -p xc6slx9-tqg144-2 T8080se.ngc T8080se.ngd  

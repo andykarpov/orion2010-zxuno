@@ -28,7 +28,8 @@ cs_sd:           out std_logic;
 rxd:             in std_logic;
 txd:             out std_logic;
 rom_we:          out std_logic;
-dac_out:         out std_logic
+dac_out:         out std_logic;
+vga_mode: 		  in std_logic := '0' -- 0 for TV, 1 for VGA
 ); 
 end vga_test;  
 
@@ -63,12 +64,13 @@ end component;
 
 COMPONENT rombios IS
 PORT (
-	--Port A
+       --Port A
  ADDRA          : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
  DOUTA          : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
  CLKA       : IN STD_LOGIC
 );
 END COMPONENT;
+
 
 component orionkeyboard is
  port(
@@ -133,6 +135,7 @@ signal wait_cpu:    std_logic;
 signal int_n:    	std_logic;
 signal m1_n:        std_logic;
 signal sel:      	std_logic;
+signal sel2: 		std_logic_vector(1 downto 0);
 signal romsel:   	std_logic;
 signal portsel:  	std_logic;
 signal portio:   	std_logic;
@@ -222,21 +225,33 @@ signal dac_buf:     std_logic_vector(7 downto 0);
 begin
 
 ------------------------------------------Main counters------------------------------------------------
-process(clock,hcnt)
+process(clock,del,hcnt,vga_mode)
 begin
-if (clock'event and clock='1') then
- if hcnt=575 then
-  hcnt<="0000000000";
- else
-  hcnt<=hcnt+1;
- end if;
-end if; 
+-- tv hcnt
+if vga_mode = '0' then
+	if (del(0)'event and del(0)='1') then
+	 if hcnt=639 then
+	  hcnt<="0000000000";
+	 else
+	  hcnt<=hcnt+1;
+	 end if;
+	end if; 
+-- vga hcnt
+else
+	if (clock'event and clock='1') then
+	 if hcnt=575 then
+	  hcnt<="0000000000";
+	 else
+	  hcnt<=hcnt+1;
+	 end if;
+	end if;
+end if;
 end process;
 
-process(clock,hcnt,vcnt,interr)
+process(clock,hcnt,vcnt,interr,vga_mode)
 begin
 if (hcnt(9)'event and hcnt(9)='0') then
- if vcnt(9 downto 1)=311 then
+ if ((vga_mode='0' and vcnt(9 downto 0)=311) or (vga_mode='1' and vcnt(9 downto 1)=311)) then
   vcnt(9 downto 0)<="0000000000";
  else
   vcnt<=vcnt+1;
@@ -320,6 +335,7 @@ if (clock'event and clock='1') then
 end if;  
 end process;
 
+
 process(clock,hcnt,clk_cpu,turbo_reg,del,sel,csf5,a_buff)  
 begin
  if (clock'event and clock='1') then
@@ -331,7 +347,7 @@ begin
    end if;   
   else
    if turbo_reg="01" then 
-    if sel='0' then
+    if ((vga_mode = '0' and hcnt(2 downto 0)>1) or (vga_mode = '1' and sel='0')) then
      clk_cpu<=del(0);  
     end if;
    end if; 
@@ -382,11 +398,11 @@ m1<='0' when m1_n='0' else '1';
 wait_cpu<='0' when wait_n='0' else '1';
 csf7_n<='0' when csf76='0' else '1';
 
-process(f8,hcnt)
+process(f8,hcnt,del,vga_mode)
 begin
  if f8(2 downto 1)="01" then
   sel<='0';
- elsif (hcnt(2 downto 0)="000") then     
+ elsif ((vga_mode = '0' and (hcnt(2 downto 0)="000") and del(0)='1') or (vga_mode = '1' and (hcnt(2 downto 0)="000"))) then     
   sel<='1';
  else
   sel<='0';
@@ -600,7 +616,7 @@ begin
   when "10"=>uart_clk<=uart_del(0);
   when "01"=>uart_clk<=uart_del(1);
   when "00"=>uart_clk<=uart_del(2);
-  when others => 
+  when others =>
  end case;
 end process;
  
@@ -625,19 +641,25 @@ begin
   rx_status<='0';
  end if;
 end process;   
- 
+
+sel2 <= vga_mode & sel;
+
 -------------------------------------Data & Adress flow control-------------------------------------------------
 --Adress commutation--
 process(hcnt,vcnt,sel,clock,a_buff,f9,fa,fb,fbdis,top,csf5,pf501,pf502,fbfull,rom_reg,p4f)  
 variable selector: std_logic_vector(2 downto 0);
 begin
 selector:= top & fbfull & p4f(2);
- case sel is
-  when '1'=>a(15 downto 0)<=not(fa(1 downto 0)) & hcnt(8 downto 3) & vcnt(8 downto 1);
+ case sel2 is
+  when "01"=>a(15 downto 0)<=not(fa(1 downto 0)) & hcnt(8 downto 3) & vcnt(7 downto 0);
             a(16)<=clock;
             a17<='0';
             a18<='0';
-  when '0'=>case fbdis & a_buff(15 downto 14) is
+  when "11"=>a(15 downto 0)<=not(fa(1 downto 0)) & hcnt(8 downto 3) & vcnt(8 downto 1);
+            a(16)<=clock;
+            a17<='0';
+            a18<='0';
+  when others=>case fbdis & a_buff(15 downto 14) is
             when "000" =>a(15 downto 0)<=fb(1 downto 0)& a_buff(13 downto 0);
                          a(16)<=fb(2);
                          a17<='0';
@@ -657,7 +679,6 @@ selector:= top & fbfull & p4f(2);
 			                                end case;			                                
 			             end case;           
 			end case; 
-	when others => 
   end case;
 end process;
 
@@ -696,15 +717,15 @@ d(7 downto 0)<=dataO when (sel='0' and wr_n='0') else "ZZZZZZZZ";
 
 ----------------------------------------------Video system section-------------------------------------------
 
-process(mode_vga,hcnt,clock)            --Horizontal sync--
+process(mode_vga,hcnt,clock,vga_mode)            --Horizontal sync--
 begin
 if (clock'event and clock='1') then
  case mode_vga is                          
-  when '0'=>if (hcnt(9 downto 0)=436) then hsync<='0';
+  when '0'=>if ((vga_mode='0' and hcnt(9 downto 0)=476) or (vga_mode='1' and hcnt(9 downto 0)=436)) then hsync<='0';
              elsif (hcnt(9 downto 0)=516) then hsync<='1'; 
             end if;
-  when '1'=>if (hcnt(9 downto 0)=486) then hsync<='0';
-             elsif (hcnt(9 downto 0)=566) then hsync<='1'; 
+  when '1'=>if ((vga_mode='0' and hcnt(9 downto 0)=524) or (vga_mode='1' and hcnt(9 downto 0)=486)) then hsync<='0';
+             elsif ((vga_mode='0' and hcnt(9 downto 0)=564) or (vga_mode='1' and hcnt(9 downto 0)=566)) then hsync<='1'; 
             end if;
   when others => 
  end case;
@@ -714,8 +735,8 @@ end process;
 process(clock,vcnt)                     --Vertical sync--
 begin
 if (clock'event and clock='1') then
- if vcnt(9 downto 1)=278 then vsync<='0';
-  elsif vcnt(9 downto 1)=282 then vsync<='1';
+ if ((vga_mode='0' and vcnt(8 downto 0)=268) or (vga_mode='1' and vcnt(9 downto 1)=278)) then vsync<='0';
+  elsif ((vga_mode='0' and vcnt(8 downto 0)=276) or (vga_mode='1' and vcnt(9 downto 1)=282)) then vsync<='1';
  end if;
 end if;
 end process;                                           
@@ -723,7 +744,7 @@ end process;
 process(clock,vcnt,mode_vga,hcnt)           --Blank--         
 begin
 if (clock'event and clock='1') then
- if (hcnt=0 and vcnt(9)='0') then blank<='1';
+ if ((vga_mode='0' and hcnt=0 and vcnt(8)='0') or (vga_mode='1' and hcnt=0 and vcnt(9)='0')) then blank<='1';
   elsif (hcnt(9 downto 5)="011"& mode_vga & mode_vga) then blank<='0';
  end if;
 end if;
@@ -767,18 +788,20 @@ case hcnt(2 downto 0) is
             vidc<=vid3(1);
  when "111"=>vid<=vid2(0);
             vidc<=vid3(0);
- when others => 
+ when others =>
 end case;
 end process;
 
-process(hcnt,clock,vid0,vid1,blank)    --Prepare videodata for mux--
+process(hcnt,clock,del,vid0,vid1,blank,vga_mode)    --Prepare videodata for mux--
 begin
- if hcnt(2 downto 0)="111" then
-  if clock'event and clock='1' then
-   vid2<=vid0;
-   vid3<=vid1;
-   blank1<=blank;
-  end if;
+ if (clock'event and clock='1') then
+	 if hcnt(2 downto 0)="111" then
+	  if ((vga_mode='0' and del(0)='1') or vga_mode='1') then	
+		vid2<=vid0;
+		vid3<=vid1;
+		blank1<=blank;
+	  end if;
+	 end if;
  end if;
 end process;    
 
@@ -819,8 +842,10 @@ end if;
 end process;
 
 -------------------Output video signals---------------
-h_sync<='0' when hsync='0' else '1';
-v_sync<='0' when vsync='0' else '1';
+h_sync<=not(hsync xor vsync) when vga_mode='0' else 
+		 '0' when hsync='0' else '1';
+v_sync<=(hsync xor vsync) when vga_mode='0' else 
+		 '0' when vsync='0' else '1';
 
 process(clock,r,g,b,i)
 begin
@@ -881,7 +906,7 @@ romd_altera:rombios --------- alteraROM BIOS ---------------
 port map(
 		ADDRA		=>romd_a(11 downto 0),
 		CLKA		=>not(clock),
-		DOUTA		    =>romd_d(7 downto 0)
+		DOUTA		=>romd_d(7 downto 0)
 );
 
 t80inst:T80s	     --------- Z80 core (T80) -----------

@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-05-15T00:04:25</DateModified>
+  <DateModified>2018-05-15T22:10:36</DateModified>
   <ModuleName>orion2010</ModuleName>
-  <SummaryTimeStamp>2018-05-12T10:48:56</SummaryTimeStamp>
+  <SummaryTimeStamp>2018-05-15T22:00:39</SummaryTimeStamp>
   <SavedFilePath>/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/ise/iseconfig/orion2010.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/ise/</ImplementationReportsDirectory>
   <DateInitialized>2018-05-12T10:39:10</DateInitialized>

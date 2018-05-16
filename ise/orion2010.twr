@@ -67,21 +67,21 @@ Timing constraint: TS_clocks_clkfx = PERIOD TIMEGRP "clocks_clkfx" TS_CLK50 *
 0.4 HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 61370 paths analyzed, 1397 endpoints analyzed, 0 failing endpoints
+ 61729 paths analyzed, 1417 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  23.672ns.
+ Minimum period is  33.544ns.
 --------------------------------------------------------------------------------
 
-Paths for end point orion/vid1_0 (SLICE_X20Y35.AX), 42 paths
+Paths for end point orion/t80inst/u0/IR_2_1 (SLICE_X16Y23.AX), 335 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     13.164ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               orion/t80inst/u0/A_4 (FF)
-  Destination:          orion/vid1_0 (FF)
+Slack (setup path):     8.228ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               orion/orionkey/keymatrix_7_50 (FF)
+  Destination:          orion/t80inst/u0/IR_2_1 (FF)
   Requirement:          25.000ns
-  Data Path Delay:      8.388ns (Levels of Logic = 4)
-  Clock Path Skew:      -2.663ns (1.472 - 4.135)
-  Source Clock:         orion/clk_cpu_BUFG rising at 0.000ns
-  Destination Clock:    clk20 falling at 25.000ns
+  Data Path Delay:      16.828ns (Levels of Logic = 7)
+  Clock Path Skew:      0.841ns (2.961 - 2.120)
+  Source Clock:         clk20 falling at 25.000ns
+  Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
   Clock Uncertainty:    0.785ns
 
   Clock Uncertainty:          0.785ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -90,40 +90,49 @@ Slack (setup path):     13.164ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       1.200ns
     Phase Error (PE):           0.150ns
 
-  Maximum Data Path at Slow Process Corner: orion/t80inst/u0/A_4 to orion/vid1_0
+  Maximum Data Path at Slow Process Corner: orion/orionkey/keymatrix_7_50 to orion/t80inst/u0/IR_2_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y51.AQ      Tcko                  0.476   orion/t80inst/u0/A<6>
-                                                       orion/t80inst/u0/A_4
-    SLICE_X19Y36.A6      net (fanout=8)        2.199   orion/t80inst/u0/A<4>
-    SLICE_X19Y36.A       Tilo                  0.259   orion/miso_buf[6]_dff_102<6>
-                                                       orion/Mmux_csf711
-    SLICE_X18Y34.A2      net (fanout=1)        0.711   orion/Mmux_csf71
-    SLICE_X18Y34.A       Tilo                  0.235   orion/p4f[7]_dff_79<7>
-                                                       orion/Mmux_csf713
-    SLICE_X16Y45.C3      net (fanout=8)        1.332   orion/csf7
-    SLICE_X16Y45.C       Tilo                  0.255   orion/f9<1>
-                                                       orion/ram_oe0
-    SLICE_X15Y40.B3      net (fanout=8)        1.156   ram_oe0
-    SLICE_X15Y40.B       Tilo                  0.259   orion/vid0<1>
-                                                       d<0>LogicTrst1
-    SLICE_X20Y35.AX      net (fanout=3)        1.421   d<0>
-    SLICE_X20Y35.CLK     Tdick                 0.085   orion/vid1<3>
-                                                       orion/vid1_0
+    SLICE_X8Y57.DQ       Tcko                  0.525   orion/orionkey/keymatrix_7<50>
+                                                       orion/orionkey/keymatrix_7_50
+    SLICE_X10Y59.D1      net (fanout=2)        0.977   orion/orionkey/keymatrix_7<50>
+    SLICE_X10Y59.D       Tilo                  0.235   orion/orionkey/keymatrix_7<19>
+                                                       orion/Mmux_dataI91
+    SLICE_X8Y54.B3       net (fanout=1)        0.889   orion/Mmux_dataI9
+    SLICE_X8Y54.B        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI92
+    SLICE_X8Y54.A5       net (fanout=1)        0.247   orion/Mmux_dataI91
+    SLICE_X8Y54.A        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI93
+    SLICE_X13Y47.B5      net (fanout=1)        1.074   orion/Mmux_dataI92
+    SLICE_X13Y47.B       Tilo                  0.259   N444
+                                                       orion/Mmux_dataI94
+    SLICE_X15Y47.A4      net (fanout=1)        0.502   orion/Mmux_dataI93
+    SLICE_X15Y47.A       Tilo                  0.259   orion/vid0<3>
+                                                       orion/Mmux_dataI95
+    SLICE_X14Y38.B4      net (fanout=1)        0.982   orion/Mmux_dataI94
+    SLICE_X14Y38.B       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/Mmux_dataI98
+    SLICE_X14Y38.A5      net (fanout=1)        0.196   orion/dataI<2>
+    SLICE_X14Y38.A       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/t80inst/u0/Mmux__n099331
+    SLICE_X16Y23.AX      net (fanout=6)        9.620   orion/t80inst/u0/_n0993<2>
+    SLICE_X16Y23.CLK     Tdick                 0.085   orion/t80inst/u0/IR_2_4
+                                                       orion/t80inst/u0/IR_2_1
     -------------------------------------------------  ---------------------------
-    Total                                      8.388ns (1.569ns logic, 6.819ns route)
-                                                       (18.7% logic, 81.3% route)
+    Total                                     16.828ns (2.341ns logic, 14.487ns route)
+                                                       (13.9% logic, 86.1% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     13.538ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               orion/t80inst/u0/A_7 (FF)
-  Destination:          orion/vid1_0 (FF)
+Slack (setup path):     8.591ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               orion/orionkey/keymatrix_7_58 (FF)
+  Destination:          orion/t80inst/u0/IR_2_1 (FF)
   Requirement:          25.000ns
-  Data Path Delay:      8.019ns (Levels of Logic = 4)
-  Clock Path Skew:      -2.658ns (1.472 - 4.130)
-  Source Clock:         orion/clk_cpu_BUFG rising at 0.000ns
-  Destination Clock:    clk20 falling at 25.000ns
+  Data Path Delay:      16.467ns (Levels of Logic = 7)
+  Clock Path Skew:      0.843ns (2.961 - 2.118)
+  Source Clock:         clk20 falling at 25.000ns
+  Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
   Clock Uncertainty:    0.785ns
 
   Clock Uncertainty:          0.785ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -132,40 +141,205 @@ Slack (setup path):     13.538ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       1.200ns
     Phase Error (PE):           0.150ns
 
-  Maximum Data Path at Slow Process Corner: orion/t80inst/u0/A_7 to orion/vid1_0
+  Maximum Data Path at Slow Process Corner: orion/orionkey/keymatrix_7_58 to orion/t80inst/u0/IR_2_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y53.BQ      Tcko                  0.430   orion/t80inst/u0/A<8>
-                                                       orion/t80inst/u0/A_7
-    SLICE_X19Y36.A5      net (fanout=8)        1.876   orion/t80inst/u0/A<7>
-    SLICE_X19Y36.A       Tilo                  0.259   orion/miso_buf[6]_dff_102<6>
-                                                       orion/Mmux_csf711
-    SLICE_X18Y34.A2      net (fanout=1)        0.711   orion/Mmux_csf71
-    SLICE_X18Y34.A       Tilo                  0.235   orion/p4f[7]_dff_79<7>
-                                                       orion/Mmux_csf713
-    SLICE_X16Y45.C3      net (fanout=8)        1.332   orion/csf7
-    SLICE_X16Y45.C       Tilo                  0.255   orion/f9<1>
-                                                       orion/ram_oe0
-    SLICE_X15Y40.B3      net (fanout=8)        1.156   ram_oe0
-    SLICE_X15Y40.B       Tilo                  0.259   orion/vid0<1>
-                                                       d<0>LogicTrst1
-    SLICE_X20Y35.AX      net (fanout=3)        1.421   d<0>
-    SLICE_X20Y35.CLK     Tdick                 0.085   orion/vid1<3>
-                                                       orion/vid1_0
+    SLICE_X9Y56.CQ       Tcko                  0.430   orion/orionkey/keymatrix_7<59>
+                                                       orion/orionkey/keymatrix_7_58
+    SLICE_X10Y59.D5      net (fanout=2)        0.711   orion/orionkey/keymatrix_7<58>
+    SLICE_X10Y59.D       Tilo                  0.235   orion/orionkey/keymatrix_7<19>
+                                                       orion/Mmux_dataI91
+    SLICE_X8Y54.B3       net (fanout=1)        0.889   orion/Mmux_dataI9
+    SLICE_X8Y54.B        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI92
+    SLICE_X8Y54.A5       net (fanout=1)        0.247   orion/Mmux_dataI91
+    SLICE_X8Y54.A        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI93
+    SLICE_X13Y47.B5      net (fanout=1)        1.074   orion/Mmux_dataI92
+    SLICE_X13Y47.B       Tilo                  0.259   N444
+                                                       orion/Mmux_dataI94
+    SLICE_X15Y47.A4      net (fanout=1)        0.502   orion/Mmux_dataI93
+    SLICE_X15Y47.A       Tilo                  0.259   orion/vid0<3>
+                                                       orion/Mmux_dataI95
+    SLICE_X14Y38.B4      net (fanout=1)        0.982   orion/Mmux_dataI94
+    SLICE_X14Y38.B       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/Mmux_dataI98
+    SLICE_X14Y38.A5      net (fanout=1)        0.196   orion/dataI<2>
+    SLICE_X14Y38.A       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/t80inst/u0/Mmux__n099331
+    SLICE_X16Y23.AX      net (fanout=6)        9.620   orion/t80inst/u0/_n0993<2>
+    SLICE_X16Y23.CLK     Tdick                 0.085   orion/t80inst/u0/IR_2_4
+                                                       orion/t80inst/u0/IR_2_1
     -------------------------------------------------  ---------------------------
-    Total                                      8.019ns (1.523ns logic, 6.496ns route)
+    Total                                     16.467ns (2.246ns logic, 14.221ns route)
+                                                       (13.6% logic, 86.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     8.957ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               orion/orionkey/keymatrix_7_18 (FF)
+  Destination:          orion/t80inst/u0/IR_2_1 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      16.095ns (Levels of Logic = 7)
+  Clock Path Skew:      0.837ns (2.961 - 2.124)
+  Source Clock:         clk20 falling at 25.000ns
+  Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
+  Clock Uncertainty:    0.785ns
+
+  Clock Uncertainty:          0.785ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       1.200ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: orion/orionkey/keymatrix_7_18 to orion/t80inst/u0/IR_2_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y59.BQ      Tcko                  0.476   orion/orionkey/keymatrix_7<19>
+                                                       orion/orionkey/keymatrix_7_18
+    SLICE_X10Y59.D4      net (fanout=2)        0.293   orion/orionkey/keymatrix_7<18>
+    SLICE_X10Y59.D       Tilo                  0.235   orion/orionkey/keymatrix_7<19>
+                                                       orion/Mmux_dataI91
+    SLICE_X8Y54.B3       net (fanout=1)        0.889   orion/Mmux_dataI9
+    SLICE_X8Y54.B        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI92
+    SLICE_X8Y54.A5       net (fanout=1)        0.247   orion/Mmux_dataI91
+    SLICE_X8Y54.A        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI93
+    SLICE_X13Y47.B5      net (fanout=1)        1.074   orion/Mmux_dataI92
+    SLICE_X13Y47.B       Tilo                  0.259   N444
+                                                       orion/Mmux_dataI94
+    SLICE_X15Y47.A4      net (fanout=1)        0.502   orion/Mmux_dataI93
+    SLICE_X15Y47.A       Tilo                  0.259   orion/vid0<3>
+                                                       orion/Mmux_dataI95
+    SLICE_X14Y38.B4      net (fanout=1)        0.982   orion/Mmux_dataI94
+    SLICE_X14Y38.B       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/Mmux_dataI98
+    SLICE_X14Y38.A5      net (fanout=1)        0.196   orion/dataI<2>
+    SLICE_X14Y38.A       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/t80inst/u0/Mmux__n099331
+    SLICE_X16Y23.AX      net (fanout=6)        9.620   orion/t80inst/u0/_n0993<2>
+    SLICE_X16Y23.CLK     Tdick                 0.085   orion/t80inst/u0/IR_2_4
+                                                       orion/t80inst/u0/IR_2_1
+    -------------------------------------------------  ---------------------------
+    Total                                     16.095ns (2.292ns logic, 13.803ns route)
+                                                       (14.2% logic, 85.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point orion/t80inst/u0/IR_2_5 (SLICE_X16Y25.AX), 335 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     12.863ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               orion/orionkey/keymatrix_7_50 (FF)
+  Destination:          orion/t80inst/u0/IR_2_5 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      12.195ns (Levels of Logic = 7)
+  Clock Path Skew:      0.843ns (2.963 - 2.120)
+  Source Clock:         clk20 falling at 25.000ns
+  Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
+  Clock Uncertainty:    0.785ns
+
+  Clock Uncertainty:          0.785ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       1.200ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: orion/orionkey/keymatrix_7_50 to orion/t80inst/u0/IR_2_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y57.DQ       Tcko                  0.525   orion/orionkey/keymatrix_7<50>
+                                                       orion/orionkey/keymatrix_7_50
+    SLICE_X10Y59.D1      net (fanout=2)        0.977   orion/orionkey/keymatrix_7<50>
+    SLICE_X10Y59.D       Tilo                  0.235   orion/orionkey/keymatrix_7<19>
+                                                       orion/Mmux_dataI91
+    SLICE_X8Y54.B3       net (fanout=1)        0.889   orion/Mmux_dataI9
+    SLICE_X8Y54.B        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI92
+    SLICE_X8Y54.A5       net (fanout=1)        0.247   orion/Mmux_dataI91
+    SLICE_X8Y54.A        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI93
+    SLICE_X13Y47.B5      net (fanout=1)        1.074   orion/Mmux_dataI92
+    SLICE_X13Y47.B       Tilo                  0.259   N444
+                                                       orion/Mmux_dataI94
+    SLICE_X15Y47.A4      net (fanout=1)        0.502   orion/Mmux_dataI93
+    SLICE_X15Y47.A       Tilo                  0.259   orion/vid0<3>
+                                                       orion/Mmux_dataI95
+    SLICE_X14Y38.B4      net (fanout=1)        0.982   orion/Mmux_dataI94
+    SLICE_X14Y38.B       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/Mmux_dataI98
+    SLICE_X14Y38.A5      net (fanout=1)        0.196   orion/dataI<2>
+    SLICE_X14Y38.A       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/t80inst/u0/Mmux__n099331
+    SLICE_X16Y25.AX      net (fanout=6)        4.987   orion/t80inst/u0/_n0993<2>
+    SLICE_X16Y25.CLK     Tdick                 0.085   orion/t80inst/u0/IR_2_5
+                                                       orion/t80inst/u0/IR_2_5
+    -------------------------------------------------  ---------------------------
+    Total                                     12.195ns (2.341ns logic, 9.854ns route)
+                                                       (19.2% logic, 80.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.226ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               orion/orionkey/keymatrix_7_58 (FF)
+  Destination:          orion/t80inst/u0/IR_2_5 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      11.834ns (Levels of Logic = 7)
+  Clock Path Skew:      0.845ns (2.963 - 2.118)
+  Source Clock:         clk20 falling at 25.000ns
+  Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
+  Clock Uncertainty:    0.785ns
+
+  Clock Uncertainty:          0.785ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       1.200ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: orion/orionkey/keymatrix_7_58 to orion/t80inst/u0/IR_2_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y56.CQ       Tcko                  0.430   orion/orionkey/keymatrix_7<59>
+                                                       orion/orionkey/keymatrix_7_58
+    SLICE_X10Y59.D5      net (fanout=2)        0.711   orion/orionkey/keymatrix_7<58>
+    SLICE_X10Y59.D       Tilo                  0.235   orion/orionkey/keymatrix_7<19>
+                                                       orion/Mmux_dataI91
+    SLICE_X8Y54.B3       net (fanout=1)        0.889   orion/Mmux_dataI9
+    SLICE_X8Y54.B        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI92
+    SLICE_X8Y54.A5       net (fanout=1)        0.247   orion/Mmux_dataI91
+    SLICE_X8Y54.A        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI93
+    SLICE_X13Y47.B5      net (fanout=1)        1.074   orion/Mmux_dataI92
+    SLICE_X13Y47.B       Tilo                  0.259   N444
+                                                       orion/Mmux_dataI94
+    SLICE_X15Y47.A4      net (fanout=1)        0.502   orion/Mmux_dataI93
+    SLICE_X15Y47.A       Tilo                  0.259   orion/vid0<3>
+                                                       orion/Mmux_dataI95
+    SLICE_X14Y38.B4      net (fanout=1)        0.982   orion/Mmux_dataI94
+    SLICE_X14Y38.B       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/Mmux_dataI98
+    SLICE_X14Y38.A5      net (fanout=1)        0.196   orion/dataI<2>
+    SLICE_X14Y38.A       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/t80inst/u0/Mmux__n099331
+    SLICE_X16Y25.AX      net (fanout=6)        4.987   orion/t80inst/u0/_n0993<2>
+    SLICE_X16Y25.CLK     Tdick                 0.085   orion/t80inst/u0/IR_2_5
+                                                       orion/t80inst/u0/IR_2_5
+    -------------------------------------------------  ---------------------------
+    Total                                     11.834ns (2.246ns logic, 9.588ns route)
                                                        (19.0% logic, 81.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     13.654ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               orion/t80inst/u0/A_6 (FF)
-  Destination:          orion/vid1_0 (FF)
+Slack (setup path):     13.592ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               orion/orionkey/keymatrix_7_18 (FF)
+  Destination:          orion/t80inst/u0/IR_2_5 (FF)
   Requirement:          25.000ns
-  Data Path Delay:      7.898ns (Levels of Logic = 4)
-  Clock Path Skew:      -2.663ns (1.472 - 4.135)
-  Source Clock:         orion/clk_cpu_BUFG rising at 0.000ns
-  Destination Clock:    clk20 falling at 25.000ns
+  Data Path Delay:      11.462ns (Levels of Logic = 7)
+  Clock Path Skew:      0.839ns (2.963 - 2.124)
+  Source Clock:         clk20 falling at 25.000ns
+  Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
   Clock Uncertainty:    0.785ns
 
   Clock Uncertainty:          0.785ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -174,127 +348,52 @@ Slack (setup path):     13.654ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       1.200ns
     Phase Error (PE):           0.150ns
 
-  Maximum Data Path at Slow Process Corner: orion/t80inst/u0/A_6 to orion/vid1_0
+  Maximum Data Path at Slow Process Corner: orion/orionkey/keymatrix_7_18 to orion/t80inst/u0/IR_2_5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y51.CQ      Tcko                  0.476   orion/t80inst/u0/A<6>
-                                                       orion/t80inst/u0/A_6
-    SLICE_X19Y36.A4      net (fanout=8)        1.709   orion/t80inst/u0/A<6>
-    SLICE_X19Y36.A       Tilo                  0.259   orion/miso_buf[6]_dff_102<6>
-                                                       orion/Mmux_csf711
-    SLICE_X18Y34.A2      net (fanout=1)        0.711   orion/Mmux_csf71
-    SLICE_X18Y34.A       Tilo                  0.235   orion/p4f[7]_dff_79<7>
-                                                       orion/Mmux_csf713
-    SLICE_X16Y45.C3      net (fanout=8)        1.332   orion/csf7
-    SLICE_X16Y45.C       Tilo                  0.255   orion/f9<1>
-                                                       orion/ram_oe0
-    SLICE_X15Y40.B3      net (fanout=8)        1.156   ram_oe0
-    SLICE_X15Y40.B       Tilo                  0.259   orion/vid0<1>
-                                                       d<0>LogicTrst1
-    SLICE_X20Y35.AX      net (fanout=3)        1.421   d<0>
-    SLICE_X20Y35.CLK     Tdick                 0.085   orion/vid1<3>
-                                                       orion/vid1_0
+    SLICE_X10Y59.BQ      Tcko                  0.476   orion/orionkey/keymatrix_7<19>
+                                                       orion/orionkey/keymatrix_7_18
+    SLICE_X10Y59.D4      net (fanout=2)        0.293   orion/orionkey/keymatrix_7<18>
+    SLICE_X10Y59.D       Tilo                  0.235   orion/orionkey/keymatrix_7<19>
+                                                       orion/Mmux_dataI91
+    SLICE_X8Y54.B3       net (fanout=1)        0.889   orion/Mmux_dataI9
+    SLICE_X8Y54.B        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI92
+    SLICE_X8Y54.A5       net (fanout=1)        0.247   orion/Mmux_dataI91
+    SLICE_X8Y54.A        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI93
+    SLICE_X13Y47.B5      net (fanout=1)        1.074   orion/Mmux_dataI92
+    SLICE_X13Y47.B       Tilo                  0.259   N444
+                                                       orion/Mmux_dataI94
+    SLICE_X15Y47.A4      net (fanout=1)        0.502   orion/Mmux_dataI93
+    SLICE_X15Y47.A       Tilo                  0.259   orion/vid0<3>
+                                                       orion/Mmux_dataI95
+    SLICE_X14Y38.B4      net (fanout=1)        0.982   orion/Mmux_dataI94
+    SLICE_X14Y38.B       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/Mmux_dataI98
+    SLICE_X14Y38.A5      net (fanout=1)        0.196   orion/dataI<2>
+    SLICE_X14Y38.A       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/t80inst/u0/Mmux__n099331
+    SLICE_X16Y25.AX      net (fanout=6)        4.987   orion/t80inst/u0/_n0993<2>
+    SLICE_X16Y25.CLK     Tdick                 0.085   orion/t80inst/u0/IR_2_5
+                                                       orion/t80inst/u0/IR_2_5
     -------------------------------------------------  ---------------------------
-    Total                                      7.898ns (1.569ns logic, 6.329ns route)
-                                                       (19.9% logic, 80.1% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point orion/vid1_6 (SLICE_X21Y35.CX), 42 paths
---------------------------------------------------------------------------------
-Slack (setup path):     13.434ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               orion/t80inst/u0/A_4 (FF)
-  Destination:          orion/vid1_6 (FF)
-  Requirement:          25.000ns
-  Data Path Delay:      8.118ns (Levels of Logic = 4)
-  Clock Path Skew:      -2.663ns (1.472 - 4.135)
-  Source Clock:         orion/clk_cpu_BUFG rising at 0.000ns
-  Destination Clock:    clk20 falling at 25.000ns
-  Clock Uncertainty:    0.785ns
-
-  Clock Uncertainty:          0.785ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       1.200ns
-    Phase Error (PE):           0.150ns
-
-  Maximum Data Path at Slow Process Corner: orion/t80inst/u0/A_4 to orion/vid1_6
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X14Y51.AQ      Tcko                  0.476   orion/t80inst/u0/A<6>
-                                                       orion/t80inst/u0/A_4
-    SLICE_X19Y36.A6      net (fanout=8)        2.199   orion/t80inst/u0/A<4>
-    SLICE_X19Y36.A       Tilo                  0.259   orion/miso_buf[6]_dff_102<6>
-                                                       orion/Mmux_csf711
-    SLICE_X18Y34.A2      net (fanout=1)        0.711   orion/Mmux_csf71
-    SLICE_X18Y34.A       Tilo                  0.235   orion/p4f[7]_dff_79<7>
-                                                       orion/Mmux_csf713
-    SLICE_X16Y45.C3      net (fanout=8)        1.332   orion/csf7
-    SLICE_X16Y45.C       Tilo                  0.255   orion/f9<1>
-                                                       orion/ram_oe0
-    SLICE_X19Y39.B3      net (fanout=8)        1.104   ram_oe0
-    SLICE_X19Y39.B       Tilo                  0.259   orion/vid0<7>
-                                                       d<6>LogicTrst1
-    SLICE_X21Y35.CX      net (fanout=4)        1.174   d<6>
-    SLICE_X21Y35.CLK     Tdick                 0.114   orion/vid1<7>
-                                                       orion/vid1_6
-    -------------------------------------------------  ---------------------------
-    Total                                      8.118ns (1.598ns logic, 6.520ns route)
-                                                       (19.7% logic, 80.3% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     13.808ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               orion/t80inst/u0/A_7 (FF)
-  Destination:          orion/vid1_6 (FF)
-  Requirement:          25.000ns
-  Data Path Delay:      7.749ns (Levels of Logic = 4)
-  Clock Path Skew:      -2.658ns (1.472 - 4.130)
-  Source Clock:         orion/clk_cpu_BUFG rising at 0.000ns
-  Destination Clock:    clk20 falling at 25.000ns
-  Clock Uncertainty:    0.785ns
-
-  Clock Uncertainty:          0.785ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       1.200ns
-    Phase Error (PE):           0.150ns
-
-  Maximum Data Path at Slow Process Corner: orion/t80inst/u0/A_7 to orion/vid1_6
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X13Y53.BQ      Tcko                  0.430   orion/t80inst/u0/A<8>
-                                                       orion/t80inst/u0/A_7
-    SLICE_X19Y36.A5      net (fanout=8)        1.876   orion/t80inst/u0/A<7>
-    SLICE_X19Y36.A       Tilo                  0.259   orion/miso_buf[6]_dff_102<6>
-                                                       orion/Mmux_csf711
-    SLICE_X18Y34.A2      net (fanout=1)        0.711   orion/Mmux_csf71
-    SLICE_X18Y34.A       Tilo                  0.235   orion/p4f[7]_dff_79<7>
-                                                       orion/Mmux_csf713
-    SLICE_X16Y45.C3      net (fanout=8)        1.332   orion/csf7
-    SLICE_X16Y45.C       Tilo                  0.255   orion/f9<1>
-                                                       orion/ram_oe0
-    SLICE_X19Y39.B3      net (fanout=8)        1.104   ram_oe0
-    SLICE_X19Y39.B       Tilo                  0.259   orion/vid0<7>
-                                                       d<6>LogicTrst1
-    SLICE_X21Y35.CX      net (fanout=4)        1.174   d<6>
-    SLICE_X21Y35.CLK     Tdick                 0.114   orion/vid1<7>
-                                                       orion/vid1_6
-    -------------------------------------------------  ---------------------------
-    Total                                      7.749ns (1.552ns logic, 6.197ns route)
+    Total                                     11.462ns (2.292ns logic, 9.170ns route)
                                                        (20.0% logic, 80.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     13.924ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               orion/t80inst/u0/A_6 (FF)
-  Destination:          orion/vid1_6 (FF)
+
+Paths for end point orion/t80inst/u0/IR_2 (SLICE_X15Y39.CX), 335 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.015ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               orion/orionkey/keymatrix_7_50 (FF)
+  Destination:          orion/t80inst/u0/IR_2 (FF)
   Requirement:          25.000ns
-  Data Path Delay:      7.628ns (Levels of Logic = 4)
-  Clock Path Skew:      -2.663ns (1.472 - 4.135)
-  Source Clock:         orion/clk_cpu_BUFG rising at 0.000ns
-  Destination Clock:    clk20 falling at 25.000ns
+  Data Path Delay:      12.040ns (Levels of Logic = 7)
+  Clock Path Skew:      0.840ns (2.960 - 2.120)
+  Source Clock:         clk20 falling at 25.000ns
+  Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
   Clock Uncertainty:    0.785ns
 
   Clock Uncertainty:          0.785ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -303,85 +402,49 @@ Slack (setup path):     13.924ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       1.200ns
     Phase Error (PE):           0.150ns
 
-  Maximum Data Path at Slow Process Corner: orion/t80inst/u0/A_6 to orion/vid1_6
+  Maximum Data Path at Slow Process Corner: orion/orionkey/keymatrix_7_50 to orion/t80inst/u0/IR_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y51.CQ      Tcko                  0.476   orion/t80inst/u0/A<6>
-                                                       orion/t80inst/u0/A_6
-    SLICE_X19Y36.A4      net (fanout=8)        1.709   orion/t80inst/u0/A<6>
-    SLICE_X19Y36.A       Tilo                  0.259   orion/miso_buf[6]_dff_102<6>
-                                                       orion/Mmux_csf711
-    SLICE_X18Y34.A2      net (fanout=1)        0.711   orion/Mmux_csf71
-    SLICE_X18Y34.A       Tilo                  0.235   orion/p4f[7]_dff_79<7>
-                                                       orion/Mmux_csf713
-    SLICE_X16Y45.C3      net (fanout=8)        1.332   orion/csf7
-    SLICE_X16Y45.C       Tilo                  0.255   orion/f9<1>
-                                                       orion/ram_oe0
-    SLICE_X19Y39.B3      net (fanout=8)        1.104   ram_oe0
-    SLICE_X19Y39.B       Tilo                  0.259   orion/vid0<7>
-                                                       d<6>LogicTrst1
-    SLICE_X21Y35.CX      net (fanout=4)        1.174   d<6>
-    SLICE_X21Y35.CLK     Tdick                 0.114   orion/vid1<7>
-                                                       orion/vid1_6
+    SLICE_X8Y57.DQ       Tcko                  0.525   orion/orionkey/keymatrix_7<50>
+                                                       orion/orionkey/keymatrix_7_50
+    SLICE_X10Y59.D1      net (fanout=2)        0.977   orion/orionkey/keymatrix_7<50>
+    SLICE_X10Y59.D       Tilo                  0.235   orion/orionkey/keymatrix_7<19>
+                                                       orion/Mmux_dataI91
+    SLICE_X8Y54.B3       net (fanout=1)        0.889   orion/Mmux_dataI9
+    SLICE_X8Y54.B        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI92
+    SLICE_X8Y54.A5       net (fanout=1)        0.247   orion/Mmux_dataI91
+    SLICE_X8Y54.A        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI93
+    SLICE_X13Y47.B5      net (fanout=1)        1.074   orion/Mmux_dataI92
+    SLICE_X13Y47.B       Tilo                  0.259   N444
+                                                       orion/Mmux_dataI94
+    SLICE_X15Y47.A4      net (fanout=1)        0.502   orion/Mmux_dataI93
+    SLICE_X15Y47.A       Tilo                  0.259   orion/vid0<3>
+                                                       orion/Mmux_dataI95
+    SLICE_X14Y38.B4      net (fanout=1)        0.982   orion/Mmux_dataI94
+    SLICE_X14Y38.B       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/Mmux_dataI98
+    SLICE_X14Y38.A5      net (fanout=1)        0.196   orion/dataI<2>
+    SLICE_X14Y38.A       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/t80inst/u0/Mmux__n099331
+    SLICE_X15Y39.CX      net (fanout=6)        4.803   orion/t80inst/u0/_n0993<2>
+    SLICE_X15Y39.CLK     Tdick                 0.114   orion/t80inst/u0/IR<3>
+                                                       orion/t80inst/u0/IR_2
     -------------------------------------------------  ---------------------------
-    Total                                      7.628ns (1.598ns logic, 6.030ns route)
-                                                       (20.9% logic, 79.1% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point orion/vid1_7 (SLICE_X21Y35.DX), 42 paths
---------------------------------------------------------------------------------
-Slack (setup path):     13.448ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               orion/t80inst/u0/A_4 (FF)
-  Destination:          orion/vid1_7 (FF)
-  Requirement:          25.000ns
-  Data Path Delay:      8.104ns (Levels of Logic = 4)
-  Clock Path Skew:      -2.663ns (1.472 - 4.135)
-  Source Clock:         orion/clk_cpu_BUFG rising at 0.000ns
-  Destination Clock:    clk20 falling at 25.000ns
-  Clock Uncertainty:    0.785ns
-
-  Clock Uncertainty:          0.785ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       1.200ns
-    Phase Error (PE):           0.150ns
-
-  Maximum Data Path at Slow Process Corner: orion/t80inst/u0/A_4 to orion/vid1_7
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X14Y51.AQ      Tcko                  0.476   orion/t80inst/u0/A<6>
-                                                       orion/t80inst/u0/A_4
-    SLICE_X19Y36.A6      net (fanout=8)        2.199   orion/t80inst/u0/A<4>
-    SLICE_X19Y36.A       Tilo                  0.259   orion/miso_buf[6]_dff_102<6>
-                                                       orion/Mmux_csf711
-    SLICE_X18Y34.A2      net (fanout=1)        0.711   orion/Mmux_csf71
-    SLICE_X18Y34.A       Tilo                  0.235   orion/p4f[7]_dff_79<7>
-                                                       orion/Mmux_csf713
-    SLICE_X16Y45.C3      net (fanout=8)        1.332   orion/csf7
-    SLICE_X16Y45.C       Tilo                  0.255   orion/f9<1>
-                                                       orion/ram_oe0
-    SLICE_X19Y39.C1      net (fanout=8)        1.254   ram_oe0
-    SLICE_X19Y39.C       Tilo                  0.259   orion/vid0<7>
-                                                       d<7>LogicTrst1
-    SLICE_X21Y35.DX      net (fanout=4)        1.010   d<7>
-    SLICE_X21Y35.CLK     Tdick                 0.114   orion/vid1<7>
-                                                       orion/vid1_7
-    -------------------------------------------------  ---------------------------
-    Total                                      8.104ns (1.598ns logic, 6.506ns route)
+    Total                                     12.040ns (2.370ns logic, 9.670ns route)
                                                        (19.7% logic, 80.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     13.822ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               orion/t80inst/u0/A_7 (FF)
-  Destination:          orion/vid1_7 (FF)
+Slack (setup path):     13.378ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               orion/orionkey/keymatrix_7_58 (FF)
+  Destination:          orion/t80inst/u0/IR_2 (FF)
   Requirement:          25.000ns
-  Data Path Delay:      7.735ns (Levels of Logic = 4)
-  Clock Path Skew:      -2.658ns (1.472 - 4.130)
-  Source Clock:         orion/clk_cpu_BUFG rising at 0.000ns
-  Destination Clock:    clk20 falling at 25.000ns
+  Data Path Delay:      11.679ns (Levels of Logic = 7)
+  Clock Path Skew:      0.842ns (2.960 - 2.118)
+  Source Clock:         clk20 falling at 25.000ns
+  Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
   Clock Uncertainty:    0.785ns
 
   Clock Uncertainty:          0.785ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -390,40 +453,49 @@ Slack (setup path):     13.822ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       1.200ns
     Phase Error (PE):           0.150ns
 
-  Maximum Data Path at Slow Process Corner: orion/t80inst/u0/A_7 to orion/vid1_7
+  Maximum Data Path at Slow Process Corner: orion/orionkey/keymatrix_7_58 to orion/t80inst/u0/IR_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y53.BQ      Tcko                  0.430   orion/t80inst/u0/A<8>
-                                                       orion/t80inst/u0/A_7
-    SLICE_X19Y36.A5      net (fanout=8)        1.876   orion/t80inst/u0/A<7>
-    SLICE_X19Y36.A       Tilo                  0.259   orion/miso_buf[6]_dff_102<6>
-                                                       orion/Mmux_csf711
-    SLICE_X18Y34.A2      net (fanout=1)        0.711   orion/Mmux_csf71
-    SLICE_X18Y34.A       Tilo                  0.235   orion/p4f[7]_dff_79<7>
-                                                       orion/Mmux_csf713
-    SLICE_X16Y45.C3      net (fanout=8)        1.332   orion/csf7
-    SLICE_X16Y45.C       Tilo                  0.255   orion/f9<1>
-                                                       orion/ram_oe0
-    SLICE_X19Y39.C1      net (fanout=8)        1.254   ram_oe0
-    SLICE_X19Y39.C       Tilo                  0.259   orion/vid0<7>
-                                                       d<7>LogicTrst1
-    SLICE_X21Y35.DX      net (fanout=4)        1.010   d<7>
-    SLICE_X21Y35.CLK     Tdick                 0.114   orion/vid1<7>
-                                                       orion/vid1_7
+    SLICE_X9Y56.CQ       Tcko                  0.430   orion/orionkey/keymatrix_7<59>
+                                                       orion/orionkey/keymatrix_7_58
+    SLICE_X10Y59.D5      net (fanout=2)        0.711   orion/orionkey/keymatrix_7<58>
+    SLICE_X10Y59.D       Tilo                  0.235   orion/orionkey/keymatrix_7<19>
+                                                       orion/Mmux_dataI91
+    SLICE_X8Y54.B3       net (fanout=1)        0.889   orion/Mmux_dataI9
+    SLICE_X8Y54.B        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI92
+    SLICE_X8Y54.A5       net (fanout=1)        0.247   orion/Mmux_dataI91
+    SLICE_X8Y54.A        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI93
+    SLICE_X13Y47.B5      net (fanout=1)        1.074   orion/Mmux_dataI92
+    SLICE_X13Y47.B       Tilo                  0.259   N444
+                                                       orion/Mmux_dataI94
+    SLICE_X15Y47.A4      net (fanout=1)        0.502   orion/Mmux_dataI93
+    SLICE_X15Y47.A       Tilo                  0.259   orion/vid0<3>
+                                                       orion/Mmux_dataI95
+    SLICE_X14Y38.B4      net (fanout=1)        0.982   orion/Mmux_dataI94
+    SLICE_X14Y38.B       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/Mmux_dataI98
+    SLICE_X14Y38.A5      net (fanout=1)        0.196   orion/dataI<2>
+    SLICE_X14Y38.A       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/t80inst/u0/Mmux__n099331
+    SLICE_X15Y39.CX      net (fanout=6)        4.803   orion/t80inst/u0/_n0993<2>
+    SLICE_X15Y39.CLK     Tdick                 0.114   orion/t80inst/u0/IR<3>
+                                                       orion/t80inst/u0/IR_2
     -------------------------------------------------  ---------------------------
-    Total                                      7.735ns (1.552ns logic, 6.183ns route)
-                                                       (20.1% logic, 79.9% route)
+    Total                                     11.679ns (2.275ns logic, 9.404ns route)
+                                                       (19.5% logic, 80.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     13.938ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               orion/t80inst/u0/A_6 (FF)
-  Destination:          orion/vid1_7 (FF)
+Slack (setup path):     13.744ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               orion/orionkey/keymatrix_7_18 (FF)
+  Destination:          orion/t80inst/u0/IR_2 (FF)
   Requirement:          25.000ns
-  Data Path Delay:      7.614ns (Levels of Logic = 4)
-  Clock Path Skew:      -2.663ns (1.472 - 4.135)
-  Source Clock:         orion/clk_cpu_BUFG rising at 0.000ns
-  Destination Clock:    clk20 falling at 25.000ns
+  Data Path Delay:      11.307ns (Levels of Logic = 7)
+  Clock Path Skew:      0.836ns (2.960 - 2.124)
+  Source Clock:         clk20 falling at 25.000ns
+  Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
   Clock Uncertainty:    0.785ns
 
   Clock Uncertainty:          0.785ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -432,44 +504,53 @@ Slack (setup path):     13.938ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       1.200ns
     Phase Error (PE):           0.150ns
 
-  Maximum Data Path at Slow Process Corner: orion/t80inst/u0/A_6 to orion/vid1_7
+  Maximum Data Path at Slow Process Corner: orion/orionkey/keymatrix_7_18 to orion/t80inst/u0/IR_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y51.CQ      Tcko                  0.476   orion/t80inst/u0/A<6>
-                                                       orion/t80inst/u0/A_6
-    SLICE_X19Y36.A4      net (fanout=8)        1.709   orion/t80inst/u0/A<6>
-    SLICE_X19Y36.A       Tilo                  0.259   orion/miso_buf[6]_dff_102<6>
-                                                       orion/Mmux_csf711
-    SLICE_X18Y34.A2      net (fanout=1)        0.711   orion/Mmux_csf71
-    SLICE_X18Y34.A       Tilo                  0.235   orion/p4f[7]_dff_79<7>
-                                                       orion/Mmux_csf713
-    SLICE_X16Y45.C3      net (fanout=8)        1.332   orion/csf7
-    SLICE_X16Y45.C       Tilo                  0.255   orion/f9<1>
-                                                       orion/ram_oe0
-    SLICE_X19Y39.C1      net (fanout=8)        1.254   ram_oe0
-    SLICE_X19Y39.C       Tilo                  0.259   orion/vid0<7>
-                                                       d<7>LogicTrst1
-    SLICE_X21Y35.DX      net (fanout=4)        1.010   d<7>
-    SLICE_X21Y35.CLK     Tdick                 0.114   orion/vid1<7>
-                                                       orion/vid1_7
+    SLICE_X10Y59.BQ      Tcko                  0.476   orion/orionkey/keymatrix_7<19>
+                                                       orion/orionkey/keymatrix_7_18
+    SLICE_X10Y59.D4      net (fanout=2)        0.293   orion/orionkey/keymatrix_7<18>
+    SLICE_X10Y59.D       Tilo                  0.235   orion/orionkey/keymatrix_7<19>
+                                                       orion/Mmux_dataI91
+    SLICE_X8Y54.B3       net (fanout=1)        0.889   orion/Mmux_dataI9
+    SLICE_X8Y54.B        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI92
+    SLICE_X8Y54.A5       net (fanout=1)        0.247   orion/Mmux_dataI91
+    SLICE_X8Y54.A        Tilo                  0.254   orion/Mmux_dataI91
+                                                       orion/Mmux_dataI93
+    SLICE_X13Y47.B5      net (fanout=1)        1.074   orion/Mmux_dataI92
+    SLICE_X13Y47.B       Tilo                  0.259   N444
+                                                       orion/Mmux_dataI94
+    SLICE_X15Y47.A4      net (fanout=1)        0.502   orion/Mmux_dataI93
+    SLICE_X15Y47.A       Tilo                  0.259   orion/vid0<3>
+                                                       orion/Mmux_dataI95
+    SLICE_X14Y38.B4      net (fanout=1)        0.982   orion/Mmux_dataI94
+    SLICE_X14Y38.B       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/Mmux_dataI98
+    SLICE_X14Y38.A5      net (fanout=1)        0.196   orion/dataI<2>
+    SLICE_X14Y38.A       Tilo                  0.235   orion/t80inst/DI_Reg<3>
+                                                       orion/t80inst/u0/Mmux__n099331
+    SLICE_X15Y39.CX      net (fanout=6)        4.803   orion/t80inst/u0/_n0993<2>
+    SLICE_X15Y39.CLK     Tdick                 0.114   orion/t80inst/u0/IR<3>
+                                                       orion/t80inst/u0/IR_2
     -------------------------------------------------  ---------------------------
-    Total                                      7.614ns (1.598ns logic, 6.016ns route)
-                                                       (21.0% logic, 79.0% route)
+    Total                                     11.307ns (2.321ns logic, 8.986ns route)
+                                                       (20.5% logic, 79.5% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_clocks_clkfx = PERIOD TIMEGRP "clocks_clkfx" TS_CLK50 * 0.4 HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point orion/t80inst/u0/IR_3_3 (SLICE_X14Y40.C6), 196 paths
+Paths for end point orion/t80inst/DI_Reg_7 (SLICE_X14Y42.D6), 181 paths
 --------------------------------------------------------------------------------
-Slack (hold path):      0.039ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               orion/hcnt_2 (FF)
-  Destination:          orion/t80inst/u0/IR_3_3 (FF)
+Slack (hold path):      0.161ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               orion/hcnt_0_C_0 (FF)
+  Destination:          orion/t80inst/DI_Reg_7 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      2.739ns (Levels of Logic = 4)
-  Clock Path Skew:      1.915ns (2.198 - 0.283)
+  Data Path Delay:      2.523ns (Levels of Logic = 5)
+  Clock Path Skew:      1.577ns (1.868 - 0.291)
   Source Clock:         clk20 rising at 50.000ns
   Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
   Clock Uncertainty:    0.785ns
@@ -480,36 +561,39 @@ Slack (hold path):      0.039ns (requirement - (clock path skew + uncertainty - 
     Discrete Jitter (DJ):       1.200ns
     Phase Error (PE):           0.150ns
 
-  Minimum Data Path at Fast Process Corner: orion/hcnt_2 to orion/t80inst/u0/IR_3_3
+  Minimum Data Path at Fast Process Corner: orion/hcnt_0_C_0 to orion/t80inst/DI_Reg_7
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y26.CQ      Tcko                  0.200   orion/hcnt<3>
-                                                       orion/hcnt_2
-    SLICE_X19Y39.D3      net (fanout=15)       1.304   orion/hcnt<2>
-    SLICE_X19Y39.DMUX    Tilo                  0.203   orion/vid0<7>
+    SLICE_X18Y32.BQ      Tcko                  0.200   orion/hcnt_0_C_0
+                                                       orion/hcnt_0_C_0
+    SLICE_X18Y32.B5      net (fanout=3)        0.079   orion/hcnt_0_C_0
+    SLICE_X18Y32.B       Tilo                  0.142   orion/hcnt_0_C_0
+                                                       orion/hcnt_01
+    SLICE_X16Y45.D1      net (fanout=16)       1.110   orion/hcnt_0
+    SLICE_X16Y45.D       Tilo                  0.156   orion/vid0<7>
                                                        orion/Mmux_sel11
-    SLICE_X16Y41.C5      net (fanout=34)       0.364   orion/sel
-    SLICE_X16Y41.C       Tilo                  0.156   orion/vid0<3>
-                                                       d<3>LogicTrst1
-    SLICE_X14Y40.D6      net (fanout=3)        0.162   d<3>
-    SLICE_X14Y40.D       Tilo                  0.142   orion/t80inst/u0/IR_3_3
-                                                       orion/Mmux_dataI125
-    SLICE_X14Y40.C6      net (fanout=2)        0.018   orion/Mmux_dataI124
-    SLICE_X14Y40.CLK     Tah         (-Th)    -0.190   orion/t80inst/u0/IR_3_3
-                                                       orion/t80inst/u0/Mmux__n099341
-                                                       orion/t80inst/u0/IR_3_3
+    SLICE_X16Y45.C6      net (fanout=34)       0.049   orion/sel
+    SLICE_X16Y45.C       Tilo                  0.156   orion/vid0<7>
+                                                       d<7>LogicTrst1
+    SLICE_X17Y43.C6      net (fanout=4)        0.140   d<7>
+    SLICE_X17Y43.C       Tilo                  0.156   orion/Mmux_dataI266
+                                                       orion/Mmux_dataI267
+    SLICE_X14Y42.D6      net (fanout=1)        0.145   orion/Mmux_dataI266
+    SLICE_X14Y42.CLK     Tah         (-Th)    -0.190   orion/t80inst/DI_Reg<7>
+                                                       orion/Mmux_dataI269
+                                                       orion/t80inst/DI_Reg_7
     -------------------------------------------------  ---------------------------
-    Total                                      2.739ns (0.891ns logic, 1.848ns route)
-                                                       (32.5% logic, 67.5% route)
+    Total                                      2.523ns (1.000ns logic, 1.523ns route)
+                                                       (39.6% logic, 60.4% route)
 
 --------------------------------------------------------------------------------
-Slack (hold path):      0.306ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               orion/hcnt_0 (FF)
-  Destination:          orion/t80inst/u0/IR_3_3 (FF)
+Slack (hold path):      0.646ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               orion/hcnt_0_P_0 (FF)
+  Destination:          orion/t80inst/DI_Reg_7 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      3.006ns (Levels of Logic = 4)
-  Clock Path Skew:      1.915ns (2.198 - 0.283)
+  Data Path Delay:      3.020ns (Levels of Logic = 5)
+  Clock Path Skew:      1.589ns (1.868 - 0.279)
   Source Clock:         clk20 rising at 50.000ns
   Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
   Clock Uncertainty:    0.785ns
@@ -520,36 +604,39 @@ Slack (hold path):      0.306ns (requirement - (clock path skew + uncertainty - 
     Discrete Jitter (DJ):       1.200ns
     Phase Error (PE):           0.150ns
 
-  Minimum Data Path at Fast Process Corner: orion/hcnt_0 to orion/t80inst/u0/IR_3_3
+  Minimum Data Path at Fast Process Corner: orion/hcnt_0_P_0 to orion/t80inst/DI_Reg_7
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y26.AQ      Tcko                  0.200   orion/hcnt<3>
-                                                       orion/hcnt_0
-    SLICE_X19Y39.D5      net (fanout=17)       1.571   orion/hcnt<0>
-    SLICE_X19Y39.DMUX    Tilo                  0.203   orion/vid0<7>
+    SLICE_X19Y23.DQ      Tcko                  0.198   orion/hcnt_0_P_0
+                                                       orion/hcnt_0_P_0
+    SLICE_X18Y32.B3      net (fanout=3)        0.578   orion/hcnt_0_P_0
+    SLICE_X18Y32.B       Tilo                  0.142   orion/hcnt_0_C_0
+                                                       orion/hcnt_01
+    SLICE_X16Y45.D1      net (fanout=16)       1.110   orion/hcnt_0
+    SLICE_X16Y45.D       Tilo                  0.156   orion/vid0<7>
                                                        orion/Mmux_sel11
-    SLICE_X16Y41.C5      net (fanout=34)       0.364   orion/sel
-    SLICE_X16Y41.C       Tilo                  0.156   orion/vid0<3>
-                                                       d<3>LogicTrst1
-    SLICE_X14Y40.D6      net (fanout=3)        0.162   d<3>
-    SLICE_X14Y40.D       Tilo                  0.142   orion/t80inst/u0/IR_3_3
-                                                       orion/Mmux_dataI125
-    SLICE_X14Y40.C6      net (fanout=2)        0.018   orion/Mmux_dataI124
-    SLICE_X14Y40.CLK     Tah         (-Th)    -0.190   orion/t80inst/u0/IR_3_3
-                                                       orion/t80inst/u0/Mmux__n099341
-                                                       orion/t80inst/u0/IR_3_3
+    SLICE_X16Y45.C6      net (fanout=34)       0.049   orion/sel
+    SLICE_X16Y45.C       Tilo                  0.156   orion/vid0<7>
+                                                       d<7>LogicTrst1
+    SLICE_X17Y43.C6      net (fanout=4)        0.140   d<7>
+    SLICE_X17Y43.C       Tilo                  0.156   orion/Mmux_dataI266
+                                                       orion/Mmux_dataI267
+    SLICE_X14Y42.D6      net (fanout=1)        0.145   orion/Mmux_dataI266
+    SLICE_X14Y42.CLK     Tah         (-Th)    -0.190   orion/t80inst/DI_Reg<7>
+                                                       orion/Mmux_dataI269
+                                                       orion/t80inst/DI_Reg_7
     -------------------------------------------------  ---------------------------
-    Total                                      3.006ns (0.891ns logic, 2.115ns route)
-                                                       (29.6% logic, 70.4% route)
+    Total                                      3.020ns (0.998ns logic, 2.022ns route)
+                                                       (33.0% logic, 67.0% route)
 
 --------------------------------------------------------------------------------
-Slack (hold path):      0.681ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               orion/hcnt_1 (FF)
-  Destination:          orion/t80inst/u0/IR_3_3 (FF)
+Slack (hold path):      0.650ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               orion/del_0 (FF)
+  Destination:          orion/t80inst/DI_Reg_7 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      3.381ns (Levels of Logic = 4)
-  Clock Path Skew:      1.915ns (2.198 - 0.283)
+  Data Path Delay:      2.978ns (Levels of Logic = 4)
+  Clock Path Skew:      1.543ns (1.868 - 0.325)
   Source Clock:         clk20 rising at 50.000ns
   Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
   Clock Uncertainty:    0.785ns
@@ -560,39 +647,39 @@ Slack (hold path):      0.681ns (requirement - (clock path skew + uncertainty - 
     Discrete Jitter (DJ):       1.200ns
     Phase Error (PE):           0.150ns
 
-  Minimum Data Path at Fast Process Corner: orion/hcnt_1 to orion/t80inst/u0/IR_3_3
+  Minimum Data Path at Fast Process Corner: orion/del_0 to orion/t80inst/DI_Reg_7
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y26.BQ      Tcko                  0.200   orion/hcnt<3>
-                                                       orion/hcnt_1
-    SLICE_X19Y39.D4      net (fanout=17)       1.946   orion/hcnt<1>
-    SLICE_X19Y39.DMUX    Tilo                  0.203   orion/vid0<7>
+    SLICE_X0Y25.AQ       Tcko                  0.234   orion/del<0>
+                                                       orion/del_0
+    SLICE_X16Y45.D3      net (fanout=16)       1.752   orion/del<0>
+    SLICE_X16Y45.D       Tilo                  0.156   orion/vid0<7>
                                                        orion/Mmux_sel11
-    SLICE_X16Y41.C5      net (fanout=34)       0.364   orion/sel
-    SLICE_X16Y41.C       Tilo                  0.156   orion/vid0<3>
-                                                       d<3>LogicTrst1
-    SLICE_X14Y40.D6      net (fanout=3)        0.162   d<3>
-    SLICE_X14Y40.D       Tilo                  0.142   orion/t80inst/u0/IR_3_3
-                                                       orion/Mmux_dataI125
-    SLICE_X14Y40.C6      net (fanout=2)        0.018   orion/Mmux_dataI124
-    SLICE_X14Y40.CLK     Tah         (-Th)    -0.190   orion/t80inst/u0/IR_3_3
-                                                       orion/t80inst/u0/Mmux__n099341
-                                                       orion/t80inst/u0/IR_3_3
+    SLICE_X16Y45.C6      net (fanout=34)       0.049   orion/sel
+    SLICE_X16Y45.C       Tilo                  0.156   orion/vid0<7>
+                                                       d<7>LogicTrst1
+    SLICE_X17Y43.C6      net (fanout=4)        0.140   d<7>
+    SLICE_X17Y43.C       Tilo                  0.156   orion/Mmux_dataI266
+                                                       orion/Mmux_dataI267
+    SLICE_X14Y42.D6      net (fanout=1)        0.145   orion/Mmux_dataI266
+    SLICE_X14Y42.CLK     Tah         (-Th)    -0.190   orion/t80inst/DI_Reg<7>
+                                                       orion/Mmux_dataI269
+                                                       orion/t80inst/DI_Reg_7
     -------------------------------------------------  ---------------------------
-    Total                                      3.381ns (0.891ns logic, 2.490ns route)
-                                                       (26.4% logic, 73.6% route)
+    Total                                      2.978ns (0.892ns logic, 2.086ns route)
+                                                       (30.0% logic, 70.0% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point orion/t80inst/u0/IR_0 (SLICE_X14Y41.A5), 196 paths
+Paths for end point orion/t80inst/DI_Reg_6 (SLICE_X14Y42.B6), 174 paths
 --------------------------------------------------------------------------------
-Slack (hold path):      0.122ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               orion/hcnt_2 (FF)
-  Destination:          orion/t80inst/u0/IR_0 (FF)
+Slack (hold path):      0.380ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               orion/turbo_reg_1 (FF)
+  Destination:          orion/t80inst/DI_Reg_6 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      2.824ns (Levels of Logic = 4)
-  Clock Path Skew:      1.917ns (2.200 - 0.283)
+  Data Path Delay:      2.741ns (Levels of Logic = 2)
+  Clock Path Skew:      1.576ns (1.868 - 0.292)
   Source Clock:         clk20 rising at 50.000ns
   Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
   Clock Uncertainty:    0.785ns
@@ -603,36 +690,30 @@ Slack (hold path):      0.122ns (requirement - (clock path skew + uncertainty - 
     Discrete Jitter (DJ):       1.200ns
     Phase Error (PE):           0.150ns
 
-  Minimum Data Path at Fast Process Corner: orion/hcnt_2 to orion/t80inst/u0/IR_0
+  Minimum Data Path at Fast Process Corner: orion/turbo_reg_1 to orion/t80inst/DI_Reg_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y26.CQ      Tcko                  0.200   orion/hcnt<3>
-                                                       orion/hcnt_2
-    SLICE_X19Y39.D3      net (fanout=15)       1.304   orion/hcnt<2>
-    SLICE_X19Y39.DMUX    Tilo                  0.203   orion/vid0<7>
-                                                       orion/Mmux_sel11
-    SLICE_X15Y40.B5      net (fanout=34)       0.403   orion/sel
-    SLICE_X15Y40.B       Tilo                  0.156   orion/vid0<1>
-                                                       d<0>LogicTrst1
-    SLICE_X14Y41.B5      net (fanout=3)        0.178   d<0>
-    SLICE_X14Y41.B       Tilo                  0.142   orion/t80inst/u0/IR<3>
-                                                       orion/Mmux_dataI35
-    SLICE_X14Y41.A5      net (fanout=2)        0.048   orion/Mmux_dataI34
-    SLICE_X14Y41.CLK     Tah         (-Th)    -0.190   orion/t80inst/u0/IR<3>
-                                                       orion/t80inst/u0/Mmux__n099312
-                                                       orion/t80inst/u0/IR_0
+    SLICE_X14Y46.AMUX    Tshcko                0.238   orion/Mmux_dataI155
+                                                       orion/turbo_reg_1
+    SLICE_X16Y45.A1      net (fanout=3)        1.871   orion/turbo_reg<1>
+    SLICE_X16Y45.A       Tilo                  0.156   orion/vid0<7>
+                                                       orion/Mmux_dataI227
+    SLICE_X14Y42.B6      net (fanout=1)        0.286   orion/Mmux_dataI226
+    SLICE_X14Y42.CLK     Tah         (-Th)    -0.190   orion/t80inst/DI_Reg<7>
+                                                       orion/Mmux_dataI229
+                                                       orion/t80inst/DI_Reg_6
     -------------------------------------------------  ---------------------------
-    Total                                      2.824ns (0.891ns logic, 1.933ns route)
-                                                       (31.6% logic, 68.4% route)
+    Total                                      2.741ns (0.584ns logic, 2.157ns route)
+                                                       (21.3% logic, 78.7% route)
 
 --------------------------------------------------------------------------------
-Slack (hold path):      0.389ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               orion/hcnt_0 (FF)
-  Destination:          orion/t80inst/u0/IR_0 (FF)
+Slack (hold path):      0.472ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               orion/hcnt_0_C_0 (FF)
+  Destination:          orion/t80inst/DI_Reg_6 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      3.091ns (Levels of Logic = 4)
-  Clock Path Skew:      1.917ns (2.200 - 0.283)
+  Data Path Delay:      2.834ns (Levels of Logic = 5)
+  Clock Path Skew:      1.577ns (1.868 - 0.291)
   Source Clock:         clk20 rising at 50.000ns
   Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
   Clock Uncertainty:    0.785ns
@@ -643,36 +724,39 @@ Slack (hold path):      0.389ns (requirement - (clock path skew + uncertainty - 
     Discrete Jitter (DJ):       1.200ns
     Phase Error (PE):           0.150ns
 
-  Minimum Data Path at Fast Process Corner: orion/hcnt_0 to orion/t80inst/u0/IR_0
+  Minimum Data Path at Fast Process Corner: orion/hcnt_0_C_0 to orion/t80inst/DI_Reg_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y26.AQ      Tcko                  0.200   orion/hcnt<3>
-                                                       orion/hcnt_0
-    SLICE_X19Y39.D5      net (fanout=17)       1.571   orion/hcnt<0>
-    SLICE_X19Y39.DMUX    Tilo                  0.203   orion/vid0<7>
+    SLICE_X18Y32.BQ      Tcko                  0.200   orion/hcnt_0_C_0
+                                                       orion/hcnt_0_C_0
+    SLICE_X18Y32.B5      net (fanout=3)        0.079   orion/hcnt_0_C_0
+    SLICE_X18Y32.B       Tilo                  0.142   orion/hcnt_0_C_0
+                                                       orion/hcnt_01
+    SLICE_X16Y45.D1      net (fanout=16)       1.110   orion/hcnt_0
+    SLICE_X16Y45.D       Tilo                  0.156   orion/vid0<7>
                                                        orion/Mmux_sel11
-    SLICE_X15Y40.B5      net (fanout=34)       0.403   orion/sel
-    SLICE_X15Y40.B       Tilo                  0.156   orion/vid0<1>
-                                                       d<0>LogicTrst1
-    SLICE_X14Y41.B5      net (fanout=3)        0.178   d<0>
-    SLICE_X14Y41.B       Tilo                  0.142   orion/t80inst/u0/IR<3>
-                                                       orion/Mmux_dataI35
-    SLICE_X14Y41.A5      net (fanout=2)        0.048   orion/Mmux_dataI34
-    SLICE_X14Y41.CLK     Tah         (-Th)    -0.190   orion/t80inst/u0/IR<3>
-                                                       orion/t80inst/u0/Mmux__n099312
-                                                       orion/t80inst/u0/IR_0
+    SLICE_X16Y45.B1      net (fanout=34)       0.281   orion/sel
+    SLICE_X16Y45.B       Tilo                  0.156   orion/vid0<7>
+                                                       d<6>LogicTrst1
+    SLICE_X16Y45.A5      net (fanout=4)        0.078   d<6>
+    SLICE_X16Y45.A       Tilo                  0.156   orion/vid0<7>
+                                                       orion/Mmux_dataI227
+    SLICE_X14Y42.B6      net (fanout=1)        0.286   orion/Mmux_dataI226
+    SLICE_X14Y42.CLK     Tah         (-Th)    -0.190   orion/t80inst/DI_Reg<7>
+                                                       orion/Mmux_dataI229
+                                                       orion/t80inst/DI_Reg_6
     -------------------------------------------------  ---------------------------
-    Total                                      3.091ns (0.891ns logic, 2.200ns route)
-                                                       (28.8% logic, 71.2% route)
+    Total                                      2.834ns (1.000ns logic, 1.834ns route)
+                                                       (35.3% logic, 64.7% route)
 
 --------------------------------------------------------------------------------
-Slack (hold path):      0.764ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               orion/hcnt_1 (FF)
-  Destination:          orion/t80inst/u0/IR_0 (FF)
+Slack (hold path):      0.957ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               orion/hcnt_0_P_0 (FF)
+  Destination:          orion/t80inst/DI_Reg_6 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      3.466ns (Levels of Logic = 4)
-  Clock Path Skew:      1.917ns (2.200 - 0.283)
+  Data Path Delay:      3.331ns (Levels of Logic = 5)
+  Clock Path Skew:      1.589ns (1.868 - 0.279)
   Source Clock:         clk20 rising at 50.000ns
   Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
   Clock Uncertainty:    0.785ns
@@ -683,151 +767,58 @@ Slack (hold path):      0.764ns (requirement - (clock path skew + uncertainty - 
     Discrete Jitter (DJ):       1.200ns
     Phase Error (PE):           0.150ns
 
-  Minimum Data Path at Fast Process Corner: orion/hcnt_1 to orion/t80inst/u0/IR_0
+  Minimum Data Path at Fast Process Corner: orion/hcnt_0_P_0 to orion/t80inst/DI_Reg_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y26.BQ      Tcko                  0.200   orion/hcnt<3>
-                                                       orion/hcnt_1
-    SLICE_X19Y39.D4      net (fanout=17)       1.946   orion/hcnt<1>
-    SLICE_X19Y39.DMUX    Tilo                  0.203   orion/vid0<7>
+    SLICE_X19Y23.DQ      Tcko                  0.198   orion/hcnt_0_P_0
+                                                       orion/hcnt_0_P_0
+    SLICE_X18Y32.B3      net (fanout=3)        0.578   orion/hcnt_0_P_0
+    SLICE_X18Y32.B       Tilo                  0.142   orion/hcnt_0_C_0
+                                                       orion/hcnt_01
+    SLICE_X16Y45.D1      net (fanout=16)       1.110   orion/hcnt_0
+    SLICE_X16Y45.D       Tilo                  0.156   orion/vid0<7>
                                                        orion/Mmux_sel11
-    SLICE_X15Y40.B5      net (fanout=34)       0.403   orion/sel
-    SLICE_X15Y40.B       Tilo                  0.156   orion/vid0<1>
-                                                       d<0>LogicTrst1
-    SLICE_X14Y41.B5      net (fanout=3)        0.178   d<0>
-    SLICE_X14Y41.B       Tilo                  0.142   orion/t80inst/u0/IR<3>
-                                                       orion/Mmux_dataI35
-    SLICE_X14Y41.A5      net (fanout=2)        0.048   orion/Mmux_dataI34
-    SLICE_X14Y41.CLK     Tah         (-Th)    -0.190   orion/t80inst/u0/IR<3>
-                                                       orion/t80inst/u0/Mmux__n099312
-                                                       orion/t80inst/u0/IR_0
+    SLICE_X16Y45.B1      net (fanout=34)       0.281   orion/sel
+    SLICE_X16Y45.B       Tilo                  0.156   orion/vid0<7>
+                                                       d<6>LogicTrst1
+    SLICE_X16Y45.A5      net (fanout=4)        0.078   d<6>
+    SLICE_X16Y45.A       Tilo                  0.156   orion/vid0<7>
+                                                       orion/Mmux_dataI227
+    SLICE_X14Y42.B6      net (fanout=1)        0.286   orion/Mmux_dataI226
+    SLICE_X14Y42.CLK     Tah         (-Th)    -0.190   orion/t80inst/DI_Reg<7>
+                                                       orion/Mmux_dataI229
+                                                       orion/t80inst/DI_Reg_6
     -------------------------------------------------  ---------------------------
-    Total                                      3.466ns (0.891ns logic, 2.575ns route)
-                                                       (25.7% logic, 74.3% route)
+    Total                                      3.331ns (0.998ns logic, 2.333ns route)
+                                                       (30.0% logic, 70.0% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point orion/t80inst/DI_Reg_2 (SLICE_X16Y40.B4), 196 paths
+Paths for end point orion/receiver/bit_spacing_2 (SLICE_X20Y39.CE), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.218ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               orion/hcnt_2 (FF)
-  Destination:          orion/t80inst/DI_Reg_2 (FF)
+Slack (hold path):      0.394ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               orion/receiver/Baud8GeneratorAcc_16 (FF)
+  Destination:          orion/receiver/bit_spacing_2 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      2.919ns (Levels of Logic = 4)
-  Clock Path Skew:      1.916ns (2.199 - 0.283)
-  Source Clock:         clk20 rising at 50.000ns
-  Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
-  Clock Uncertainty:    0.785ns
+  Data Path Delay:      0.396ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.070 - 0.068)
+  Source Clock:         orion/uart_clk_BUFG rising at 50.000ns
+  Destination Clock:    orion/uart_clk_BUFG rising at 50.000ns
+  Clock Uncertainty:    0.000ns
 
-  Clock Uncertainty:          0.785ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       1.200ns
-    Phase Error (PE):           0.150ns
-
-  Minimum Data Path at Fast Process Corner: orion/hcnt_2 to orion/t80inst/DI_Reg_2
+  Minimum Data Path at Fast Process Corner: orion/receiver/Baud8GeneratorAcc_16 to orion/receiver/bit_spacing_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y26.CQ      Tcko                  0.200   orion/hcnt<3>
-                                                       orion/hcnt_2
-    SLICE_X19Y39.D3      net (fanout=15)       1.304   orion/hcnt<2>
-    SLICE_X19Y39.DMUX    Tilo                  0.203   orion/vid0<7>
-                                                       orion/Mmux_sel11
-    SLICE_X16Y41.B4      net (fanout=34)       0.418   orion/sel
-    SLICE_X16Y41.B       Tilo                  0.156   orion/vid0<3>
-                                                       d<2>LogicTrst1
-    SLICE_X16Y41.A5      net (fanout=3)        0.081   d<2>
-    SLICE_X16Y41.A       Tilo                  0.156   orion/vid0<3>
-                                                       orion/Mmux_dataI95
-    SLICE_X16Y40.B4      net (fanout=1)        0.204   orion/Mmux_dataI94
-    SLICE_X16Y40.CLK     Tah         (-Th)    -0.197   orion/t80inst/DI_Reg<3>
-                                                       orion/Mmux_dataI98
-                                                       orion/t80inst/DI_Reg_2
+    SLICE_X22Y38.AQ      Tcko                  0.200   orion/receiver/Baud8GeneratorAcc<16>
+                                                       orion/receiver/Baud8GeneratorAcc_16
+    SLICE_X20Y39.CE      net (fanout=7)        0.298   orion/receiver/Baud8GeneratorAcc<16>
+    SLICE_X20Y39.CLK     Tckce       (-Th)     0.102   orion/receiver/bit_spacing<2>
+                                                       orion/receiver/bit_spacing_2
     -------------------------------------------------  ---------------------------
-    Total                                      2.919ns (0.912ns logic, 2.007ns route)
-                                                       (31.2% logic, 68.8% route)
-
---------------------------------------------------------------------------------
-Slack (hold path):      0.485ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               orion/hcnt_0 (FF)
-  Destination:          orion/t80inst/DI_Reg_2 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      3.186ns (Levels of Logic = 4)
-  Clock Path Skew:      1.916ns (2.199 - 0.283)
-  Source Clock:         clk20 rising at 50.000ns
-  Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
-  Clock Uncertainty:    0.785ns
-
-  Clock Uncertainty:          0.785ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       1.200ns
-    Phase Error (PE):           0.150ns
-
-  Minimum Data Path at Fast Process Corner: orion/hcnt_0 to orion/t80inst/DI_Reg_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X14Y26.AQ      Tcko                  0.200   orion/hcnt<3>
-                                                       orion/hcnt_0
-    SLICE_X19Y39.D5      net (fanout=17)       1.571   orion/hcnt<0>
-    SLICE_X19Y39.DMUX    Tilo                  0.203   orion/vid0<7>
-                                                       orion/Mmux_sel11
-    SLICE_X16Y41.B4      net (fanout=34)       0.418   orion/sel
-    SLICE_X16Y41.B       Tilo                  0.156   orion/vid0<3>
-                                                       d<2>LogicTrst1
-    SLICE_X16Y41.A5      net (fanout=3)        0.081   d<2>
-    SLICE_X16Y41.A       Tilo                  0.156   orion/vid0<3>
-                                                       orion/Mmux_dataI95
-    SLICE_X16Y40.B4      net (fanout=1)        0.204   orion/Mmux_dataI94
-    SLICE_X16Y40.CLK     Tah         (-Th)    -0.197   orion/t80inst/DI_Reg<3>
-                                                       orion/Mmux_dataI98
-                                                       orion/t80inst/DI_Reg_2
-    -------------------------------------------------  ---------------------------
-    Total                                      3.186ns (0.912ns logic, 2.274ns route)
-                                                       (28.6% logic, 71.4% route)
-
---------------------------------------------------------------------------------
-Slack (hold path):      0.860ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               orion/hcnt_1 (FF)
-  Destination:          orion/t80inst/DI_Reg_2 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      3.561ns (Levels of Logic = 4)
-  Clock Path Skew:      1.916ns (2.199 - 0.283)
-  Source Clock:         clk20 rising at 50.000ns
-  Destination Clock:    orion/clk_cpu_BUFG rising at 50.000ns
-  Clock Uncertainty:    0.785ns
-
-  Clock Uncertainty:          0.785ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       1.200ns
-    Phase Error (PE):           0.150ns
-
-  Minimum Data Path at Fast Process Corner: orion/hcnt_1 to orion/t80inst/DI_Reg_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X14Y26.BQ      Tcko                  0.200   orion/hcnt<3>
-                                                       orion/hcnt_1
-    SLICE_X19Y39.D4      net (fanout=17)       1.946   orion/hcnt<1>
-    SLICE_X19Y39.DMUX    Tilo                  0.203   orion/vid0<7>
-                                                       orion/Mmux_sel11
-    SLICE_X16Y41.B4      net (fanout=34)       0.418   orion/sel
-    SLICE_X16Y41.B       Tilo                  0.156   orion/vid0<3>
-                                                       d<2>LogicTrst1
-    SLICE_X16Y41.A5      net (fanout=3)        0.081   d<2>
-    SLICE_X16Y41.A       Tilo                  0.156   orion/vid0<3>
-                                                       orion/Mmux_dataI95
-    SLICE_X16Y40.B4      net (fanout=1)        0.204   orion/Mmux_dataI94
-    SLICE_X16Y40.CLK     Tah         (-Th)    -0.197   orion/t80inst/DI_Reg<3>
-                                                       orion/Mmux_dataI98
-                                                       orion/t80inst/DI_Reg_2
-    -------------------------------------------------  ---------------------------
-    Total                                      3.561ns (0.912ns logic, 2.649ns route)
-                                                       (25.6% logic, 74.4% route)
+    Total                                      0.396ns (0.098ns logic, 0.298ns route)
+                                                       (24.7% logic, 75.3% route)
 
 --------------------------------------------------------------------------------
 
@@ -838,7 +829,7 @@ Slack: 46.430ns (period - min period limit)
   Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
   Physical resource: orion/romd_altera/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
   Logical resource: orion/romd_altera/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
-  Location pin: RAMB16_X1Y20.CLKA
+  Location pin: RAMB16_X1Y22.CLKA
   Clock network: clk20
 --------------------------------------------------------------------------------
 Slack: 46.430ns (period - min period limit)
@@ -846,7 +837,7 @@ Slack: 46.430ns (period - min period limit)
   Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
   Physical resource: orion/romd_altera/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
   Logical resource: orion/romd_altera/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
-  Location pin: RAMB16_X1Y22.CLKA
+  Location pin: RAMB16_X1Y20.CLKA
   Clock network: clk20
 --------------------------------------------------------------------------------
 Slack: 47.334ns (period - min period limit)
@@ -866,8 +857,8 @@ Derived Constraints for TS_CLK50
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_CLK50                       |     20.000ns|      8.000ns|      9.469ns|            0|            0|            0|        61370|
-| TS_clocks_clkfx               |     50.000ns|     23.672ns|          N/A|            0|            0|        61370|            0|
+|TS_CLK50                       |     20.000ns|      8.000ns|     13.418ns|            0|            0|            0|        61729|
+| TS_clocks_clkfx               |     50.000ns|     33.544ns|          N/A|            0|            0|        61729|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 All constraints were met.
@@ -882,7 +873,7 @@ Clock to Setup on destination clock CLK50
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK50          |    8.505|    3.819|    9.784|   13.584|
+CLK50          |    9.840|    4.452|   10.536|   13.498|
 ---------------+---------+---------+---------+---------+
 
 
@@ -891,23 +882,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 61370 paths, 0 nets, and 2715 connections
+Constraints cover 61729 paths, 0 nets, and 2809 connections
 
 Design statistics:
-   Minimum period:  23.672ns{1}   (Maximum frequency:  42.244MHz)
+   Minimum period:  33.544ns{1}   (Maximum frequency:  29.812MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Tue May 15 22:00:06 2018 
+Analysis completed Wed May 16 22:30:31 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 415 MB
+Peak Memory Usage: 416 MB
 
 
 

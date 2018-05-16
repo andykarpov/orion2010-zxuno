@@ -78,7 +78,8 @@ PORT (
 	rxd:             in std_logic;
 	txd:             out std_logic;
 	rom_we:          out std_logic;
-	dac_out:         out std_logic
+	dac_out:         out std_logic;
+	vga_mode: 		  in std_logic
 );
 END COMPONENT;
 
@@ -96,7 +97,7 @@ VGA_G <= "110" when i/='0' and g='1' else "010" when g='1' else "000";
 VGA_B <= "110" when i/='0' and b='1' else "010" when b='1' else "000";
 SOUND_L <= dac_out;
 SOUND_R <= dac_out;
-SRAM_ADDR(20 downto 18) <= (others => '0');
+SRAM_ADDR(20 downto 19) <= (others => '0');
 SRAM_WE_N <= ram_we0;
 SRAM_CE_N <= '0';
 STD_N <= '0';
@@ -117,7 +118,7 @@ port map (
 	sound => sound,
 	a => SRAM_ADDR(16 downto 0),
 	a17 => SRAM_ADDR(17),
-	a18 => open,
+	a18 => SRAM_ADDR(18),
 	d => d(7 downto 0),
 	wr => wr,
 	rd => rd,
@@ -138,7 +139,8 @@ port map (
 	rxd => rxd,
 	txd => txd,
 	rom_we => rom_we,
-	dac_out => dac_out
+	dac_out => dac_out,
+	vga_mode => '0'
 );
 
 clocks:clock

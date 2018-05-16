@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-andy-mi::  Tue May 15 21:59:47 2018
+andy-mi::  Wed May 16 22:30:12 2018
 
 par -w -intstyle ise -ol high -mt off orion2010_map.ncd orion2010.ncd
 orion2010.pcf 
@@ -22,16 +22,16 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   648 out of  11,440    5%
-    Number used as Flip Flops:                 646
-    Number used as Latches:                      2
+  Number of Slice Registers:                   683 out of  11,440    5%
+    Number used as Flip Flops:                 671
+    Number used as Latches:                     12
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      1,974 out of   5,720   34%
-    Number used as logic:                    1,927 out of   5,720   33%
-      Number using O6 output only:           1,568
-      Number using O5 output only:              98
-      Number using O5 and O6:                  261
+  Number of Slice LUTs:                      2,008 out of   5,720   35%
+    Number used as logic:                    1,962 out of   5,720   34%
+      Number using O6 output only:           1,613
+      Number using O5 output only:              84
+      Number using O5 and O6:                  265
       Number used as ROM:                        0
     Number used as Memory:                      35 out of   1,440    2%
       Number used as Dual Port RAM:             34
@@ -43,18 +43,18 @@ Slice Logic Utilization:
         Number using O6 output only:             1
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:     12
+    Number used exclusively as route-thrus:     11
       Number with same-slice register load:      4
-      Number with same-slice carry load:         7
+      Number with same-slice carry load:         6
       Number with other load:                    1
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   734 out of   1,430   51%
-  Number of MUXCYs used:                       228 out of   2,860    7%
-  Number of LUT Flip Flop pairs used:        2,096
-    Number with an unused Flip Flop:         1,457 out of   2,096   69%
-    Number with an unused LUT:                 122 out of   2,096    5%
-    Number of fully used LUT-FF pairs:         517 out of   2,096   24%
+  Number of occupied Slices:                   728 out of   1,430   50%
+  Number of MUXCYs used:                       216 out of   2,860    7%
+  Number of LUT Flip Flop pairs used:        2,134
+    Number with an unused Flip Flop:         1,461 out of   2,134   68%
+    Number with an unused LUT:                 126 out of   2,134    5%
+    Number of fully used LUT-FF pairs:         547 out of   2,134   25%
     Number of slice register sites lost
       to control set restrictions:               0 out of  11,440    0%
 
@@ -103,39 +103,40 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 4 secs 
-Finished initial Timing Analysis.  REAL time: 4 secs 
+Starting initial Timing Analysis.  REAL time: 3 secs 
+Finished initial Timing Analysis.  REAL time: 3 secs 
 
-WARNING:Par:288 - The signal orion/t80inst/u0/Regs/Mram_RegsL11_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal orion/t80inst/u0/Regs/Mram_RegsH11_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal orion/t80inst/u0/Regs/Mram_RegsL11_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 11556 unrouted;      REAL time: 4 secs 
+Phase  1  : 11781 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 10598 unrouted;      REAL time: 5 secs 
+Phase  2  : 10809 unrouted;      REAL time: 4 secs 
 
-Phase  3  : 5319 unrouted;      REAL time: 8 secs 
+Phase  3  : 5392 unrouted;      REAL time: 8 secs 
 
-Phase  4  : 5319 unrouted; (Setup:0, Hold:16884, Component Switching Limit:0)     REAL time: 8 secs 
+Phase  4  : 5392 unrouted; (Setup:0, Hold:18978, Component Switching Limit:0)     REAL time: 8 secs 
 
 Updating file: orion2010.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:15517, Component Switching Limit:0)     REAL time: 12 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:18714, Component Switching Limit:0)     REAL time: 12 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:15517, Component Switching Limit:0)     REAL time: 12 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:18714, Component Switching Limit:0)     REAL time: 12 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:15517, Component Switching Limit:0)     REAL time: 12 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:18714, Component Switching Limit:0)     REAL time: 12 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:15517, Component Switching Limit:0)     REAL time: 12 secs 
-WARNING:Route:522 - Unusually high hold time violation detected among 1 connections.The router will continue and try to fix it 
-	orion/uart_wr:AQ -> orion/transm/state<2>:A6 -3673
+Phase  8  : 0 unrouted; (Setup:0, Hold:18714, Component Switching Limit:0)     REAL time: 12 secs 
+WARNING:Route:522 - Unusually high hold time violation detected among 2 connections.The router will continue and try to fix it 
+	orion/uart_wr:AQ -> orion/transm/state<2>:A6 -3920
+	orion/vector<2>:BQ -> orion/t80inst/DI_Reg<3>:B1 -2173
 
 
 Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 12 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 13 secs 
-Total REAL time to Router completion: 13 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 12 secs 
+Total REAL time to Router completion: 12 secs 
 Total CPU time to Router completion: 13 secs 
 
 Partition Implementation Status
@@ -154,36 +155,58 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|  orion/clk_cpu_BUFG |  BUFGMUX_X2Y1| No   |  130 |  0.116     |  1.507      |
+|               clk20 |  BUFGMUX_X2Y2| No   |  121 |  0.103     |  1.495      |
 +---------------------+--------------+------+------+------------+-------------+
-|               clk20 |  BUFGMUX_X2Y2| No   |  101 |  0.095     |  1.486      |
-+---------------------+--------------+------+------+------------+-------------+
-| orion/uart_clk_BUFG |  BUFGMUX_X2Y4| No   |   20 |  0.106     |  1.497      |
+|  orion/clk_cpu_BUFG |  BUFGMUX_X2Y1| No   |  129 |  0.110     |  1.501      |
 +---------------------+--------------+------+------+------------+-------------+
 |orion/t80inst/WR_n_B |              |      |      |            |             |
-|                 UFG | BUFGMUX_X3Y13| No   |   25 |  0.109     |  1.500      |
+|                 UFG | BUFGMUX_X3Y13| No   |   25 |  0.100     |  1.498      |
 +---------------------+--------------+------+------+------------+-------------+
-|orion/csf767_dataO[3 |              |      |      |            |             |
-|         ]_AND_422_o |         Local|      |    2 |  0.000     |  0.379      |
+| orion/uart_clk_BUFG |  BUFGMUX_X2Y4| No   |   20 |  0.048     |  1.440      |
 +---------------------+--------------+------+------+------------+-------------+
 |orion/receiver/RxD_d |              |      |      |            |             |
-|           ata_ready |         Local|      |    8 |  0.858     |  1.427      |
+|           ata_ready |         Local|      |    8 |  1.392     |  2.321      |
++---------------------+--------------+------+------+------------+-------------+
+|       orion/sck_buf |         Local|      |    3 |  0.585     |  1.422      |
++---------------------+--------------+------+------+------------+-------------+
+|        orion/del<0> |         Local|      |   16 |  0.765     |  2.615      |
++---------------------+--------------+------+------+------------+-------------+
+|   orion/hcnt<9>_inv |         Local|      |    3 |  0.323     |  2.436      |
++---------------------+--------------+------+------+------------+-------------+
+|orion/csf767_dataO[3 |              |      |      |            |             |
+|         ]_AND_463_o |         Local|      |    2 |  0.000     |  0.873      |
++---------------------+--------------+------+------+------------+-------------+
+|  orion/orionkey/cpm |         Local|      |    2 |  0.000     |  0.896      |
 +---------------------+--------------+------+------+------------+-------------+
 |orion/csf767_dataO[4 |              |      |      |            |             |
-|         ]_AND_420_o |         Local|      |    2 |  0.000     |  0.586      |
+|         ]_AND_461_o |         Local|      |    2 |  0.000     |  0.586      |
 +---------------------+--------------+------+------+------------+-------------+
-|  orion/orionkey/cpm |         Local|      |    2 |  0.000     |  2.042      |
+|   orion/_i000009<7> |         Local|      |    3 |  0.000     |  0.960      |
 +---------------------+--------------+------+------+------------+-------------+
-|       orion/hcnt<9> |         Local|      |    9 |  0.196     |  1.599      |
+|   orion/_i000009<3> |         Local|      |    3 |  0.000     |  0.360      |
 +---------------------+--------------+------+------+------------+-------------+
-|       orion/sck_buf |         Local|      |    3 |  0.682     |  1.214      |
+|   orion/_i000009<4> |         Local|      |    3 |  0.000     |  0.618      |
 +---------------------+--------------+------+------+------------+-------------+
-|  orion/t80inst/RD_n |         Local|      |    3 |  0.000     |  0.836      |
+|   orion/_i000009<1> |         Local|      |    3 |  0.000     |  1.014      |
 +---------------------+--------------+------+------+------------+-------------+
-|  orion/orionkey/rom |         Local|      |    4 |  0.366     |  1.713      |
+|   orion/_i000009<5> |         Local|      |    3 |  0.000     |  0.587      |
++---------------------+--------------+------+------+------------+-------------+
+|   orion/_i000009<8> |         Local|      |    3 |  0.000     |  0.340      |
++---------------------+--------------+------+------+------------+-------------+
+|   orion/_i000009<9> |         Local|      |    3 |  0.000     |  1.111      |
++---------------------+--------------+------+------+------------+-------------+
+|  orion/t80inst/RD_n |         Local|      |    3 |  0.000     |  1.256      |
++---------------------+--------------+------+------+------------+-------------+
+|   orion/_i000009<2> |         Local|      |    3 |  0.000     |  0.914      |
++---------------------+--------------+------+------+------------+-------------+
+|   orion/_i000009<0> |         Local|      |    3 |  0.000     |  0.897      |
++---------------------+--------------+------+------+------------+-------------+
+|   orion/_i000009<6> |         Local|      |    3 |  0.000     |  0.573      |
++---------------------+--------------+------+------+------------+-------------+
+|  orion/orionkey/rom |         Local|      |    4 |  0.456     |  1.770      |
 +---------------------+--------------+------+------+------------+-------------+
 |orion/orionkey/keyb_ |              |      |      |            |             |
-|                 int |         Local|      |    1 |  0.000     |  1.023      |
+|                 int |         Local|      |    1 |  0.000     |  1.283      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -205,11 +228,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
+  TS_clocks_clkfx = PERIOD TIMEGRP "clocks_ | SETUP       |     8.228ns|    33.544ns|       0|           0
+  clkfx" TS_CLK50 * 0.4 HIGH 50%            | HOLD        |     0.161ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
   TS_CLK50 = PERIOD TIMEGRP "CLK50" 50 MHz  | MINLOWPULSE |    12.000ns|     8.000ns|       0|           0
   HIGH 50%                                  |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_clocks_clkfx = PERIOD TIMEGRP "clocks_ | SETUP       |    13.164ns|    23.672ns|       0|           0
-  clkfx" TS_CLK50 * 0.4 HIGH 50%            | HOLD        |     0.039ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -223,8 +246,8 @@ Derived Constraints for TS_CLK50
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_CLK50                       |     20.000ns|      8.000ns|      9.469ns|            0|            0|            0|        61370|
-| TS_clocks_clkfx               |     50.000ns|     23.672ns|          N/A|            0|            0|        61370|            0|
+|TS_CLK50                       |     20.000ns|      8.000ns|     13.418ns|            0|            0|            0|        61729|
+| TS_clocks_clkfx               |     50.000ns|     33.544ns|          N/A|            0|            0|        61729|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 All constraints were met.

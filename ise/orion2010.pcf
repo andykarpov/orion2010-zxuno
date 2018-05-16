@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue May 15 21:59:43 2018
+// Written by: Map P.20131013 on Wed May 16 22:30:08 2018
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -68,20 +68,19 @@ PIN
         = BEL
         "orion/romd_altera/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram"
         PINNAME CLKA;
-TIMEGRP clocks_clkfx = BEL "clocks/clkout1_buf" BEL "orion/hcnt_9" BEL
-        "orion/hcnt_8" BEL "orion/hcnt_7" BEL "orion/hcnt_6" BEL
-        "orion/hcnt_5" BEL "orion/hcnt_4" BEL "orion/hcnt_3" BEL
-        "orion/hcnt_2" BEL "orion/hcnt_1" BEL "orion/hcnt_0" BEL
-        "orion/dac_buf_7" BEL "orion/dac_buf_6" BEL "orion/dac_buf_5" BEL
-        "orion/dac_buf_4" BEL "orion/dac_buf_3" BEL "orion/dac_buf_2" BEL
-        "orion/dac_buf_1" BEL "orion/dac_buf_0" BEL "orion/dac_cnt_7" BEL
-        "orion/dac_cnt_6" BEL "orion/int_cnt_18" BEL "orion/int_cnt_17" BEL
-        "orion/int_cnt_16" BEL "orion/int_cnt_15" BEL "orion/int_cnt_14" BEL
-        "orion/int_cnt_13" BEL "orion/int_cnt_12" BEL "orion/int_cnt_11" BEL
-        "orion/int_cnt_10" BEL "orion/int_cnt_9" BEL "orion/int_cnt_8" BEL
-        "orion/int_cnt_7" BEL "orion/i_clock_DFF_74" BEL "orion/red" BEL
-        "orion/green" BEL "orion/blue" BEL "orion/dac_out" BEL "orion/vid3_7"
-        BEL "orion/vid3_6" BEL "orion/vid3_5" BEL "orion/vid3_4" BEL
+TIMEGRP clocks_clkfx = BEL "clocks/clkout1_buf" BEL "orion/del_2" BEL
+        "orion/del_1" BEL "orion/del_0" BEL "orion/dac_buf_7" BEL
+        "orion/dac_buf_6" BEL "orion/dac_buf_5" BEL "orion/dac_buf_4" BEL
+        "orion/dac_buf_3" BEL "orion/dac_buf_2" BEL "orion/dac_buf_1" BEL
+        "orion/dac_buf_0" BEL "orion/dac_cnt_7" BEL "orion/dac_cnt_6" BEL
+        "orion/dac_cnt_5" BEL "orion/dac_cnt_4" BEL "orion/dac_cnt_3" BEL
+        "orion/int_cnt_18" BEL "orion/int_cnt_17" BEL "orion/int_cnt_16" BEL
+        "orion/int_cnt_15" BEL "orion/int_cnt_14" BEL "orion/int_cnt_13" BEL
+        "orion/int_cnt_12" BEL "orion/int_cnt_11" BEL "orion/int_cnt_10" BEL
+        "orion/int_cnt_9" BEL "orion/int_cnt_8" BEL "orion/int_cnt_7" BEL
+        "orion/i_clock_DFF_74" BEL "orion/red" BEL "orion/blue" BEL
+        "orion/green" BEL "orion/dac_out" BEL "orion/vid3_7" BEL
+        "orion/vid3_6" BEL "orion/vid3_5" BEL "orion/vid3_4" BEL
         "orion/vid3_3" BEL "orion/vid3_2" BEL "orion/vid3_1" BEL
         "orion/vid3_0" BEL "orion/vid2_7" BEL "orion/vid2_6" BEL
         "orion/vid2_5" BEL "orion/vid2_4" BEL "orion/vid2_3" BEL
@@ -246,22 +245,27 @@ TIMEGRP clocks_clkfx = BEL "clocks/clkout1_buf" BEL "orion/hcnt_9" BEL
         "orion/receiver/RxD_data_2" BEL "orion/receiver/RxD_data_1" BEL
         "orion/receiver/RxD_data_0" BEL "orion/receiver/RxD_data_ready" BEL
         "orion/blank" BEL "orion/vsync" BEL "orion/hsync" BEL "orion/uart_wr"
-        BEL "orion/interr" BEL "orion/t80inst/u0/IR_0_1" BEL
-        "orion/t80inst/u0/IR_1_1" BEL "orion/t80inst/u0/IR_2_1" BEL
-        "orion/t80inst/u0/IR_7_1" BEL "orion/t80inst/u0/IR_6_1" BEL
-        "orion/t80inst/u0/IR_0_2" BEL "orion/t80inst/u0/IR_2_2" BEL
+        BEL "orion/interr" BEL "orion/hcnt_9_C_9" BEL "orion/hcnt_9_P_9" BEL
+        "orion/hcnt_0_C_0" BEL "orion/hcnt_0_P_0" BEL "orion/hcnt_1_C_1" BEL
+        "orion/hcnt_1_P_1" BEL "orion/hcnt_2_C_2" BEL "orion/hcnt_2_P_2" BEL
+        "orion/hcnt_3_C_3" BEL "orion/hcnt_3_P_3" BEL "orion/hcnt_4_C_4" BEL
+        "orion/hcnt_4_P_4" BEL "orion/hcnt_5_C_5" BEL "orion/hcnt_5_P_5" BEL
+        "orion/hcnt_6_C_6" BEL "orion/hcnt_6_P_6" BEL "orion/hcnt_8_C_8" BEL
+        "orion/hcnt_8_P_8" BEL "orion/hcnt_7_C_7" BEL "orion/hcnt_7_P_7" BEL
+        "orion/t80inst/u0/IR_1_1" BEL "orion/t80inst/u0/IR_0_1" BEL
+        "orion/t80inst/u0/IR_2_1" BEL "orion/t80inst/u0/IR_7_1" BEL
+        "orion/t80inst/u0/IR_6_1" BEL "orion/t80inst/u0/IR_2_2" BEL
         "orion/t80inst/u0/IR_4_1" BEL "orion/t80inst/u0/IR_5_1" BEL
         "orion/t80inst/u0/IR_3_1" BEL "orion/t80inst/u0/IR_4_2" BEL
-        "orion/t80inst/u0/IR_1_2" BEL "orion/t80inst/u0/IR_2_3" BEL
-        "orion/t80inst/u0/IR_0_3" BEL "orion/t80inst/u0/IR_6_2" BEL
-        "orion/t80inst/u0/IR_4_3" BEL "orion/t80inst/u0/IR_7_2" BEL
-        "orion/t80inst/u0/IR_0_4" BEL "orion/t80inst/u0/IR_2_4" BEL
-        "orion/t80inst/u0/IR_6_3" BEL "orion/t80inst/u0/IR_5_2" BEL
-        "orion/t80inst/u0/IR_3_2" BEL "orion/t80inst/u0/IR_7_3" BEL
-        "orion/t80inst/u0/IR_1_3" BEL "orion/t80inst/u0/IR_3_3" BEL
-        "orion/t80inst/u0/IR_4_4" BEL "orion/t80inst/u0/IR_5_3" BEL
-        "orion/t80inst/u0/IR_0_5" BEL "orion/t80inst/u0/IR_0_6" BEL
-        "orion/t80inst/u0/IR_1_4" BEL "orion/t80inst/u0/IR_2_5" BEL
+        "orion/t80inst/u0/IR_1_2" BEL "orion/t80inst/u0/IR_6_2" BEL
+        "orion/t80inst/u0/IR_2_3" BEL "orion/t80inst/u0/IR_4_3" BEL
+        "orion/t80inst/u0/IR_7_2" BEL "orion/t80inst/u0/IR_0_2" BEL
+        "orion/t80inst/u0/IR_6_3" BEL "orion/t80inst/u0/IR_2_4" BEL
+        "orion/t80inst/u0/IR_5_2" BEL "orion/t80inst/u0/IR_3_2" BEL
+        "orion/t80inst/u0/IR_7_3" BEL "orion/t80inst/u0/IR_1_3" BEL
+        "orion/t80inst/u0/IR_3_3" BEL "orion/t80inst/u0/IR_4_4" BEL
+        "orion/t80inst/u0/IR_5_3" BEL "orion/t80inst/u0/IR_2_5" BEL
+        "orion/t80inst/u0/IR_0_3" BEL "orion/t80inst/u0/IR_6_4" BEL
         "orion/uart_clk_BUFG" BEL "orion/orionkey/ps2_keyboard_ins/Mshreg_q_8"
         BEL "orion/orionkey/ps2_keyboard_ins/q_8" PIN
         "orion/romd_altera/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram_pins<28>"
