@@ -80,13 +80,13 @@
 <msg type="warning" file="HDLCompiler" num="751" delta="old" >"/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 341: Redeclaration of ansi port <arg fmt="%s" index="1">ps2_data</arg> is not allowed
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="new" >"/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 884: Actual for formal port <arg fmt="%s" index="1">clk</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 885: Actual for formal port <arg fmt="%s" index="1">clk</arg> is neither a static name nor a globally static expression
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="new" >"/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 908: Actual for formal port <arg fmt="%s" index="1">clka</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 909: Actual for formal port <arg fmt="%s" index="1">clka</arg> is neither a static name nor a globally static expression
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 653: <arg fmt="%s" index="1">sel2</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 654: <arg fmt="%s" index="1">sel2</arg> should be on the sensitivity list of the process
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/keyboard/orionkeyboard.v" Line 124: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
@@ -149,19 +149,19 @@
 <msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">rxd</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd</arg>&quot; line <arg fmt="%s" index="2">874</arg>: Output port &lt;<arg fmt="%s" index="3">RxD_endofpacket</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">receiver</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd</arg>&quot; line <arg fmt="%s" index="2">875</arg>: Output port &lt;<arg fmt="%s" index="3">RxD_endofpacket</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">receiver</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd</arg>&quot; line <arg fmt="%s" index="2">874</arg>: Output port &lt;<arg fmt="%s" index="3">RxD_idle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">receiver</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd</arg>&quot; line <arg fmt="%s" index="2">875</arg>: Output port &lt;<arg fmt="%s" index="3">RxD_idle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">receiver</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd</arg>&quot; line <arg fmt="%s" index="2">912</arg>: Output port &lt;<arg fmt="%s" index="3">RFSH_n</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">t80inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd</arg>&quot; line <arg fmt="%s" index="2">913</arg>: Output port &lt;<arg fmt="%s" index="3">RFSH_n</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">t80inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd</arg>&quot; line <arg fmt="%s" index="2">912</arg>: Output port &lt;<arg fmt="%s" index="3">HALT_n</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">t80inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd</arg>&quot; line <arg fmt="%s" index="2">913</arg>: Output port &lt;<arg fmt="%s" index="3">HALT_n</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">t80inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd</arg>&quot; line <arg fmt="%s" index="2">912</arg>: Output port &lt;<arg fmt="%s" index="3">BUSAK_n</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">t80inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd</arg>&quot; line <arg fmt="%s" index="2">913</arg>: Output port &lt;<arg fmt="%s" index="3">BUSAK_n</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">t80inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">inport</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -272,10 +272,10 @@
 <msg type="info" file="Xst" num="3231" delta="new" >The small RAM &lt;<arg fmt="%s" index="1">Mram_enable_timer_5usec</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
 </msg>
 
-<msg type="info" file="Xst" num="3231" delta="new" >The small RAM &lt;<arg fmt="%s" index="1">Mram__n1696</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+<msg type="info" file="Xst" num="3231" delta="new" >The small RAM &lt;<arg fmt="%s" index="1">Mram__n1697</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0872</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0857</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">p4f[7]_dff_87_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">vga_test</arg>&gt;.

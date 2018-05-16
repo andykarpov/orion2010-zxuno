@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed May 16 22:30:08 2018
+// Written by: Map P.20131013 on Wed May 16 23:01:01 2018
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -79,22 +79,17 @@ TIMEGRP clocks_clkfx = BEL "clocks/clkout1_buf" BEL "orion/del_2" BEL
         "orion/int_cnt_12" BEL "orion/int_cnt_11" BEL "orion/int_cnt_10" BEL
         "orion/int_cnt_9" BEL "orion/int_cnt_8" BEL "orion/int_cnt_7" BEL
         "orion/i_clock_DFF_74" BEL "orion/red" BEL "orion/blue" BEL
-        "orion/green" BEL "orion/dac_out" BEL "orion/vid3_7" BEL
-        "orion/vid3_6" BEL "orion/vid3_5" BEL "orion/vid3_4" BEL
-        "orion/vid3_3" BEL "orion/vid3_2" BEL "orion/vid3_1" BEL
-        "orion/vid3_0" BEL "orion/vid2_7" BEL "orion/vid2_6" BEL
-        "orion/vid2_5" BEL "orion/vid2_4" BEL "orion/vid2_3" BEL
-        "orion/vid2_2" BEL "orion/vid2_1" BEL "orion/vid2_0" BEL
-        "orion/vid1_7" BEL "orion/vid1_6" BEL "orion/vid1_5" BEL
-        "orion/vid1_4" BEL "orion/vid1_3" BEL "orion/vid1_2" BEL
-        "orion/vid1_1" BEL "orion/vid1_0" BEL "orion/vid0_7" BEL
-        "orion/vid0_6" BEL "orion/vid0_5" BEL "orion/vid0_4" BEL
-        "orion/vid0_3" BEL "orion/vid0_2" BEL "orion/vid0_1" BEL
-        "orion/vid0_0" BEL "orion/vector_2" BEL "orion/vector_1" BEL
-        "orion/clk_cpu" BEL "orion/turbo_reg_1" BEL "orion/turbo_reg_0" BEL
-        "orion/blank1" BEL "orion/orionkey/state_FSM_FFd2" BEL
-        "orion/orionkey/state_FSM_FFd3" BEL "orion/orionkey/state_FSM_FFd1"
-        BEL "orion/orionkey/state_FSM_FFd4" BEL "orion/orionkey/prefix_1" BEL
+        "orion/green" BEL "orion/dac_out" BEL "orion/vid1_7" BEL
+        "orion/vid1_6" BEL "orion/vid1_5" BEL "orion/vid1_4" BEL
+        "orion/vid1_3" BEL "orion/vid1_2" BEL "orion/vid1_1" BEL
+        "orion/vid1_0" BEL "orion/vid0_7" BEL "orion/vid0_6" BEL
+        "orion/vid0_5" BEL "orion/vid0_4" BEL "orion/vid0_3" BEL
+        "orion/vid0_2" BEL "orion/vid0_1" BEL "orion/vid0_0" BEL
+        "orion/vector_2" BEL "orion/vector_1" BEL "orion/clk_cpu" BEL
+        "orion/turbo_reg_1" BEL "orion/turbo_reg_0" BEL
+        "orion/orionkey/state_FSM_FFd2" BEL "orion/orionkey/state_FSM_FFd3"
+        BEL "orion/orionkey/state_FSM_FFd1" BEL
+        "orion/orionkey/state_FSM_FFd4" BEL "orion/orionkey/prefix_1" BEL
         "orion/orionkey/prefix_0" BEL "orion/orionkey/rk_kb_7" BEL
         "orion/orionkey/rk_kb_6" BEL "orion/orionkey/rk_kb_5" BEL
         "orion/orionkey/rk_kb_4" BEL "orion/orionkey/rk_kb_3" BEL

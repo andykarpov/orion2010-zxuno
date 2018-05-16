@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Wed May 16 22:30:15 2018">
+  <application stringID="par" timeStamp="Wed May 16 23:01:17 2018">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -45,7 +45,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz"/>
-          <item stringID="speed" value="2700.323 MHz"/>
+          <item stringID="speed" value="1900.124 MHz"/>
         </row>
       </table>
     </section>
@@ -59,12 +59,12 @@
     </task>
     <task stringID="PAR_PAR">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="12 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="13 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="27 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="27 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
         <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
-        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="13 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="13 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="28 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="28 secs "/>
       </section>
     </task>
     <task stringID="PAR_par">
@@ -79,168 +79,169 @@
           <column label="Net Skew(ns)" stringID="NET_SKEW"/>
           <column label="Max Delay(ns)" stringID="MAX_DELAY"/>
           <row stringID="row" value="1">
-            <item label="Clock Net" stringID="CLOCK_NET" value="clk20"/>
-            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
-            <item label="Resource" stringID="RESOURCE" value="BUFGMUX_X2Y2"/>
-            <item label="Locked" stringID="LOCKED" value="No"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="121.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.103000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.495000"/>
-          </row>
-          <row stringID="row" value="2">
-            <item label="Clock Net" stringID="CLOCK_NET" value="orion/clk_cpu_BUFG"/>
-            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
-            <item label="Resource" stringID="RESOURCE" value="BUFGMUX_X2Y1"/>
-            <item label="Locked" stringID="LOCKED" value="No"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="129.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.110000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.501000"/>
-          </row>
-          <row stringID="row" value="3">
-            <item label="Clock Net" stringID="CLOCK_NET" value="orion/t80inst/WR_n_BUFG"/>
-            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
-            <item label="Resource" stringID="RESOURCE" value="BUFGMUX_X3Y13"/>
-            <item label="Locked" stringID="LOCKED" value="No"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="25.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.100000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.498000"/>
-          </row>
-          <row stringID="row" value="4">
             <item label="Clock Net" stringID="CLOCK_NET" value="orion/uart_clk_BUFG"/>
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="BUFGMUX_X2Y4"/>
             <item label="Locked" stringID="LOCKED" value="No"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="20.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.048000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.440000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.075000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.502000"/>
+          </row>
+          <row stringID="row" value="2">
+            <item label="Clock Net" stringID="CLOCK_NET" value="clk20"/>
+            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
+            <item label="Resource" stringID="RESOURCE" value="BUFGMUX_X2Y2"/>
+            <item label="Locked" stringID="LOCKED" value="No"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="117.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.075000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.466000"/>
+          </row>
+          <row stringID="row" value="3">
+            <item label="Clock Net" stringID="CLOCK_NET" value="orion/clk_cpu_BUFG"/>
+            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
+            <item label="Resource" stringID="RESOURCE" value="BUFGMUX_X2Y12"/>
+            <item label="Locked" stringID="LOCKED" value="No"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="129.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.119000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.510000"/>
+          </row>
+          <row stringID="row" value="4">
+            <item label="Clock Net" stringID="CLOCK_NET" value="orion/del_0_BUFG"/>
+            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
+            <item label="Resource" stringID="RESOURCE" value="BUFGMUX_X2Y1"/>
+            <item label="Locked" stringID="LOCKED" value="No"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="9.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.049000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.447000"/>
           </row>
           <row stringID="row" value="5">
+            <item label="Clock Net" stringID="CLOCK_NET" value="orion/t80inst/WR_n_BUFG"/>
+            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
+            <item label="Resource" stringID="RESOURCE" value="BUFGMUX_X3Y13"/>
+            <item label="Locked" stringID="LOCKED" value="No"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="25.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.119000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.509000"/>
+          </row>
+          <row stringID="row" value="6">
             <item label="Clock Net" stringID="CLOCK_NET" value="orion/receiver/RxD_data_ready"/>
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="Local"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="8.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="1.392000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="2.321000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.781000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.874000"/>
           </row>
-          <row stringID="row" value="6">
+          <row stringID="row" value="7">
             <item label="Clock Net" stringID="CLOCK_NET" value="orion/sck_buf"/>
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="Local"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.585000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.422000"/>
-          </row>
-          <row stringID="row" value="7">
-            <item label="Clock Net" stringID="CLOCK_NET" value="orion/del&lt;0>"/>
-            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
-            <item label="Resource" stringID="RESOURCE" value="Local"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="16.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.765000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="2.615000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.235000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.027000"/>
           </row>
           <row stringID="row" value="8">
+            <item label="Clock Net" stringID="CLOCK_NET" value="orion/_i000009&lt;6>"/>
+            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
+            <item label="Resource" stringID="RESOURCE" value="Local"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.024000"/>
+          </row>
+          <row stringID="row" value="9">
             <item label="Clock Net" stringID="CLOCK_NET" value="orion/hcnt&lt;9>_inv"/>
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="Local"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.323000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="2.436000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.199000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.255000"/>
           </row>
-          <row stringID="row" value="9">
-            <item label="Clock Net" stringID="CLOCK_NET" value="orion/csf767_dataO[3]_AND_463_o"/>
+          <row stringID="row" value="10">
+            <item label="Clock Net" stringID="CLOCK_NET" value="orion/csf767_dataO[3]_AND_462_o"/>
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="Local"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="2.000000"/>
             <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.873000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.371000"/>
           </row>
-          <row stringID="row" value="10">
+          <row stringID="row" value="11">
             <item label="Clock Net" stringID="CLOCK_NET" value="orion/orionkey/cpm"/>
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="Local"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="2.000000"/>
             <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.896000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.971000"/>
           </row>
-          <row stringID="row" value="11">
-            <item label="Clock Net" stringID="CLOCK_NET" value="orion/csf767_dataO[4]_AND_461_o"/>
+          <row stringID="row" value="12">
+            <item label="Clock Net" stringID="CLOCK_NET" value="orion/csf767_dataO[4]_AND_460_o"/>
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="Local"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="2.000000"/>
             <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.586000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.608000"/>
           </row>
-          <row stringID="row" value="12">
+          <row stringID="row" value="13">
             <item label="Clock Net" stringID="CLOCK_NET" value="orion/_i000009&lt;7>"/>
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="Local"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
             <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.960000"/>
-          </row>
-          <row stringID="row" value="13">
-            <item label="Clock Net" stringID="CLOCK_NET" value="orion/_i000009&lt;3>"/>
-            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
-            <item label="Resource" stringID="RESOURCE" value="Local"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.360000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.613000"/>
           </row>
           <row stringID="row" value="14">
-            <item label="Clock Net" stringID="CLOCK_NET" value="orion/_i000009&lt;4>"/>
-            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
-            <item label="Resource" stringID="RESOURCE" value="Local"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.618000"/>
-          </row>
-          <row stringID="row" value="15">
             <item label="Clock Net" stringID="CLOCK_NET" value="orion/_i000009&lt;1>"/>
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="Local"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
             <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.014000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.570000"/>
           </row>
-          <row stringID="row" value="16">
-            <item label="Clock Net" stringID="CLOCK_NET" value="orion/_i000009&lt;5>"/>
-            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
-            <item label="Resource" stringID="RESOURCE" value="Local"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.587000"/>
-          </row>
-          <row stringID="row" value="17">
-            <item label="Clock Net" stringID="CLOCK_NET" value="orion/_i000009&lt;8>"/>
-            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
-            <item label="Resource" stringID="RESOURCE" value="Local"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.340000"/>
-          </row>
-          <row stringID="row" value="18">
-            <item label="Clock Net" stringID="CLOCK_NET" value="orion/_i000009&lt;9>"/>
-            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
-            <item label="Resource" stringID="RESOURCE" value="Local"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.111000"/>
-          </row>
-          <row stringID="row" value="19">
-            <item label="Clock Net" stringID="CLOCK_NET" value="orion/t80inst/RD_n"/>
-            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
-            <item label="Resource" stringID="RESOURCE" value="Local"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.256000"/>
-          </row>
-          <row stringID="row" value="20">
+          <row stringID="row" value="15">
             <item label="Clock Net" stringID="CLOCK_NET" value="orion/_i000009&lt;2>"/>
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="Local"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
             <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.914000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.709000"/>
+          </row>
+          <row stringID="row" value="16">
+            <item label="Clock Net" stringID="CLOCK_NET" value="orion/_i000009&lt;3>"/>
+            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
+            <item label="Resource" stringID="RESOURCE" value="Local"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.777000"/>
+          </row>
+          <row stringID="row" value="17">
+            <item label="Clock Net" stringID="CLOCK_NET" value="orion/_i000009&lt;4>"/>
+            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
+            <item label="Resource" stringID="RESOURCE" value="Local"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.639000"/>
+          </row>
+          <row stringID="row" value="18">
+            <item label="Clock Net" stringID="CLOCK_NET" value="orion/_i000009&lt;8>"/>
+            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
+            <item label="Resource" stringID="RESOURCE" value="Local"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.594000"/>
+          </row>
+          <row stringID="row" value="19">
+            <item label="Clock Net" stringID="CLOCK_NET" value="orion/_i000009&lt;9>"/>
+            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
+            <item label="Resource" stringID="RESOURCE" value="Local"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.395000"/>
+          </row>
+          <row stringID="row" value="20">
+            <item label="Clock Net" stringID="CLOCK_NET" value="orion/t80inst/RD_n"/>
+            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
+            <item label="Resource" stringID="RESOURCE" value="Local"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.480000"/>
           </row>
           <row stringID="row" value="21">
             <item label="Clock Net" stringID="CLOCK_NET" value="orion/_i000009&lt;0>"/>
@@ -248,23 +249,23 @@
             <item label="Resource" stringID="RESOURCE" value="Local"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
             <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.897000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.954000"/>
           </row>
           <row stringID="row" value="22">
-            <item label="Clock Net" stringID="CLOCK_NET" value="orion/_i000009&lt;6>"/>
+            <item label="Clock Net" stringID="CLOCK_NET" value="orion/_i000009&lt;5>"/>
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="Local"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
             <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.573000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.173000"/>
           </row>
           <row stringID="row" value="23">
             <item label="Clock Net" stringID="CLOCK_NET" value="orion/orionkey/rom"/>
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="Local"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="4.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.456000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.770000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.406000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.925000"/>
           </row>
           <row stringID="row" value="24">
             <item label="Clock Net" stringID="CLOCK_NET" value="orion/orionkey/keyb_int"/>
@@ -272,7 +273,7 @@
             <item label="Resource" stringID="RESOURCE" value="Local"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="1.000000"/>
             <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.283000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.149000"/>
           </row>
         </table>
       </section>
@@ -1597,7 +1598,7 @@
     </task>
   </application>
 
-  <application stringID="Par" timeStamp="Wed May 16 22:30:16 2018">
+  <application stringID="Par" timeStamp="Wed May 16 23:01:18 2018">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -1637,7 +1638,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz"/>
-          <item stringID="speed" value="2713.227 MHz"/>
+          <item stringID="speed" value="2187.532 MHz"/>
         </row>
       </table>
     </section>
@@ -1649,9 +1650,9 @@
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHTHRU" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHLOGIC" value="0"/>
         </item>
-        <item AVAILABLE="5720" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="2008">
+        <item AVAILABLE="5720" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="2006">
           <item dataType="int" stringID="PAR_NUM_LOGIC_O5ONLY" value="84"/>
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="1613"/>
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="1614"/>
           <item dataType="int" stringID="PAR_NUM_LOGIC_O5ANDO6" value="265"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O5ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O6ONLY" value="0"/>
@@ -1666,21 +1667,21 @@
           <item dataType="int" stringID="PAR_NUM_SRL_O6ONLY" value="1"/>
           <item dataType="int" stringID="PAR_NUM_SRL_O5ANDO6" value="0"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO6" value="7"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO5" value="4"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO5" value="1"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_O5ANDO6" value="0"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_FLOP" value="4"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_FLOP" value="1"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_CARRY4" value="6"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_OTHERS" value="1"/>
         </item>
-        <item AVAILABLE="1430" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="728">
+        <item AVAILABLE="1430" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="706">
           <item AVAILABLE="355" dataType="int" stringID="PAR_NUM_SLICEL" value="103"/>
           <item AVAILABLE="360" dataType="int" stringID="PAR_NUM_SLICEM" value="10"/>
-          <item AVAILABLE="715" dataType="int" stringID="PAR_NUM_SLICEX" value="615"/>
+          <item AVAILABLE="715" dataType="int" stringID="PAR_NUM_SLICEX" value="593"/>
         </item>
-        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="2134">
-          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="1461"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="126"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="547"/>
+        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="2127">
+          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="1451"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="121"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="555"/>
         </item>
       </section>
       <section stringID="PAR_IOB_REPORTING">
@@ -1719,7 +1720,7 @@
         <item AVAILABLE="1" dataType="int" stringID="PAR_NUM_SUSPEND_SYNC" value="0"/>
       </section>
       <section stringID="PAR_BUFG_DATA">
-        <item dataType="int" stringID="PAR_NUM_BUFG" value="5"/>
+        <item dataType="int" stringID="PAR_NUM_BUFG" value="6"/>
         <item dataType="int" stringID="PAR_NUM_BUFGMUX" value="0"/>
         <item dataType="int" stringID="PAR_AVAILABLE" value="16"/>
       </section>

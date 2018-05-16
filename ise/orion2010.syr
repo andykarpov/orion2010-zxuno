@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Reading design: orion2010.prj
@@ -168,8 +168,8 @@ Parsing architecture <rtl> of entity <t80s>.
 Parsing VHDL file "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" into library work
 Parsing entity <vga_test>.
 Parsing architecture <vga_arch> of entity <vga_test>.
-WARNING:HDLCompiler:946 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 884: Actual for formal port clk is neither a static name nor a globally static expression
-WARNING:HDLCompiler:946 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 908: Actual for formal port clka is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 885: Actual for formal port clk is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 909: Actual for formal port clka is neither a static name nor a globally static expression
 Parsing VHDL file "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/orion2010.vhd" into library work
 Parsing entity <orion2010>.
 Parsing architecture <orion2010_arch> of entity <orion2010>.
@@ -181,10 +181,10 @@ Parsing architecture <orion2010_arch> of entity <orion2010>.
 Elaborating entity <orion2010> (architecture <orion2010_arch>) from library <work>.
 
 Elaborating entity <vga_test> (architecture <vga_arch>) from library <work>.
-INFO:HDLCompiler:679 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 619. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:92 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 653: sel2 should be on the sensitivity list of the process
-INFO:HDLCompiler:679 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 730. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 791. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 620. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:92 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 654: sel2 should be on the sensitivity list of the process
+INFO:HDLCompiler:679 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 731. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" Line 792. Case statement is complete. others clause is never selected
 Going to verilog side to elaborate module async_transmitter
 
 Elaborating module <async_transmitter(ClkFrequency=20000000,Baud=38400,RegisterInputData=1,BaudGeneratorAccWidth=16)>.
@@ -273,11 +273,11 @@ Unit <orion2010> synthesized.
 
 Synthesizing Unit <vga_test>.
     Related source file is "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd".
-INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" line 874: Output port <RxD_endofpacket> of the instance <receiver> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" line 874: Output port <RxD_idle> of the instance <receiver> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" line 912: Output port <RFSH_n> of the instance <t80inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" line 912: Output port <HALT_n> of the instance <t80inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" line 912: Output port <BUSAK_n> of the instance <t80inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" line 875: Output port <RxD_endofpacket> of the instance <receiver> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" line 875: Output port <RxD_idle> of the instance <receiver> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" line 913: Output port <RFSH_n> of the instance <t80inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" line 913: Output port <HALT_n> of the instance <t80inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-zxuno/src/vga_test.vhd" line 913: Output port <BUSAK_n> of the instance <t80inst> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <rx_status>.
     Found 1-bit register for signal <sck_buf>.
     Found 10-bit register for signal <vcnt>.
@@ -329,7 +329,7 @@ INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-z
     Found 1-bit register for signal <green>.
     Found 1-bit register for signal <blue>.
     Found 1-bit register for signal <i_clock_DFF_74>.
-    Found 10-bit register for signal <n0625>.
+    Found 10-bit register for signal <n0619>.
     Found 1-bit register for signal <fbdis>.
     Found 1-bit register for signal <hcnt<9>>.
     Found 1-bit register for signal <hcnt<8>>.
@@ -343,20 +343,20 @@ INFO:Xst:3210 - "/home/andy/Documents/Projects/Retrocomp/FPGA/ZXUNO/orion-2010-z
     Found 1-bit register for signal <hcnt<0>>.
     Found 1-bit register for signal <rom_reg<1>>.
     Found 1-bit register for signal <rom_reg<0>>.
-    Found 10-bit adder for signal <hcnt[9]_GND_22_o_add_1_OUT> created at line 236.
-    Found 10-bit adder for signal <vcnt[9]_GND_22_o_add_11_OUT> created at line 257.
-    Found 19-bit adder for signal <int_cnt[18]_GND_22_o_add_15_OUT> created at line 268.
-    Found 3-bit adder for signal <del[2]_GND_22_o_add_24_OUT> created at line 324.
-    Found 2-bit adder for signal <rom_reg[1]_GND_22_o_add_54_OUT> created at line 417.
-    Found 3-bit adder for signal <uart_del[2]_GND_22_o_add_114_OUT> created at line 623.
-    Found 8-bit subtractor for signal <GND_22_o_GND_22_o_sub_39_OUT<7:0>> created at line 365.
-    Found 8-bit subtractor for signal <GND_22_o_GND_22_o_sub_41_OUT<7:0>> created at line 367.
-    Found 16x4-bit Read Only RAM for signal <_n0872>
-    Found 1-bit 4-to-1 multiplexer for signal <uart_clk> created at line 614.
-    Found 17-bit 4-to-1 multiplexer for signal <a> created at line 653.
-    Found 1-bit 8-to-1 multiplexer for signal <vid> created at line 774.
-    Found 1-bit 8-to-1 multiplexer for signal <vidc> created at line 774.
-    Found 1-bit 7-to-1 multiplexer for signal <f8[3]_vid_Mux_175_o> created at line 811.
+    Found 10-bit adder for signal <hcnt[9]_GND_22_o_add_1_OUT> created at line 237.
+    Found 10-bit adder for signal <vcnt[9]_GND_22_o_add_11_OUT> created at line 258.
+    Found 19-bit adder for signal <int_cnt[18]_GND_22_o_add_15_OUT> created at line 269.
+    Found 3-bit adder for signal <del[2]_GND_22_o_add_24_OUT> created at line 325.
+    Found 2-bit adder for signal <rom_reg[1]_GND_22_o_add_54_OUT> created at line 418.
+    Found 3-bit adder for signal <uart_del[2]_GND_22_o_add_114_OUT> created at line 624.
+    Found 8-bit subtractor for signal <GND_22_o_GND_22_o_sub_39_OUT<7:0>> created at line 366.
+    Found 8-bit subtractor for signal <GND_22_o_GND_22_o_sub_41_OUT<7:0>> created at line 368.
+    Found 16x4-bit Read Only RAM for signal <_n0857>
+    Found 1-bit 4-to-1 multiplexer for signal <uart_clk> created at line 615.
+    Found 17-bit 4-to-1 multiplexer for signal <a> created at line 654.
+    Found 1-bit 8-to-1 multiplexer for signal <vid> created at line 775.
+    Found 1-bit 8-to-1 multiplexer for signal <vidc> created at line 775.
+    Found 1-bit 7-to-1 multiplexer for signal <f8[3]_vid_Mux_173_o> created at line 812.
 WARNING:Xst:737 - Found 1-bit latch for signal <inport>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 1-bit tristate buffer for signal <d<7>> created at line 17
     Found 1-bit tristate buffer for signal <d<6>> created at line 17
@@ -366,10 +366,10 @@ WARNING:Xst:737 - Found 1-bit latch for signal <inport>. Latches may be generate
     Found 1-bit tristate buffer for signal <d<2>> created at line 17
     Found 1-bit tristate buffer for signal <d<1>> created at line 17
     Found 1-bit tristate buffer for signal <d<0>> created at line 17
-    Found 1-bit tristate buffer for signal <bright> created at line 850
-    Found 3-bit comparator lessequal for signal <vga_mode_vga_mode_OR_43_o> created at line 350
-    Found 8-bit comparator greater for signal <GND_22_o_dac_buf[7]_LessThan_40_o> created at line 366
-    Found 5-bit comparator equal for signal <hcnt[9]_GND_22_o_equal_161_o> created at line 748
+    Found 1-bit tristate buffer for signal <bright> created at line 851
+    Found 3-bit comparator lessequal for signal <vga_mode_vga_mode_OR_43_o> created at line 351
+    Found 8-bit comparator greater for signal <GND_22_o_dac_buf[7]_LessThan_40_o> created at line 367
+    Found 5-bit comparator equal for signal <hcnt[9]_GND_22_o_equal_161_o> created at line 749
     WARNING:Xst:2404 -  FFs/Latches <bright<0:0>> (without init value) have a constant value of 0 in block <vga_test>.
     Summary:
 	inferred   1 RAM(s).
@@ -540,7 +540,7 @@ Synthesizing Unit <ps2_keyboard>.
     Found 12-bit adder for signal <timer_60usec_count[11]_GND_37_o_add_49_OUT> created at line 371.
     Found 8-bit adder for signal <timer_5usec_count[7]_GND_37_o_add_55_OUT> created at line 379.
     Found 8x1-bit Read Only RAM for signal <enable_timer_5usec>
-    Found 16x3-bit Read Only RAM for signal <_n1696>
+    Found 16x3-bit Read Only RAM for signal <_n1697>
     Found 4-bit 15-to-1 multiplexer for signal <m1_next_state> created at line 177.
     HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <m1_state> would allow inference of a finite state machine and as consequence better performance and smaller area.
     Summary:
@@ -946,7 +946,7 @@ INFO:Xst:3231 - The small RAM <Mram_enable_timer_5usec> will be implemented on L
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to signal <enable_timer_5usec> |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram__n1696> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n1697> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -966,7 +966,7 @@ The following registers are absorbed into counter <int_cnt>: 1 register on signa
 The following registers are absorbed into counter <dac_cnt>: 1 register on signal <dac_cnt>.
 The following registers are absorbed into counter <dac_buf>: 1 register on signal <dac_buf>.
 The following registers are absorbed into counter <vcnt>: 1 register on signal <vcnt>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0872> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0857> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -1264,14 +1264,14 @@ Top Level Output File Name         : orion2010.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2626
+# BELS                             : 2627
 #      GND                         : 2
 #      INV                         : 66
 #      LUT1                        : 90
 #      LUT2                        : 112
 #      LUT3                        : 232
 #      LUT4                        : 168
-#      LUT5                        : 459
+#      LUT5                        : 460
 #      LUT6                        : 1055
 #      MUXCY                       : 194
 #      MUXF7                       : 49
@@ -1298,8 +1298,8 @@ Primitive and Black Box Usage:
 #      RAMB16BWER                  : 2
 # Shift Registers                  : 1
 #      SRLC16E                     : 1
-# Clock Buffers                    : 5
-#      BUFG                        : 5
+# Clock Buffers                    : 6
+#      BUFG                        : 6
 # IO Buffers                       : 53
 #      IBUF                        : 3
 #      IBUFG                       : 1
@@ -1316,8 +1316,8 @@ Selected Device : 6slx9tqg144-2
 
 Slice Logic Utilization: 
  Number of Slice Registers:             683  out of  11440     5%  
- Number of Slice LUTs:                 2231  out of   5720    39%  
-    Number used as Logic:              2182  out of   5720    38%  
+ Number of Slice LUTs:                 2232  out of   5720    39%  
+    Number used as Logic:              2183  out of   5720    38%  
     Number used as Memory:               49  out of   1440     3%  
        Number used as RAM:               48
        Number used as SRL:                1
@@ -1325,8 +1325,8 @@ Slice Logic Utilization:
 Slice Logic Distribution: 
  Number of LUT Flip Flop pairs used:   2417
    Number with an unused Flip Flop:    1734  out of   2417    71%  
-   Number with an unused LUT:           186  out of   2417     7%  
-   Number of fully used LUT-FF pairs:   497  out of   2417    20%  
+   Number with an unused LUT:           185  out of   2417     7%  
+   Number of fully used LUT-FF pairs:   498  out of   2417    20%  
    Number of unique control sets:       131
 
 IO Utilization: 
@@ -1336,7 +1336,7 @@ IO Utilization:
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                2  out of     32     6%  
     Number using Block RAM only:          2
- Number of BUFG/BUFGCTRLs:                5  out of     16    31%  
+ Number of BUFG/BUFGCTRLs:                6  out of     16    37%  
 
 ---------------------------
 Partition Resource Summary:
@@ -1360,21 +1360,21 @@ Clock Information:
 Clock Signal                                                       | Clock buffer(FF name)                                                                                                                      | Load  |
 -------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+-------+
 orion/hcnt<9>_inv(orion/hcnt<9>_inv1:O)                            | NONE(*)(orion/vcnt_9)                                                                                                                      | 10    |
-CLK50                                                              | DCM_SP:CLKFX                                                                                                                               | 238   |
+CLK50                                                              | DCM_SP:CLKFX                                                                                                                               | 221   |
+orion/del_0                                                        | BUFG                                                                                                                                       | 27    |
 orion/receiver/RxD_data_ready                                      | NONE(orion/int_buf)                                                                                                                        | 9     |
 orion/orionkey/keyb_int                                            | NONE(orion/int_keyb)                                                                                                                       | 1     |
 orion/t80inst/WR_n                                                 | BUFG                                                                                                                                       | 67    |
 orion/t80inst/RD_n                                                 | NONE(orion/rx_status)                                                                                                                      | 1     |
 orion/orionkey/cpm                                                 | NONE(orion/cpm_rom)                                                                                                                        | 1     |
-orion/del_0                                                        | NONE(orion/_i000009_9)                                                                                                                     | 10    |
 orion/sck_buf                                                      | NONE(orion/miso_buf[6]_dff_110_6)                                                                                                          | 7     |
 orion/uart_clk(orion/Mmux_uart_clk11:O)                            | BUFG(*)(orion/transm/state_3)                                                                                                              | 57    |
 orion/clk_cpu                                                      | BUFG                                                                                                                                       | 291   |
 orion/romd_altera/N1                                               | NONE(orion/romd_altera/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram)| 2     |
 orion/_i000009_9                                                   | NONE(orion/hcnt_9_LDC)                                                                                                                     | 1     |
-orion/csf767_dataO[3]_AND_463_o(orion/csf767_dataO[3]_AND_463_o1:O)| NONE(*)(orion/rom_reg_0_LDC)                                                                                                               | 1     |
+orion/csf767_dataO[3]_AND_462_o(orion/csf767_dataO[3]_AND_462_o1:O)| NONE(*)(orion/rom_reg_0_LDC)                                                                                                               | 1     |
 orion/orionkey/rom                                                 | NONE(orion/rom_reg_0_C_0)                                                                                                                  | 4     |
-orion/csf767_dataO[4]_AND_461_o(orion/csf767_dataO[4]_AND_461_o1:O)| NONE(*)(orion/rom_reg_1_LDC)                                                                                                               | 1     |
+orion/csf767_dataO[4]_AND_460_o(orion/csf767_dataO[4]_AND_460_o1:O)| NONE(*)(orion/rom_reg_1_LDC)                                                                                                               | 1     |
 orion/_i000009_0                                                   | NONE(orion/hcnt_0_LDC)                                                                                                                     | 1     |
 orion/_i000009_1                                                   | NONE(orion/hcnt_1_LDC)                                                                                                                     | 1     |
 orion/_i000009_2                                                   | NONE(orion/hcnt_2_LDC)                                                                                                                     | 1     |
@@ -1432,10 +1432,10 @@ Delay:               4.556ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK50'
-  Clock period: 6.181ns (frequency: 161.783MHz)
-  Total number of paths / destination ports: 42597 / 456
+  Clock period: 6.160ns (frequency: 162.350MHz)
+  Total number of paths / destination ports: 42417 / 419
 -------------------------------------------------------------------------
-Delay:               7.726ns (Levels of Logic = 4)
+Delay:               7.699ns (Levels of Logic = 4)
   Source:            orion/hcnt_0_C_0 (FF)
   Destination:       orion/vid1_7 (FF)
   Source Clock:      CLK50 rising 0.4X
@@ -1446,13 +1446,13 @@ Delay:               7.726ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              4   0.525   0.912  orion/hcnt_0_C_0 (orion/hcnt_0_C_0)
-     LUT3:I1->O           16   0.250   1.637  orion/hcnt_01 (orion/hcnt_0)
+     LUT3:I1->O           15   0.250   1.610  orion/hcnt_01 (orion/hcnt_0)
      LUT6:I0->O           45   0.254   2.192  orion/Mmux_sel11 (orion/sel)
      LUT6:I0->O            8   0.254   1.374  orion/ram_oe0 (ram_oe0)
      LUT5:I0->O            5   0.254   0.000  d<7>LogicTrst1 (d<7>)
      FDE_1:D                   0.074          orion/vid1_7
     ----------------------------------------
-    Total                      7.726ns (1.611ns logic, 6.115ns route)
+    Total                      7.699ns (1.611ns logic, 6.088ns route)
                                        (20.9% logic, 79.1% route)
 
 =========================================================================
@@ -1563,8 +1563,8 @@ Delay:               12.446ns (Levels of Logic = 12)
      FDCE:C->Q             5   0.525   1.117  orion/t80inst/u0/IR_6_1 (orion/t80inst/u0/IR_6_1)
      LUT4:I0->O           15   0.254   1.263  orion/t80inst/u0/mcode/_n4099<7>11 (orion/t80inst/u0/mcode/_n4099<7>1)
      LUT6:I4->O            3   0.250   1.042  orion/t80inst/u0/mcode/Mmux_IncDec_166_SW1 (N284)
-     LUT6:I2->O            1   0.254   0.790  orion/t80inst/u0/TState[2]_GND_44_o_AND_395_o1_SW2 (N535)
-     LUT6:I4->O           12   0.250   1.069  orion/t80inst/u0/TState[2]_GND_44_o_AND_395_o1 (orion/t80inst/u0/TState[2]_GND_44_o_AND_395_o)
+     LUT6:I2->O            1   0.254   0.790  orion/t80inst/u0/TState[2]_GND_44_o_AND_394_o1_SW2 (N535)
+     LUT6:I4->O           12   0.250   1.069  orion/t80inst/u0/TState[2]_GND_44_o_AND_394_o1 (orion/t80inst/u0/TState[2]_GND_44_o_AND_394_o)
      LUT6:I5->O           18   0.254   1.234  orion/t80inst/u0/Mmux_RegAddrA3_1 (orion/t80inst/u0/Mmux_RegAddrA3)
      RAM16X1D:A2->SPO      3   0.235   0.766  orion/t80inst/u0/Regs/Mram_RegsL5 (orion/t80inst/u0/RegBusA<4>)
      LUT5:I4->O            1   0.254   0.000  orion/t80inst/u0/Maddsub_ID16_lut<4> (orion/t80inst/u0/Maddsub_ID16_lut<4>)
@@ -1667,7 +1667,7 @@ Offset:              6.433ns (Levels of Logic = 6)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK50'
   Total number of paths / destination ports: 335 / 38
 -------------------------------------------------------------------------
-Offset:              11.404ns (Levels of Logic = 5)
+Offset:              11.377ns (Levels of Logic = 5)
   Source:            orion/hcnt_0_C_0 (FF)
   Destination:       SRAM_DQ<7> (PAD)
   Source Clock:      CLK50 rising 0.4X
@@ -1677,20 +1677,20 @@ Offset:              11.404ns (Levels of Logic = 5)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              4   0.525   0.912  orion/hcnt_0_C_0 (orion/hcnt_0_C_0)
-     LUT3:I1->O           16   0.250   1.637  orion/hcnt_01 (orion/hcnt_0)
+     LUT3:I1->O           15   0.250   1.610  orion/hcnt_01 (orion/hcnt_0)
      LUT6:I0->O           45   0.254   2.192  orion/Mmux_sel11 (orion/sel)
      LUT6:I0->O            8   0.254   1.374  orion/ram_oe0 (ram_oe0)
      LUT5:I0->O            5   0.254   0.840  d<7>LogicTrst1 (d<7>)
      IOBUF:I->IO               2.912          SRAM_DQ_7_IOBUF (SRAM_DQ<7>)
     ----------------------------------------
-    Total                     11.404ns (4.449ns logic, 6.955ns route)
-                                       (39.0% logic, 61.0% route)
+    Total                     11.377ns (4.449ns logic, 6.928ns route)
+                                       (39.1% logic, 60.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'orion/_i000009_0'
   Total number of paths / destination ports: 44 / 28
 -------------------------------------------------------------------------
-Offset:              11.565ns (Levels of Logic = 5)
+Offset:              11.538ns (Levels of Logic = 5)
   Source:            orion/hcnt_0_LDC (LATCH)
   Destination:       SRAM_DQ<7> (PAD)
   Source Clock:      orion/_i000009_0 falling
@@ -1700,20 +1700,20 @@ Offset:              11.565ns (Levels of Logic = 5)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              4   0.581   1.032  orion/hcnt_0_LDC (orion/hcnt_0_LDC)
-     LUT3:I0->O           16   0.235   1.637  orion/hcnt_01 (orion/hcnt_0)
+     LUT3:I0->O           15   0.235   1.610  orion/hcnt_01 (orion/hcnt_0)
      LUT6:I0->O           45   0.254   2.192  orion/Mmux_sel11 (orion/sel)
      LUT6:I0->O            8   0.254   1.374  orion/ram_oe0 (ram_oe0)
      LUT5:I0->O            5   0.254   0.840  d<7>LogicTrst1 (d<7>)
      IOBUF:I->IO               2.912          SRAM_DQ_7_IOBUF (SRAM_DQ<7>)
     ----------------------------------------
-    Total                     11.565ns (4.490ns logic, 7.075ns route)
-                                       (38.8% logic, 61.2% route)
+    Total                     11.538ns (4.490ns logic, 7.048ns route)
+                                       (38.9% logic, 61.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'orion/_i000009_1'
   Total number of paths / destination ports: 44 / 28
 -------------------------------------------------------------------------
-Offset:              11.529ns (Levels of Logic = 5)
+Offset:              11.502ns (Levels of Logic = 5)
   Source:            orion/hcnt_1_LDC (LATCH)
   Destination:       SRAM_DQ<7> (PAD)
   Source Clock:      orion/_i000009_1 falling
@@ -1723,20 +1723,20 @@ Offset:              11.529ns (Levels of Logic = 5)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              3   0.581   0.994  orion/hcnt_1_LDC (orion/hcnt_1_LDC)
-     LUT3:I0->O           17   0.235   1.639  orion/hcnt_11 (orion/hcnt_1)
+     LUT3:I0->O           16   0.235   1.612  orion/hcnt_11 (orion/hcnt_1)
      LUT6:I1->O           45   0.254   2.192  orion/Mmux_sel11 (orion/sel)
      LUT6:I0->O            8   0.254   1.374  orion/ram_oe0 (ram_oe0)
      LUT5:I0->O            5   0.254   0.840  d<7>LogicTrst1 (d<7>)
      IOBUF:I->IO               2.912          SRAM_DQ_7_IOBUF (SRAM_DQ<7>)
     ----------------------------------------
-    Total                     11.529ns (4.490ns logic, 7.039ns route)
-                                       (38.9% logic, 61.1% route)
+    Total                     11.502ns (4.490ns logic, 7.012ns route)
+                                       (39.0% logic, 61.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'orion/_i000009_2'
   Total number of paths / destination ports: 44 / 28
 -------------------------------------------------------------------------
-Offset:              11.308ns (Levels of Logic = 5)
+Offset:              11.293ns (Levels of Logic = 5)
   Source:            orion/hcnt_2_LDC (LATCH)
   Destination:       SRAM_DQ<7> (PAD)
   Source Clock:      orion/_i000009_2 falling
@@ -1745,15 +1745,15 @@ Offset:              11.308ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDC:G->Q              2   0.581   0.954  orion/hcnt_2_LDC (orion/hcnt_2_LDC)
-     LUT3:I0->O           16   0.235   1.458  orion/hcnt_21 (orion/hcnt_2)
+     LDC:G->Q              3   0.581   0.994  orion/hcnt_2_LDC (orion/hcnt_2_LDC)
+     LUT3:I0->O           14   0.235   1.403  orion/hcnt_21 (orion/hcnt_2)
      LUT6:I2->O           45   0.254   2.192  orion/Mmux_sel11 (orion/sel)
      LUT6:I0->O            8   0.254   1.374  orion/ram_oe0 (ram_oe0)
      LUT5:I0->O            5   0.254   0.840  d<7>LogicTrst1 (d<7>)
      IOBUF:I->IO               2.912          SRAM_DQ_7_IOBUF (SRAM_DQ<7>)
     ----------------------------------------
-    Total                     11.308ns (4.490ns logic, 6.818ns route)
-                                       (39.7% logic, 60.3% route)
+    Total                     11.293ns (4.490ns logic, 6.803ns route)
+                                       (39.8% logic, 60.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'orion/t80inst/WR_n'
@@ -1785,15 +1785,15 @@ Timing constraint: Default OFFSET OUT AFTER for Clock 'orion/clk_cpu'
   Total number of paths / destination ports: 814 / 28
 -------------------------------------------------------------------------
 Offset:              12.603ns (Levels of Logic = 8)
-  Source:            orion/t80inst/u0/A_12 (FF)
+  Source:            orion/t80inst/u0/A_13 (FF)
   Destination:       SRAM_ADDR<16> (PAD)
   Source Clock:      orion/clk_cpu rising
 
-  Data Path: orion/t80inst/u0/A_12 to SRAM_ADDR<16>
+  Data Path: orion/t80inst/u0/A_13 to SRAM_ADDR<16>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDPE:C->Q             3   0.525   1.042  orion/t80inst/u0/A_12 (orion/t80inst/u0/A_12)
+     FDPE:C->Q             3   0.525   1.042  orion/t80inst/u0/A_13 (orion/t80inst/u0/A_13)
      LUT4:I0->O            9   0.254   0.976  orion/csf8111 (orion/csf811)
      LUT4:I3->O            2   0.254   0.726  orion/portsel_p4f[0]_AND_44_o1 (orion/portsel_p4f[0]_AND_44_o)
      LUT6:I5->O            4   0.254   0.804  orion/Mmux_csf513 (orion/csf5)
@@ -1807,13 +1807,13 @@ Offset:              12.603ns (Levels of Logic = 8)
                                        (41.3% logic, 58.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'orion/csf767_dataO[4]_AND_461_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'orion/csf767_dataO[4]_AND_460_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              6.343ns (Levels of Logic = 3)
   Source:            orion/rom_reg_1_LDC (LATCH)
   Destination:       SRAM_ADDR<17> (PAD)
-  Source Clock:      orion/csf767_dataO[4]_AND_461_o falling
+  Source Clock:      orion/csf767_dataO[4]_AND_460_o falling
 
   Data Path: orion/rom_reg_1_LDC to SRAM_ADDR<17>
                                 Gate     Net
@@ -1850,13 +1850,13 @@ Offset:              7.538ns (Levels of Logic = 4)
                                        (55.6% logic, 44.4% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'orion/csf767_dataO[3]_AND_463_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'orion/csf767_dataO[3]_AND_462_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              7.699ns (Levels of Logic = 4)
   Source:            orion/rom_reg_0_LDC (LATCH)
   Destination:       SRAM_ADDR<16> (PAD)
-  Source Clock:      orion/csf767_dataO[3]_AND_463_o falling
+  Source Clock:      orion/csf767_dataO[3]_AND_462_o falling
 
   Data Path: orion/rom_reg_0_LDC to SRAM_ADDR<16>
                                 Gate     Net
@@ -1938,7 +1938,7 @@ Offset:              6.734ns (Levels of Logic = 3)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'orion/_i000009_5'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              6.549ns (Levels of Logic = 3)
+Offset:              6.567ns (Levels of Logic = 3)
   Source:            orion/hcnt_5_LDC (LATCH)
   Destination:       SRAM_ADDR<10> (PAD)
   Source Clock:      orion/_i000009_5 falling
@@ -1947,13 +1947,13 @@ Offset:              6.549ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDC:G->Q              1   0.581   0.910  orion/hcnt_5_LDC (orion/hcnt_5_LDC)
-     LUT3:I0->O            9   0.235   0.976  orion/hcnt_51 (orion/hcnt_5)
+     LDC:G->Q              3   0.581   0.994  orion/hcnt_5_LDC (orion/hcnt_5_LDC)
+     LUT3:I0->O            7   0.235   0.910  orion/hcnt_51 (orion/hcnt_5)
      LUT6:I5->O            1   0.254   0.681  orion/Mmux_a41 (SRAM_ADDR_10_OBUF)
      OBUF:I->O                 2.912          SRAM_ADDR_10_OBUF (SRAM_ADDR<10>)
     ----------------------------------------
-    Total                      6.549ns (3.982ns logic, 2.567ns route)
-                                       (60.8% logic, 39.2% route)
+    Total                      6.567ns (3.982ns logic, 2.585ns route)
+                                       (60.6% logic, 39.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'orion/_i000009_4'
@@ -2046,19 +2046,19 @@ Clock to Setup on destination clock CLK50
                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------------+---------+---------+---------+---------+
-CLK50                        |    7.726|    3.115|   15.085|         |
-orion/_i000009_0             |         |    7.887|    7.887|         |
-orion/_i000009_1             |         |    7.851|    7.851|         |
-orion/_i000009_2             |         |    7.630|    7.630|         |
-orion/_i000009_3             |         |    5.695|         |         |
-orion/_i000009_4             |         |    5.755|         |         |
-orion/_i000009_5             |         |    6.049|         |         |
-orion/_i000009_6             |         |    6.080|         |         |
-orion/_i000009_7             |         |    5.944|         |         |
+CLK50                        |    7.699|    3.115|   15.085|         |
+orion/_i000009_0             |         |    7.860|    7.860|         |
+orion/_i000009_1             |         |    7.824|    7.824|         |
+orion/_i000009_2             |         |    7.615|    7.615|         |
+orion/_i000009_3             |         |    5.935|         |         |
+orion/_i000009_4             |         |    5.996|         |         |
+orion/_i000009_5             |         |    4.977|         |         |
+orion/_i000009_6             |         |    5.616|         |         |
+orion/_i000009_7             |         |    5.528|         |         |
 orion/_i000009_8             |         |    5.610|         |         |
 orion/_i000009_9             |         |    5.603|         |         |
 orion/clk_cpu                |    7.190|         |    6.791|         |
-orion/del_0                  |    2.729|         |         |         |
+orion/del_0                  |    2.729|         |    5.652|         |
 orion/hcnt<9>_inv            |    3.972|         |         |         |
 orion/orionkey/cpm           |         |         |    1.690|         |
 orion/orionkey/keyb_int      |    3.005|         |         |         |
@@ -2152,13 +2152,13 @@ Clock to Setup on destination clock orion/clk_cpu
                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
-CLK50                          |   11.821|    9.066|         |         |
-orion/_i000009_0               |         |   11.982|         |         |
-orion/_i000009_1               |         |   11.946|         |         |
-orion/_i000009_2               |         |   11.725|         |         |
+CLK50                          |   11.794|    9.066|         |         |
+orion/_i000009_0               |         |   11.955|         |         |
+orion/_i000009_1               |         |   11.919|         |         |
+orion/_i000009_2               |         |   11.710|         |         |
 orion/clk_cpu                  |   12.446|         |         |         |
-orion/csf767_dataO[3]_AND_463_o|         |    4.329|         |         |
-orion/csf767_dataO[4]_AND_461_o|         |    6.106|         |         |
+orion/csf767_dataO[3]_AND_462_o|         |    4.329|         |         |
+orion/csf767_dataO[4]_AND_460_o|         |    6.106|         |         |
 orion/orionkey/keyb_int        |    1.723|         |         |         |
 orion/orionkey/rom             |    5.945|         |         |         |
 orion/receiver/RxD_data_ready  |    5.599|         |         |         |
@@ -2168,7 +2168,7 @@ orion/t80inst/WR_n             |   10.660|         |         |         |
 orion/uart_clk                 |    6.764|         |         |         |
 -------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock orion/csf767_dataO[3]_AND_463_o
+Clock to Setup on destination clock orion/csf767_dataO[3]_AND_462_o
 ------------------+---------+---------+---------+---------+
                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -2177,7 +2177,7 @@ orion/clk_cpu     |         |         |    7.130|         |
 orion/t80inst/WR_n|         |         |    7.106|         |
 ------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock orion/csf767_dataO[4]_AND_461_o
+Clock to Setup on destination clock orion/csf767_dataO[4]_AND_460_o
 ------------------+---------+---------+---------+---------+
                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -2191,15 +2191,15 @@ Clock to Setup on destination clock orion/del_0
                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
-CLK50           |    5.812|         |         |         |
-orion/_i000009_0|         |    5.180|         |         |
-orion/_i000009_1|         |    4.925|         |         |
-orion/_i000009_2|         |    4.963|         |         |
-orion/_i000009_3|         |    5.538|         |         |
-orion/_i000009_4|         |    5.599|         |         |
-orion/_i000009_5|         |    5.634|         |         |
-orion/_i000009_6|         |    5.973|         |         |
-orion/_i000009_7|         |    5.474|         |         |
+CLK50           |    6.717|    1.280|         |         |
+orion/_i000009_0|         |    5.105|         |         |
+orion/_i000009_1|         |    6.779|         |         |
+orion/_i000009_2|         |    6.878|         |         |
+orion/_i000009_3|         |    6.294|         |         |
+orion/_i000009_4|         |    6.096|         |         |
+orion/_i000009_5|         |    4.977|         |         |
+orion/_i000009_6|         |    4.711|         |         |
+orion/_i000009_7|         |    4.538|         |         |
 orion/_i000009_8|         |    4.921|         |         |
 orion/_i000009_9|         |    4.643|         |         |
 ----------------+---------+---------+---------+---------+
@@ -2235,8 +2235,8 @@ Clock to Setup on destination clock orion/orionkey/rom
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
 orion/clk_cpu                  |    7.234|         |         |         |
-orion/csf767_dataO[3]_AND_463_o|         |    2.130|         |         |
-orion/csf767_dataO[4]_AND_461_o|         |    1.844|         |         |
+orion/csf767_dataO[3]_AND_462_o|         |    2.130|         |         |
+orion/csf767_dataO[4]_AND_460_o|         |    1.844|         |         |
 orion/orionkey/rom             |    2.049|         |         |         |
 orion/t80inst/WR_n             |    7.210|         |         |         |
 -------------------------------+---------+---------+---------+---------+
@@ -2291,13 +2291,13 @@ orion/uart_clk |    4.273|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 30.00 secs
-Total CPU time to Xst completion: 29.22 secs
+Total REAL time to Xst completion: 39.00 secs
+Total CPU time to Xst completion: 38.73 secs
  
 --> 
 
 
-Total memory usage is 444976 kilobytes
+Total memory usage is 444700 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  114 (   0 filtered)

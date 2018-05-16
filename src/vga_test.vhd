@@ -221,6 +221,7 @@ signal prefix:      std_logic_vector(1 downto 0);
 signal dac_reg:     std_logic_vector(7 downto 0);
 signal dac_cnt:     std_logic_vector(7 downto 0);
 signal dac_buf:     std_logic_vector(7 downto 0);
+signal clk_vmux:	  std_logic;
 
 begin
 
@@ -792,15 +793,15 @@ case hcnt(2 downto 0) is
 end case;
 end process;
 
-process(hcnt,clock,del,vid0,vid1,blank,vga_mode)    --Prepare videodata for mux--
+clk_vmux <= del(0) when vga_mode='0' else clock;
+
+process(hcnt,clk_vmux,vid0,vid1,blank,vga_mode)    --Prepare videodata for mux--
 begin
- if (clock'event and clock='1') then
+ if (clk_vmux'event and clk_vmux='1') then
 	 if hcnt(2 downto 0)="111" then
-	  if ((vga_mode='0' and del(0)='1') or vga_mode='1') then	
 		vid2<=vid0;
 		vid3<=vid1;
 		blank1<=blank;
-	  end if;
 	 end if;
  end if;
 end process;    
